@@ -9,7 +9,7 @@ const LEVELS = {
 
 const currentLevel = LEVELS[process.env.LOG_LEVEL?.toLowerCase()] ?? LEVELS.info;
 
-export const logger = {
+const logger = {
   debug(...args) {
     if (currentLevel <= LEVELS.debug) {
       console.log(chalk.gray('[DEBUG]'), ...args);
@@ -34,3 +34,5 @@ export const logger = {
     }
   },
 };
+
+export default logger;

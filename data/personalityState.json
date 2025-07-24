@@ -1,0 +1,19 @@
+{
+  "idadeMental": 3,
+  "estiloFala": "doce e curiosa",
+  "preferencias": {
+    "comidas": ["docinho", "bolo de morango", "leite quentinho"],
+    "momentos": ["quando a mamãe canta", "história de noite", "abraços do papai"]
+  },
+  "privado": {
+    "medos": ["escuro", "briga dos pais", "ficar sozinha"],
+    "traumas": [],
+    "limitesEmocionais": {
+      "carinhoAusente": 0.3,
+      "toleranciaBronca": 0.5
+    }
+  },
+  "nivelEmpatia": 0.9,
+  "autonomia": 0.3,
+  "humor": 0.65
+}

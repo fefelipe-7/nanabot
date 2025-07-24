@@ -1,4 +1,5 @@
 import fetch from 'node-fetch';
+import { formatReply } from '../utils/formatReply.js';
 
 const OPENROUTER_API_URL = 'https://openrouter.ai/api/v1/chat/completions';
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
@@ -64,7 +65,7 @@ async function callOpenRouterAPI(prompt) {
 async function processMessage(content, userMetadata) {
   const prompt = buildPrompt(content, userMetadata);
   const resposta = await callOpenRouterAPI(prompt);
-  return resposta;
+  return formatReply(resposta);
 }
 
 export default { processMessage };

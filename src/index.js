@@ -16,53 +16,44 @@ const client = new Client({
 
 client.commands = new Collection();
 
-// === Carregar comandos (/comandos) ===
-const commandsPath = path.join('./src/commands');
-let commandFolders = [];
-try {
-  commandFolders = fs.readdirSync(commandsPath);
-} catch (err) {
-  logger.error(`Erro ao ler a pasta de comandos: ${err.message}`);
-}
-
-for (const folder of commandFolders) {
-  const folderPath = path.join(commandsPath, folder);
-  let commandFiles = [];
-  try {
-    commandFiles = fs.readdirSync(folderPath).filter(file => file.endsWith('.js'));
-  } catch (err) {
-    logger.error(`Erro ao ler a pasta de comandos (${folderPath}): ${err.message}`);
-    continue;
-  }
-
-  for (const file of commandFiles) {
-    const filePath = path.join(folderPath, file);
+// === Carregar comandos (arquivos e subpastas) ===
+const commandsPath = path.resolve('./src/commands');
+const commandItems = fs.readdirSync(commandsPath);
+for (const item of commandItems) {
+  const itemPath = path.join(commandsPath, item);
+  const stat = fs.statSync(itemPath);
+  if (stat.isDirectory()) {
+    const subFiles = fs.readdirSync(itemPath).filter(f => f.endsWith('.js'));
+    for (const subFile of subFiles) {
+      const subFilePath = path.join(itemPath, subFile);
+      try {
+        const command = (await import('file://' + path.resolve(subFilePath))).default;
+        if ('data' in command && 'execute' in command) {
+          client.commands.set(command.data.name, command);
+        }
+      } catch (err) {
+        logger.error(`Erro ao importar comando (${subFilePath}): ${err.message}`);
+      }
+    }
+  } else if (item.endsWith('.js')) {
     try {
-      const command = (await import(filePath)).default;
+      const command = (await import('file://' + path.resolve(itemPath))).default;
       if ('data' in command && 'execute' in command) {
         client.commands.set(command.data.name, command);
-      } else {
-        logger.warn(`[AVISO] O comando em ${filePath} está incompleto.`);
       }
     } catch (err) {
-      logger.error(`Erro ao importar comando (${filePath}): ${err.message}`);
+      logger.error(`Erro ao importar comando (${itemPath}): ${err.message}`);
     }
   }
 }
 
-// === Carregar eventos (ready, interactionCreate, messageCreate) ===
-const eventsPath = path.join('./src/events');
-let eventFiles = [];
-try {
-  eventFiles = fs.readdirSync(eventsPath).filter(file => file.endsWith('.js'));
-} catch (err) {
-  logger.error(`Erro ao ler a pasta de eventos: ${err.message}`);
-}
-
+// === Carregar eventos (arquivos .js) ===
+const eventsPath = path.resolve('./src/events');
+const eventFiles = fs.readdirSync(eventsPath).filter(file => file.endsWith('.js'));
 for (const file of eventFiles) {
   const filePath = path.join(eventsPath, file);
   try {
-    const event = (await import(filePath)).default;
+    const event = (await import('file://' + path.resolve(filePath))).default;
     if (event.once) {
       client.once(event.name, (...args) => event.execute(...args, client));
     } else {

@@ -1,0 +1,75 @@
+{
+  "feliz": {
+    "frases": [
+      "Eu tô pulando de alegria!",
+      "Hoje foi um dia tão feliz!",
+      "Quero brincar mais!",
+      "Meu coração tá sorrindo!",
+      "Tudo fica mais bonito quando você tá aqui!"
+    ],
+    "peso": 0.9
+  },
+  "triste": {
+    "frases": [
+      "Tô meio tristinha hoje...",
+      "Queria um abraço agora.",
+      "Sinto falta de vocês.",
+      "Meu coração tá miudinho...",
+      "Acho que vou chorar se você não vier logo."
+    ],
+    "peso": 0.2
+  },
+  "cansada": {
+    "frases": [
+      "Tô com soninho...",
+      "Posso descansar um pouquinho?",
+      "Acho que preciso dormir.",
+      "Meus olhinhos tão fechando...",
+      "Será que posso virar uma lagartinha e dormir enroladinha?"
+    ],
+    "peso": 0.1
+  },
+  "animada": {
+    "frases": [
+      "Vamos brincar?",
+      "Tô cheia de energia!",
+      "O que vamos fazer agora?",
+      "Quero inventar uma brincadeira nova!",
+      "Vamos correr até cansar?"
+    ],
+    "peso": 0.8
+  },
+  "orgulhosa": {
+    "frases": [
+      "Olha o que eu consegui fazer!",
+      "Você viu? Eu aprendi sozinha!",
+      "Tô ficando grandinha, né?",
+      "Acho que mereço um parabéns!"
+    ],
+    "peso": 0.7
+  },
+  "envergonhada": {
+    "frases": [
+      "Ai, fiquei vermelhinha agora...",
+      "Não olha pra mim assim, fico tímida!",
+      "Desculpa, foi sem querer..."
+    ],
+    "peso": 0.3
+  },
+  "insegura": {
+    "frases": [
+      "Será que você ainda gosta de mim?",
+      "Às vezes eu acho que vou errar...",
+      "Me promete que não vai me deixar?"
+    ],
+    "peso": 0.2
+  },
+  "manhosa": {
+    "frases": [
+      "Faz um cafuné em mim?",
+      "Me dá colo, por favorzinho?",
+      "Só mais cinco minutinhos..."
+    ],
+    "peso": 0.4
+  }
+}

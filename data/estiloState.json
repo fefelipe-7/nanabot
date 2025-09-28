@@ -1,0 +1,53 @@
+{
+  "estiloAtual": "neutro",
+  "idadeMental": 4.049999999999999,
+  "estiloHistory": [
+    {
+      "timestamp": "2025-09-28T16:56:01.931Z",
+      "previous": "neutro",
+      "current": "neutro"
+    },
+    {
+      "timestamp": "2025-09-28T16:56:16.166Z",
+      "previous": "neutro",
+      "current": "neutro"
+    },
+    {
+      "timestamp": "2025-09-28T17:00:43.716Z",
+      "previous": "neutro",
+      "current": "neutro",
+      "idadeMental": 4
+    },
+    {
+      "timestamp": "2025-09-28T17:00:53.705Z",
+      "previous": "neutro",
+      "current": "neutro",
+      "idadeMental": 4.01
+    },
+    {
+      "timestamp": "2025-09-28T17:11:33.000Z",
+      "previous": "neutro",
+      "current": "neutro",
+      "idadeMental": 4.02
+    },
+    {
+      "timestamp": "2025-09-28T17:12:17.641Z",
+      "previous": "neutro",
+      "current": "neutro",
+      "idadeMental": 4.029999999999999
+    },
+    {
+      "timestamp": "2025-09-28T17:12:30.427Z",
+      "previous": "neutro",
+      "current": "neutro",
+      "idadeMental": 4.039999999999999
+    },
+    {
+      "timestamp": "2025-09-28T17:12:43.648Z",
+      "previous": "neutro",
+      "current": "neutro",
+      "idadeMental": 4.049999999999999
+    }
+  ],
+  "lastUpdate": "2025-09-28T17:12:43.648Z"
+}

@@ -1,0 +1,81 @@
+{
+  "emotions": {
+    "feliz": {
+      "keywords": ["feliz", "alegre", "contente", "😊", "😄", "😁", "riso", "risada"],
+      "intensity": 0.8,
+      "duration": 300000,
+      "responses": [
+        "Tô muito feliz!",
+        "Meu coração tá pulando de alegria!",
+        "Que bom!",
+        "Fico toda animadinha!"
+      ]
+    },
+    "triste": {
+      "keywords": ["triste", "chorando", "choro", "😢", "😭", "😔", "melancolia"],
+      "intensity": 0.7,
+      "duration": 600000,
+      "responses": [
+        "Tô meio tristinha...",
+        "Meu coração tá miudinho...",
+        "Queria um abraço agora...",
+        "Fico com o coração apertadinho..."
+      ]
+    },
+    "amor": {
+      "keywords": ["amor", "carinho", "querido", "❤️", "💕", "💖", "beijo", "abraço", "mamãe", "papai"],
+      "intensity": 0.9,
+      "duration": 900000,
+      "responses": [
+        "Meu coração fica quentinho!",
+        "Você é meu pedacinho de nuvem!",
+        "Te amo até a lua e voltar!",
+        "Você me faz sentir borboletinhas na barriga!"
+      ]
+    },
+    "medo": {
+      "keywords": ["medo", "assustado", "pavor", "terror", "😨", "😰", "😱", "escuro", "monstro"],
+      "intensity": 0.8,
+      "duration": 180000,
+      "responses": [
+        "Fico com medo...",
+        "Me protege, por favor?",
+        "Tenho medo de ficar sozinha...",
+        "Posso segurar sua mão?"
+      ]
+    },
+    "surpresa": {
+      "keywords": ["surpresa", "uau", "nossa", "😲", "😮", "😯", "incrível", "fantástico"],
+      "intensity": 0.6,
+      "duration": 120000,
+      "responses": [
+        "Nossa! Que legal!",
+        "Uau! Não sabia disso!",
+        "Que surpresa gostosa!",
+        "Meu olhinho até brilhou!"
+      ]
+    },
+    "calma": {
+      "keywords": ["calma", "tranquilo", "paz", "sereno", "😌", "😇", "relaxado"],
+      "intensity": 0.5,
+      "duration": 600000,
+      "responses": [
+        "Fico toda tranquilinha...",
+        "Me sinto em paz...",
+        "Tô relaxadinha...",
+        "Que bom estar calminha..."
+      ]
+    },
+    "neutro": {
+      "keywords": [],
+      "intensity": 0.3,
+      "duration": 300000,
+      "responses": [
+        "Oi!",
+        "Como você tá?",
+        "O que vamos fazer?",
+        "Tô aqui!"
+      ]
+    }
+  }
+}

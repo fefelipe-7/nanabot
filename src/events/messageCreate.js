@@ -8,11 +8,21 @@ export default {
   async execute(message, client) {
     if (message.author.bot) return; // Ignorar mensagens de bots
 
-    // Verifica se o bot foi mencionado na mensagem
-    if (!message.mentions.has(client.user)) return;
+    let content = '';
+    let shouldProcess = false;
 
-    // Remove a menção do texto para pegar só o que a pessoa escreveu
-    const content = message.content.replace(/<@!?(\d+)>/, '').trim();
+    // Verifica se a mensagem começa com o prefixo n!
+    if (message.content.startsWith('n!')) {
+      content = message.content.slice(2).trim();
+      shouldProcess = true;
+    }
+    // Verifica se o bot foi mencionado na mensagem
+    else if (message.mentions.has(client.user)) {
+      content = message.content.replace(/<@!?(\d+)>/, '').trim();
+      shouldProcess = true;
+    }
+
+    if (!shouldProcess || !content) return;
 
     // Identifica o papel do usuário (mamãe, papai, etc)
     const role = getUserRole(message.author.id);

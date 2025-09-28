@@ -1,0 +1,713 @@
+{
+  "preferences": [
+    [
+      "activities:histórias",
+      {
+        "category": "activities",
+        "item": "histórias",
+        "level": 0.9999572848958332,
+        "interactions": 4,
+        "positiveInteractions": 4,
+        "negativeInteractions": 0,
+        "lastUpdate": "2025-09-28T16:11:13.062Z",
+        "confidence": 0.7
+      }
+    ]
+  ],
+  "preferenceHistory": [
+    {
+      "timestamp": "2025-09-28T15:46:00.622Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "userId": "test_user",
+        "role": "test_role",
+        "username": "TestUser",
+        "startTime": 1759074360591
+      },
+      "totalPreferences": 0
+    },
+    {
+      "timestamp": "2025-09-28T15:46:00.648Z",
+      "detected": [
+        {
+          "category": "activities",
+          "item": "histórias",
+          "intensity": 0.2,
+          "matches": 1,
+          "base": 0.9,
+          "context": {
+            "userId": "test_user",
+            "role": "test_role",
+            "username": "TestUser",
+            "startTime": 1759074360631
+          }
+        }
+      ],
+      "changes": [
+        {
+          "key": "activities:histórias",
+          "category": "activities",
+          "item": "histórias",
+          "oldLevel": 0.9,
+          "newLevel": 1,
+          "change": 0.09999999999999998,
+          "confidence": 0.55
+        }
+      ],
+      "context": {
+        "userId": "test_user",
+        "role": "test_role",
+        "username": "TestUser",
+        "startTime": 1759074360631
+      },
+      "totalPreferences": 1
+    },
+    {
+      "timestamp": "2025-09-28T15:46:00.667Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "userId": "test_user",
+        "role": "test_role",
+        "username": "TestUser",
+        "startTime": 1759074360654
+      },
+      "totalPreferences": 1
+    },
+    {
+      "timestamp": "2025-09-28T15:46:00.685Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "userId": "test_user",
+        "role": "test_role",
+        "username": "TestUser",
+        "startTime": 1759074360671
+      },
+      "totalPreferences": 1
+    },
+    {
+      "timestamp": "2025-09-28T15:52:04.492Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "userId": "test_user",
+        "role": "test_role",
+        "username": "TestUser",
+        "startTime": 1759074724464
+      },
+      "totalPreferences": 1
+    },
+    {
+      "timestamp": "2025-09-28T15:52:04.527Z",
+      "detected": [
+        {
+          "category": "activities",
+          "item": "histórias",
+          "intensity": 0.2,
+          "matches": 1,
+          "base": 0.9,
+          "context": {
+            "userId": "test_user",
+            "role": "test_role",
+            "username": "TestUser",
+            "startTime": 1759074724498
+          }
+        }
+      ],
+      "changes": [
+        {
+          "key": "activities:histórias",
+          "category": "activities",
+          "item": "histórias",
+          "oldLevel": 0.9999957884259258,
+          "newLevel": 1,
+          "change": 0.00000421157407415329,
+          "confidence": 0.6
+        }
+      ],
+      "context": {
+        "userId": "test_user",
+        "role": "test_role",
+        "username": "TestUser",
+        "startTime": 1759074724498
+      },
+      "totalPreferences": 1
+    },
+    {
+      "timestamp": "2025-09-28T15:52:04.545Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "userId": "test_user",
+        "role": "test_role",
+        "username": "TestUser",
+        "startTime": 1759074724535
+      },
+      "totalPreferences": 1
+    },
+    {
+      "timestamp": "2025-09-28T15:52:04.578Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "userId": "test_user",
+        "role": "test_role",
+        "username": "TestUser",
+        "startTime": 1759074724552
+      },
+      "totalPreferences": 1
+    },
+    {
+      "timestamp": "2025-09-28T16:02:47.305Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "userId": "test_user",
+        "role": "test_role",
+        "username": "TestUser",
+        "startTime": 1759075367257
+      },
+      "totalPreferences": 1
+    },
+    {
+      "timestamp": "2025-09-28T16:02:47.340Z",
+      "detected": [
+        {
+          "category": "activities",
+          "item": "histórias",
+          "intensity": 0.2,
+          "matches": 1,
+          "base": 0.9,
+          "context": {
+            "userId": "test_user",
+            "role": "test_role",
+            "username": "TestUser",
+            "startTime": 1759075367315
+          }
+        }
+      ],
+      "changes": [
+        {
+          "key": "activities:histórias",
+          "category": "activities",
+          "item": "histórias",
+          "oldLevel": 0.9999925600347221,
+          "newLevel": 1,
+          "change": 0.00000743996527785562,
+          "confidence": 0.65
+        }
+      ],
+      "context": {
+        "userId": "test_user",
+        "role": "test_role",
+        "username": "TestUser",
+        "startTime": 1759075367315
+      },
+      "totalPreferences": 1
+    },
+    {
+      "timestamp": "2025-09-28T16:02:47.356Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "userId": "test_user",
+        "role": "test_role",
+        "username": "TestUser",
+        "startTime": 1759075367347
+      },
+      "totalPreferences": 1
+    },
+    {
+      "timestamp": "2025-09-28T16:02:47.389Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "userId": "test_user",
+        "role": "test_role",
+        "username": "TestUser",
+        "startTime": 1759075367360
+      },
+      "totalPreferences": 1
+    },
+    {
+      "timestamp": "2025-09-28T16:11:13.046Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "userId": "test_user",
+        "role": "test_role",
+        "username": "TestUser",
+        "startTime": 1759075873033
+      },
+      "totalPreferences": 1
+    },
+    {
+      "timestamp": "2025-09-28T16:11:13.062Z",
+      "detected": [
+        {
+          "category": "activities",
+          "item": "histórias",
+          "intensity": 0.2,
+          "matches": 1,
+          "base": 0.9,
+          "context": {
+            "userId": "test_user",
+            "role": "test_role",
+            "username": "TestUser",
+            "startTime": 1759075873051
+          }
+        }
+      ],
+      "changes": [
+        {
+          "key": "activities:histórias",
+          "category": "activities",
+          "item": "histórias",
+          "oldLevel": 0.9999941467476852,
+          "newLevel": 1,
+          "change": 0.0000058532523148357996,
+          "confidence": 0.7
+        }
+      ],
+      "context": {
+        "userId": "test_user",
+        "role": "test_role",
+        "username": "TestUser",
+        "startTime": 1759075873051
+      },
+      "totalPreferences": 1
+    },
+    {
+      "timestamp": "2025-09-28T16:11:13.067Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "userId": "test_user",
+        "role": "test_role",
+        "username": "TestUser",
+        "startTime": 1759075873064
+      },
+      "totalPreferences": 1
+    },
+    {
+      "timestamp": "2025-09-28T16:11:13.073Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "userId": "test_user",
+        "role": "test_role",
+        "username": "TestUser",
+        "startTime": 1759075873069
+      },
+      "totalPreferences": 1
+    },
+    {
+      "timestamp": "2025-09-28T16:56:01.930Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7"
+      },
+      "totalPreferences": 1
+    },
+    {
+      "timestamp": "2025-09-28T16:56:16.165Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7"
+      },
+      "totalPreferences": 1
+    },
+    {
+      "timestamp": "2025-09-28T17:00:43.714Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7"
+      },
+      "totalPreferences": 1
+    },
+    {
+      "timestamp": "2025-09-28T17:00:53.704Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7"
+      },
+      "totalPreferences": 1
+    },
+    {
+      "timestamp": "2025-09-28T17:11:32.996Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7"
+      },
+      "totalPreferences": 1
+    },
+    {
+      "timestamp": "2025-09-28T17:12:17.640Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7"
+      },
+      "totalPreferences": 1
+    },
+    {
+      "timestamp": "2025-09-28T17:12:30.426Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7"
+      },
+      "totalPreferences": 1
+    },
+    {
+      "timestamp": "2025-09-28T17:12:43.646Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7"
+      },
+      "totalPreferences": 1
+    }
+  ],
+  "lastUpdate": "2025-09-28T17:12:43.646Z",
+  "categories": {
+    "activities": {
+      "brincar": {
+        "base": 0.8,
+        "keywords": [
+          "brincar",
+          "jogar",
+          "diversão",
+          "brincadeira"
+        ]
+      },
+      "histórias": {
+        "base": 0.9,
+        "keywords": [
+          "história",
+          "conto",
+          "fábula",
+          "aventura"
+        ]
+      },
+      "música": {
+        "base": 0.7,
+        "keywords": [
+          "música",
+          "cantar",
+          "dançar",
+          "ritmo"
+        ]
+      },
+      "desenhar": {
+        "base": 0.6,
+        "keywords": [
+          "desenhar",
+          "pintar",
+          "arte",
+          "criar"
+        ]
+      },
+      "cozinhar": {
+        "base": 0.5,
+        "keywords": [
+          "cozinhar",
+          "comida",
+          "receita",
+          "fazer"
+        ]
+      },
+      "ler": {
+        "base": 0.8,
+        "keywords": [
+          "ler",
+          "livro",
+          "texto",
+          "aprender"
+        ]
+      },
+      "exercícios": {
+        "base": 0.4,
+        "keywords": [
+          "exercício",
+          "correr",
+          "pular",
+          "movimento"
+        ]
+      },
+      "dormir": {
+        "base": 0.6,
+        "keywords": [
+          "dormir",
+          "sono",
+          "descansar",
+          "cama"
+        ]
+      }
+    },
+    "topics": {
+      "animais": {
+        "base": 0.9,
+        "keywords": [
+          "gato",
+          "cachorro",
+          "passarinho",
+          "animal",
+          "bicho"
+        ]
+      },
+      "natureza": {
+        "base": 0.8,
+        "keywords": [
+          "flor",
+          "árvore",
+          "sol",
+          "lua",
+          "estrela"
+        ]
+      },
+      "família": {
+        "base": 0.95,
+        "keywords": [
+          "mamãe",
+          "papai",
+          "família",
+          "parentes"
+        ]
+      },
+      "amigos": {
+        "base": 0.7,
+        "keywords": [
+          "amigo",
+          "amiga",
+          "colega",
+          "pessoa"
+        ]
+      },
+      "comida": {
+        "base": 0.6,
+        "keywords": [
+          "comida",
+          "lanche",
+          "doce",
+          "fruta"
+        ]
+      },
+      "brinquedos": {
+        "base": 0.8,
+        "keywords": [
+          "brinquedo",
+          "boneca",
+          "carrinho",
+          "jogo"
+        ]
+      },
+      "escola": {
+        "base": 0.5,
+        "keywords": [
+          "escola",
+          "aula",
+          "professor",
+          "aprender"
+        ]
+      },
+      "tecnologia": {
+        "base": 0.3,
+        "keywords": [
+          "computador",
+          "celular",
+          "internet",
+          "app"
+        ]
+      }
+    },
+    "emotions": {
+      "alegria": {
+        "base": 0.9,
+        "keywords": [
+          "feliz",
+          "alegre",
+          "sorrindo",
+          "riso"
+        ]
+      },
+      "amor": {
+        "base": 0.95,
+        "keywords": [
+          "amor",
+          "carinho",
+          "beijo",
+          "abraço"
+        ]
+      },
+      "tranquilidade": {
+        "base": 0.7,
+        "keywords": [
+          "calma",
+          "paz",
+          "tranquilo",
+          "sereno"
+        ]
+      },
+      "excitação": {
+        "base": 0.6,
+        "keywords": [
+          "animado",
+          "empolgado",
+          "surpresa",
+          "novidade"
+        ]
+      },
+      "tristeza": {
+        "base": 0.2,
+        "keywords": [
+          "triste",
+          "chorando",
+          "melancolia",
+          "saudade"
+        ]
+      },
+      "medo": {
+        "base": 0.1,
+        "keywords": [
+          "medo",
+          "assustado",
+          "terror",
+          "pavor"
+        ]
+      },
+      "raiva": {
+        "base": 0.1,
+        "keywords": [
+          "raiva",
+          "bravo",
+          "irritado",
+          "fúria"
+        ]
+      }
+    },
+    "environments": {
+      "casa": {
+        "base": 0.9,
+        "keywords": [
+          "casa",
+          "lar",
+          "quarto",
+          "sala"
+        ]
+      },
+      "parque": {
+        "base": 0.8,
+        "keywords": [
+          "parque",
+          "jardim",
+          "praça",
+          "natureza"
+        ]
+      },
+      "escola": {
+        "base": 0.5,
+        "keywords": [
+          "escola",
+          "aula",
+          "classe",
+          "professor"
+        ]
+      },
+      "loja": {
+        "base": 0.4,
+        "keywords": [
+          "loja",
+          "compras",
+          "mercado",
+          "shopping"
+        ]
+      },
+      "hospital": {
+        "base": 0.2,
+        "keywords": [
+          "hospital",
+          "médico",
+          "doente",
+          "remédio"
+        ]
+      },
+      "escuro": {
+        "base": 0.1,
+        "keywords": [
+          "escuro",
+          "noite",
+          "sombra",
+          "escuridão"
+        ]
+      }
+    },
+    "people": {
+      "mamãe": {
+        "base": 0.95,
+        "keywords": [
+          "mamãe",
+          "mãe",
+          "mamã"
+        ]
+      },
+      "papai": {
+        "base": 0.95,
+        "keywords": [
+          "papai",
+          "pai",
+          "papá"
+        ]
+      },
+      "avós": {
+        "base": 0.8,
+        "keywords": [
+          "vovó",
+          "vovô",
+          "avó",
+          "avô"
+        ]
+      },
+      "tios": {
+        "base": 0.6,
+        "keywords": [
+          "tio",
+          "tia",
+          "primo",
+          "prima"
+        ]
+      },
+      "amigos": {
+        "base": 0.7,
+        "keywords": [
+          "amigo",
+          "amiga",
+          "colega"
+        ]
+      },
+      "estranhos": {
+        "base": 0.3,
+        "keywords": [
+          "pessoa",
+          "gente",
+          "alguém"
+        ]
+      }
+    }
+  }
+}

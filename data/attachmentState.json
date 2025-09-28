@@ -1,0 +1,364 @@
+{
+  "attachments": [
+    [
+      "test_user",
+      {
+        "userId": "test_user",
+        "userRole": "amiguinho",
+        "level": 0.48399999999999993,
+        "trust": 0.5,
+        "security": 0.5,
+        "intimacy": 0.3,
+        "dependency": 0.24000000000000005,
+        "anxiety": 0.049999999999999975,
+        "lastUpdate": "2025-09-28T16:11:13.072Z",
+        "interactionCount": 16,
+        "positiveInteractions": 5,
+        "negativeInteractions": 0,
+        "totalTime": 0,
+        "averageResponseTime": 0,
+        "favoriteActivities": [],
+        "comfortLevel": 0.5,
+        "attachmentStyle": "avoidant",
+        "comfort": 0.31094720085823335
+      }
+    ],
+    [
+      "default",
+      {
+        "userId": "default",
+        "userRole": "amiguinho",
+        "level": 0.292,
+        "trust": 0.5,
+        "security": 0.5,
+        "intimacy": 0.3,
+        "dependency": 0.2,
+        "anxiety": 0.12999999999999995,
+        "lastUpdate": "2025-09-28T17:12:43.643Z",
+        "interactionCount": 8,
+        "positiveInteractions": 1,
+        "negativeInteractions": 0,
+        "totalTime": 0,
+        "averageResponseTime": 0,
+        "favoriteActivities": [],
+        "comfortLevel": 0.5,
+        "attachmentStyle": "avoidant",
+        "comfort": 0.20304223333333335
+      }
+    ]
+  ],
+  "attachmentHistory": [
+    {
+      "timestamp": "2025-09-28T15:46:00.618Z",
+      "userId": "test_user",
+      "userRole": "amiguinho",
+      "change": -0.0010000000000000009,
+      "factors": {
+        "separation_anxiety": 1
+      },
+      "newLevel": 0.299,
+      "trust": 0.5,
+      "security": 0.5,
+      "intimacy": 0.3,
+      "anxiety": 0.2
+    },
+    {
+      "timestamp": "2025-09-28T15:46:00.644Z",
+      "userId": "test_user",
+      "userRole": "amiguinho",
+      "change": 0.049,
+      "factors": {
+        "quality_time": 1
+      },
+      "newLevel": 0.348,
+      "trust": 0.5,
+      "security": 0.5,
+      "intimacy": 0.3,
+      "anxiety": 0.19
+    },
+    {
+      "timestamp": "2025-09-28T15:46:00.663Z",
+      "userId": "test_user",
+      "userRole": "amiguinho",
+      "change": -0.0010000000000000009,
+      "factors": {},
+      "newLevel": 0.347,
+      "trust": 0.5,
+      "security": 0.5,
+      "intimacy": 0.3,
+      "anxiety": 0.18
+    },
+    {
+      "timestamp": "2025-09-28T15:46:00.681Z",
+      "userId": "test_user",
+      "userRole": "amiguinho",
+      "change": -0.0010000000000000009,
+      "factors": {},
+      "newLevel": 0.346,
+      "trust": 0.5,
+      "security": 0.5,
+      "intimacy": 0.3,
+      "anxiety": 0.16999999999999998
+    },
+    {
+      "timestamp": "2025-09-28T15:52:04.490Z",
+      "userId": "test_user",
+      "userRole": "amiguinho",
+      "change": -0.0010000000000000009,
+      "factors": {},
+      "newLevel": 0.345,
+      "trust": 0.5,
+      "security": 0.5,
+      "intimacy": 0.3,
+      "anxiety": 0.15999999999999998
+    },
+    {
+      "timestamp": "2025-09-28T15:52:04.526Z",
+      "userId": "test_user",
+      "userRole": "amiguinho",
+      "change": 0.049,
+      "factors": {
+        "quality_time": 1
+      },
+      "newLevel": 0.39399999999999996,
+      "trust": 0.5,
+      "security": 0.5,
+      "intimacy": 0.3,
+      "anxiety": 0.14999999999999997
+    },
+    {
+      "timestamp": "2025-09-28T15:52:04.543Z",
+      "userId": "test_user",
+      "userRole": "amiguinho",
+      "change": -0.0010000000000000009,
+      "factors": {},
+      "newLevel": 0.39299999999999996,
+      "trust": 0.5,
+      "security": 0.5,
+      "intimacy": 0.3,
+      "anxiety": 0.13999999999999996
+    },
+    {
+      "timestamp": "2025-09-28T15:52:04.576Z",
+      "userId": "test_user",
+      "userRole": "amiguinho",
+      "change": -0.0010000000000000009,
+      "factors": {},
+      "newLevel": 0.39199999999999996,
+      "trust": 0.5,
+      "security": 0.5,
+      "intimacy": 0.3,
+      "anxiety": 0.12999999999999995
+    },
+    {
+      "timestamp": "2025-09-28T16:02:47.293Z",
+      "userId": "test_user",
+      "userRole": "amiguinho",
+      "change": -0.0010000000000000009,
+      "factors": {},
+      "newLevel": 0.39099999999999996,
+      "trust": 0.5,
+      "security": 0.5,
+      "intimacy": 0.3,
+      "anxiety": 0.11999999999999995
+    },
+    {
+      "timestamp": "2025-09-28T16:02:47.339Z",
+      "userId": "test_user",
+      "userRole": "amiguinho",
+      "change": 0.049,
+      "factors": {
+        "quality_time": 1
+      },
+      "newLevel": 0.43999999999999995,
+      "trust": 0.5,
+      "security": 0.5,
+      "intimacy": 0.3,
+      "anxiety": 0.10999999999999996
+    },
+    {
+      "timestamp": "2025-09-28T16:02:47.355Z",
+      "userId": "test_user",
+      "userRole": "amiguinho",
+      "change": -0.0010000000000000009,
+      "factors": {},
+      "newLevel": 0.43899999999999995,
+      "trust": 0.5,
+      "security": 0.5,
+      "intimacy": 0.3,
+      "anxiety": 0.09999999999999996
+    },
+    {
+      "timestamp": "2025-09-28T16:02:47.381Z",
+      "userId": "test_user",
+      "userRole": "amiguinho",
+      "change": -0.0010000000000000009,
+      "factors": {},
+      "newLevel": 0.43799999999999994,
+      "trust": 0.5,
+      "security": 0.5,
+      "intimacy": 0.3,
+      "anxiety": 0.08999999999999997
+    },
+    {
+      "timestamp": "2025-09-28T16:11:13.043Z",
+      "userId": "test_user",
+      "userRole": "amiguinho",
+      "change": -0.0010000000000000009,
+      "factors": {},
+      "newLevel": 0.43699999999999994,
+      "trust": 0.5,
+      "security": 0.5,
+      "intimacy": 0.3,
+      "anxiety": 0.07999999999999997
+    },
+    {
+      "timestamp": "2025-09-28T16:11:13.060Z",
+      "userId": "test_user",
+      "userRole": "amiguinho",
+      "change": 0.049,
+      "factors": {
+        "quality_time": 1
+      },
+      "newLevel": 0.48599999999999993,
+      "trust": 0.5,
+      "security": 0.5,
+      "intimacy": 0.3,
+      "anxiety": 0.06999999999999998
+    },
+    {
+      "timestamp": "2025-09-28T16:11:13.066Z",
+      "userId": "test_user",
+      "userRole": "amiguinho",
+      "change": -0.0010000000000000009,
+      "factors": {},
+      "newLevel": 0.48499999999999993,
+      "trust": 0.5,
+      "security": 0.5,
+      "intimacy": 0.3,
+      "anxiety": 0.05999999999999998
+    },
+    {
+      "timestamp": "2025-09-28T16:11:13.072Z",
+      "userId": "test_user",
+      "userRole": "amiguinho",
+      "change": -0.0010000000000000009,
+      "factors": {},
+      "newLevel": 0.48399999999999993,
+      "trust": 0.5,
+      "security": 0.5,
+      "intimacy": 0.3,
+      "anxiety": 0.049999999999999975
+    },
+    {
+      "timestamp": "2025-09-28T16:56:01.927Z",
+      "userId": "default",
+      "userRole": "amiguinho",
+      "change": -0.0010000000000000009,
+      "factors": {
+        "separation_anxiety": 1
+      },
+      "newLevel": 0.299,
+      "trust": 0.5,
+      "security": 0.5,
+      "intimacy": 0.3,
+      "anxiety": 0.2
+    },
+    {
+      "timestamp": "2025-09-28T16:56:16.164Z",
+      "userId": "default",
+      "userRole": "amiguinho",
+      "change": -0.0010000000000000009,
+      "factors": {},
+      "newLevel": 0.298,
+      "trust": 0.5,
+      "security": 0.5,
+      "intimacy": 0.3,
+      "anxiety": 0.19
+    },
+    {
+      "timestamp": "2025-09-28T17:00:43.711Z",
+      "userId": "default",
+      "userRole": "amiguinho",
+      "change": -0.0010000000000000009,
+      "factors": {},
+      "newLevel": 0.297,
+      "trust": 0.5,
+      "security": 0.5,
+      "intimacy": 0.3,
+      "anxiety": 0.18
+    },
+    {
+      "timestamp": "2025-09-28T17:00:53.703Z",
+      "userId": "default",
+      "userRole": "amiguinho",
+      "change": -0.0010000000000000009,
+      "factors": {},
+      "newLevel": 0.296,
+      "trust": 0.5,
+      "security": 0.5,
+      "intimacy": 0.3,
+      "anxiety": 0.16999999999999998
+    },
+    {
+      "timestamp": "2025-09-28T17:11:32.994Z",
+      "userId": "default",
+      "userRole": "amiguinho",
+      "change": -0.0010000000000000009,
+      "factors": {},
+      "newLevel": 0.295,
+      "trust": 0.5,
+      "security": 0.5,
+      "intimacy": 0.3,
+      "anxiety": 0.15999999999999998
+    },
+    {
+      "timestamp": "2025-09-28T17:12:17.638Z",
+      "userId": "default",
+      "userRole": "amiguinho",
+      "change": -0.0010000000000000009,
+      "factors": {},
+      "newLevel": 0.294,
+      "trust": 0.5,
+      "security": 0.5,
+      "intimacy": 0.3,
+      "anxiety": 0.14999999999999997
+    },
+    {
+      "timestamp": "2025-09-28T17:12:30.425Z",
+      "userId": "default",
+      "userRole": "amiguinho",
+      "change": -0.0010000000000000009,
+      "factors": {},
+      "newLevel": 0.293,
+      "trust": 0.5,
+      "security": 0.5,
+      "intimacy": 0.3,
+      "anxiety": 0.13999999999999996
+    },
+    {
+      "timestamp": "2025-09-28T17:12:43.643Z",
+      "userId": "default",
+      "userRole": "amiguinho",
+      "change": -0.0010000000000000009,
+      "factors": {},
+      "newLevel": 0.292,
+      "trust": 0.5,
+      "security": 0.5,
+      "intimacy": 0.3,
+      "anxiety": 0.12999999999999995
+    }
+  ],
+  "separationAnxiety": 0.2,
+  "lastInteraction": [
+    [
+      "test_user",
+      "2025-09-28T16:11:13.072Z"
+    ],
+    [
+      "default",
+      "2025-09-28T17:12:43.642Z"
+    ]
+  ],
+  "lastUpdate": "2025-09-28T17:12:43.644Z"
+}

@@ -1,0 +1,12 @@
+{
+  "socialLearningRate": 0.6,
+  "observationSkills": 0.5,
+  "imitationAbility": 0.7,
+  "socialAwareness": 0.6,
+  "socialBehaviors": [],
+  "socialModels": [],
+  "socialContexts": [],
+  "socialLearningHistory": [],
+  "lastUpdate": "2025-09-28T15:19:51.801Z",
+  "moduleName": "socialLearning"
+}

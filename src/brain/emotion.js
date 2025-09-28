@@ -3,6 +3,10 @@
 
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 class EmotionSystem {
   constructor() {
@@ -158,10 +162,12 @@ class EmotionSystem {
       let intensity = 0;
       let matches = 0;
       
-      for (const keyword of emotionData.keywords) {
-        if (input.toLowerCase().includes(keyword.toLowerCase())) {
-          intensity += emotionData.intensity * 0.1;
-          matches++;
+      if (emotionData.keywords && Array.isArray(emotionData.keywords)) {
+        for (const keyword of emotionData.keywords) {
+          if (input.toLowerCase().includes(keyword.toLowerCase())) {
+            intensity += emotionData.intensity * 0.1;
+            matches++;
+          }
         }
       }
       

@@ -1,0 +1,11 @@
+{
+  "crisisLevel": 0,
+  "regulationSkills": 0.5,
+  "recoveryRate": 0.3,
+  "crisisHistory": [],
+  "regulationStrategies": [],
+  "triggerPatterns": [],
+  "copingMechanisms": [],
+  "lastUpdate": "2025-09-28T15:19:51.793Z",
+  "moduleName": "crises"
+}

@@ -1,0 +1,11 @@
+{
+  "preprocessingLevel": 0.8,
+  "normalizationSkills": 0.7,
+  "contextalizationSkills": 0.6,
+  "linguisticAnalysis": 0.5,
+  "preprocessingHistory": [],
+  "preprocessingPatterns": [],
+  "preprocessingRules": [],
+  "lastUpdate": "2025-09-28T15:19:51.816Z",
+  "moduleName": "preprocessor"
+}

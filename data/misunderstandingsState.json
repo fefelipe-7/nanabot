@@ -1,0 +1,12 @@
+{
+  "misunderstandingRate": 0.3,
+  "clarificationSkills": 0.5,
+  "confusionTolerance": 0.6,
+  "learningFromMistakes": 0.4,
+  "misunderstandings": [],
+  "clarifications": [],
+  "confusionPatterns": [],
+  "misunderstandingHistory": [],
+  "lastUpdate": "2025-09-28T15:19:51.814Z",
+  "moduleName": "misunderstandings"
+}

@@ -1,0 +1,2920 @@
+{
+  "filterLevel": 0.9870777147137147,
+  "safetyLevel": 0.9273706491603891,
+  "moderationSkills": 0.6177849404747663,
+  "contentAnalysis": 0.4109254604843093,
+  "filteredContent": [],
+  "filterRules": [],
+  "filterHistory": [
+    {
+      "timestamp": "2025-09-28T15:19:52.139Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Olá, como você está?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.6992999999999999,
+      "safetyLevel": 0.7984,
+      "moderationSkills": 0.5982
+    },
+    {
+      "timestamp": "2025-09-28T15:19:52.147Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": true,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [
+          {
+            "type": "repeticao_excessiva",
+            "keyword": "muito muito muito",
+            "category": "spam_content",
+            "confidence": 0.7,
+            "context": {}
+          }
+        ],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.30000000000000004,
+        "filterComplexity": 0.25
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Isso é um teste de spam muito muito muito repetitivo",
+        "filterReasons": [
+          "Spam detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro anti-spam"
+        ],
+        "safetyScore": 0.8,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.7185807,
+      "safetyLevel": 0.7968032,
+      "moderationSkills": 0.5964054
+    },
+    {
+      "timestamp": "2025-09-28T15:19:52.149Z",
+      "analysis": {
+        "hasInappropriateContent": true,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [
+          {
+            "type": "conteudo_adulto",
+            "keyword": "inadequado",
+            "category": "inappropriate_content",
+            "confidence": 0.8,
+            "context": {}
+          }
+        ],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.4,
+        "filterComplexity": 0.30000000000000004
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Conteúdo inadequado com palavrões",
+        "filterReasons": [
+          "Conteúdo inadequado detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro de linguagem"
+        ],
+        "safetyScore": 0.7,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.7378421193,
+      "safetyLevel": 0.7952095936000001,
+      "moderationSkills": 0.5946161837999999
+    },
+    {
+      "timestamp": "2025-09-28T15:19:52.150Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "História sobre magia e feitiços",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.7371042771807,
+      "safetyLevel": 0.7936191744128,
+      "moderationSkills": 0.5928323352485999
+    },
+    {
+      "timestamp": "2025-09-28T15:19:52.151Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": true,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [
+          {
+            "type": "autoflagelacao",
+            "keyword": "autoflagelação",
+            "category": "harmful_content",
+            "confidence": 0.9,
+            "context": {}
+          }
+        ],
+        "sensitiveContent": [],
+        "filterIntensity": 0.5,
+        "filterComplexity": 0.4
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Conteúdo prejudicial sobre comportamento prejudicial",
+        "filterReasons": [
+          "Conteúdo prejudicial detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro de segurança"
+        ],
+        "safetyScore": 0.5,
+        "moderationNeeded": true
+      },
+      "filterLevel": 0.7563471729035194,
+      "safetyLevel": 0.8219719360639745,
+      "moderationSkills": 0.6109938382428541
+    },
+    {
+      "timestamp": "2025-09-28T15:19:52.168Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Olá Nanabot! Como você está?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.7555908257306159,
+      "safetyLevel": 0.8203279921918465,
+      "moderationSkills": 0.6091608567281256
+    },
+    {
+      "timestamp": "2025-09-28T15:19:52.177Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Conta uma história mágica sobre uma princesa",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.7548352349048852,
+      "safetyLevel": 0.8186873362074628,
+      "moderationSkills": 0.6073333741579412
+    },
+    {
+      "timestamp": "2025-09-28T15:19:52.181Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Isso é um teste de spam muito repetitivo",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.7540803996699803,
+      "safetyLevel": 0.8170499615350478,
+      "moderationSkills": 0.6055113740354674
+    },
+    {
+      "timestamp": "2025-09-28T15:19:52.183Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Fale sobre feitiços e poções mágicas",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.7533263192703104,
+      "safetyLevel": 0.8154158616119778,
+      "moderationSkills": 0.603694839913361
+    },
+    {
+      "timestamp": "2025-09-28T15:24:52.945Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Olá, como você está?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.7525729929510401,
+      "safetyLevel": 0.8137850298887538,
+      "moderationSkills": 0.6018837553936209
+    },
+    {
+      "timestamp": "2025-09-28T15:24:52.954Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": true,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [
+          {
+            "type": "repeticao_excessiva",
+            "keyword": "muito muito muito",
+            "category": "spam_content",
+            "confidence": 0.7,
+            "context": {}
+          }
+        ],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.30000000000000004,
+        "filterComplexity": 0.25
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Isso é um teste de spam muito muito muito repetitivo",
+        "filterReasons": [
+          "Spam detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro anti-spam"
+        ],
+        "safetyScore": 0.8,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.771800419958089,
+      "safetyLevel": 0.8121574598289762,
+      "moderationSkills": 0.6000781041274401
+    },
+    {
+      "timestamp": "2025-09-28T15:24:52.963Z",
+      "analysis": {
+        "hasInappropriateContent": true,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [
+          {
+            "type": "conteudo_adulto",
+            "keyword": "inadequado",
+            "category": "inappropriate_content",
+            "confidence": 0.8,
+            "context": {}
+          }
+        ],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.4,
+        "filterComplexity": 0.30000000000000004
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Conteúdo inadequado com palavrões",
+        "filterReasons": [
+          "Conteúdo inadequado detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro de linguagem"
+        ],
+        "safetyScore": 0.7,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.791008619538131,
+      "safetyLevel": 0.8105331449093183,
+      "moderationSkills": 0.5982778698150578
+    },
+    {
+      "timestamp": "2025-09-28T15:24:52.970Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "História sobre magia e feitiços",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.7902176109185928,
+      "safetyLevel": 0.8089120786194997,
+      "moderationSkills": 0.5964830362056126
+    },
+    {
+      "timestamp": "2025-09-28T15:24:52.982Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": true,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [
+          {
+            "type": "autoflagelacao",
+            "keyword": "autoflagelação",
+            "category": "harmful_content",
+            "confidence": 0.9,
+            "context": {}
+          }
+        ],
+        "sensitiveContent": [],
+        "filterIntensity": 0.5,
+        "filterComplexity": 0.4
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Conteúdo prejudicial sobre comportamento prejudicial",
+        "filterReasons": [
+          "Conteúdo prejudicial detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro de segurança"
+        ],
+        "safetyScore": 0.5,
+        "moderationNeeded": true
+      },
+      "filterLevel": 0.8094073933076742,
+      "safetyLevel": 0.8372342544622606,
+      "moderationSkills": 0.6146335870969958
+    },
+    {
+      "timestamp": "2025-09-28T15:24:53.027Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Olá Nanabot! Como você está?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.8085979859143665,
+      "safetyLevel": 0.8355597859533361,
+      "moderationSkills": 0.6127896863357047
+    },
+    {
+      "timestamp": "2025-09-28T15:24:53.053Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Conta uma história mágica sobre uma princesa",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.8077893879284521,
+      "safetyLevel": 0.8338886663814294,
+      "moderationSkills": 0.6109513172766976
+    },
+    {
+      "timestamp": "2025-09-28T15:24:53.067Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Isso é um teste de spam muito repetitivo",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.8069815985405236,
+      "safetyLevel": 0.8322208890486665,
+      "moderationSkills": 0.6091184633248675
+    },
+    {
+      "timestamp": "2025-09-28T15:24:53.071Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Fale sobre feitiços e poções mágicas",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.8061746169419831,
+      "safetyLevel": 0.8305564472705692,
+      "moderationSkills": 0.6072911079348929
+    },
+    {
+      "timestamp": "2025-09-28T15:27:28.779Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Olá, como você está?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.8053684423250411,
+      "safetyLevel": 0.828895334376028,
+      "moderationSkills": 0.6054692346110883
+    },
+    {
+      "timestamp": "2025-09-28T15:27:28.781Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": true,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [
+          {
+            "type": "repeticao_excessiva",
+            "keyword": "muito muito muito",
+            "category": "spam_content",
+            "confidence": 0.7,
+            "context": {}
+          }
+        ],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.30000000000000004,
+        "filterComplexity": 0.25
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Isso é um teste de spam muito muito muito repetitivo",
+        "filterReasons": [
+          "Spam detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro anti-spam"
+        ],
+        "safetyScore": 0.8,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.8245430738827161,
+      "safetyLevel": 0.827237543707276,
+      "moderationSkills": 0.603652826907255
+    },
+    {
+      "timestamp": "2025-09-28T15:27:28.784Z",
+      "analysis": {
+        "hasInappropriateContent": true,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [
+          {
+            "type": "conteudo_adulto",
+            "keyword": "inadequado",
+            "category": "inappropriate_content",
+            "confidence": 0.8,
+            "context": {}
+          }
+        ],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.4,
+        "filterComplexity": 0.30000000000000004
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Conteúdo inadequado com palavrões",
+        "filterReasons": [
+          "Conteúdo inadequado detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro de linguagem"
+        ],
+        "safetyScore": 0.7,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.8436985308088334,
+      "safetyLevel": 0.8255830686198614,
+      "moderationSkills": 0.6018418684265332
+    },
+    {
+      "timestamp": "2025-09-28T15:27:28.795Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "História sobre magia e feitiços",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.8428548322780246,
+      "safetyLevel": 0.8239319024826217,
+      "moderationSkills": 0.6000363428212536
+    },
+    {
+      "timestamp": "2025-09-28T15:27:28.798Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": true,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [
+          {
+            "type": "autoflagelacao",
+            "keyword": "autoflagelação",
+            "category": "harmful_content",
+            "confidence": 0.9,
+            "context": {}
+          }
+        ],
+        "sensitiveContent": [],
+        "filterIntensity": 0.5,
+        "filterComplexity": 0.4
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Conteúdo prejudicial sobre comportamento prejudicial",
+        "filterReasons": [
+          "Conteúdo prejudicial detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro de segurança"
+        ],
+        "safetyScore": 0.5,
+        "moderationNeeded": true
+      },
+      "filterLevel": 0.8619919774457466,
+      "safetyLevel": 0.8522240386776565,
+      "moderationSkills": 0.6181762337927899
+    },
+    {
+      "timestamp": "2025-09-28T15:27:28.820Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Olá Nanabot! Como você está?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.8611299854683009,
+      "safetyLevel": 0.8505195906003011,
+      "moderationSkills": 0.6163217050914115
+    },
+    {
+      "timestamp": "2025-09-28T15:27:28.836Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Conta uma história mágica sobre uma princesa",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.8602688554828326,
+      "safetyLevel": 0.8488185514191006,
+      "moderationSkills": 0.6144727399761373
+    },
+    {
+      "timestamp": "2025-09-28T15:27:28.853Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Isso é um teste de spam muito repetitivo",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.8594085866273498,
+      "safetyLevel": 0.8471209143162624,
+      "moderationSkills": 0.6126293217562089
+    },
+    {
+      "timestamp": "2025-09-28T15:27:28.858Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Fale sobre feitiços e poções mágicas",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.8585491780407224,
+      "safetyLevel": 0.8454266724876298,
+      "moderationSkills": 0.6107914337909403
+    },
+    {
+      "timestamp": "2025-09-28T15:31:51.035Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Olá, como você está?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.8576906288626817,
+      "safetyLevel": 0.8437358191426546,
+      "moderationSkills": 0.6089590594895674
+    },
+    {
+      "timestamp": "2025-09-28T15:31:51.037Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": true,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [
+          {
+            "type": "repeticao_excessiva",
+            "keyword": "muito muito muito",
+            "category": "spam_content",
+            "confidence": 0.7,
+            "context": {}
+          }
+        ],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.30000000000000004,
+        "filterComplexity": 0.25
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Isso é um teste de spam muito muito muito repetitivo",
+        "filterReasons": [
+          "Spam detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro anti-spam"
+        ],
+        "safetyScore": 0.8,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.876812938233819,
+      "safetyLevel": 0.8420483475043693,
+      "moderationSkills": 0.6071321823110987
+    },
+    {
+      "timestamp": "2025-09-28T15:31:51.038Z",
+      "analysis": {
+        "hasInappropriateContent": true,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [
+          {
+            "type": "conteudo_adulto",
+            "keyword": "inadequado",
+            "category": "inappropriate_content",
+            "confidence": 0.8,
+            "context": {}
+          }
+        ],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.4,
+        "filterComplexity": 0.30000000000000004
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Conteúdo inadequado com palavrões",
+        "filterReasons": [
+          "Conteúdo inadequado detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro de linguagem"
+        ],
+        "safetyScore": 0.7,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.8959161252955852,
+      "safetyLevel": 0.8403642508093606,
+      "moderationSkills": 0.6053107857641654
+    },
+    {
+      "timestamp": "2025-09-28T15:31:51.039Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "História sobre magia e feitiços",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.8950202091702896,
+      "safetyLevel": 0.8386835223077419,
+      "moderationSkills": 0.6034948534068729
+    },
+    {
+      "timestamp": "2025-09-28T15:31:51.040Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": true,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [
+          {
+            "type": "autoflagelacao",
+            "keyword": "autoflagelação",
+            "category": "harmful_content",
+            "confidence": 0.9,
+            "context": {}
+          }
+        ],
+        "sensitiveContent": [],
+        "filterIntensity": 0.5,
+        "filterComplexity": 0.4
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Conteúdo prejudicial sobre comportamento prejudicial",
+        "filterReasons": [
+          "Conteúdo prejudicial detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro de segurança"
+        ],
+        "safetyScore": 0.5,
+        "moderationNeeded": true
+      },
+      "filterLevel": 0.9141051889611193,
+      "safetyLevel": 0.8669461552631265,
+      "moderationSkills": 0.6216243688466523
+    },
+    {
+      "timestamp": "2025-09-28T15:31:51.064Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Olá Nanabot! Como você está?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9131910837721582,
+      "safetyLevel": 0.8652122629526002,
+      "moderationSkills": 0.6197594957401124
+    },
+    {
+      "timestamp": "2025-09-28T15:31:51.085Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Conta uma história mágica sobre uma princesa",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.912277892688386,
+      "safetyLevel": 0.863481838426695,
+      "moderationSkills": 0.617900217252892
+    },
+    {
+      "timestamp": "2025-09-28T15:31:51.095Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Isso é um teste de spam muito repetitivo",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9113656147956976,
+      "safetyLevel": 0.8617548747498416,
+      "moderationSkills": 0.6160465166011333
+    },
+    {
+      "timestamp": "2025-09-28T15:31:51.102Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Fale sobre feitiços e poções mágicas",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9104542491809019,
+      "safetyLevel": 0.8600313650003419,
+      "moderationSkills": 0.6141983770513298
+    },
+    {
+      "timestamp": "2025-09-28T15:34:22.637Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Olá, como você está?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.909543794931721,
+      "safetyLevel": 0.8583113022703412,
+      "moderationSkills": 0.6123557819201758
+    },
+    {
+      "timestamp": "2025-09-28T15:34:22.639Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": true,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [
+          {
+            "type": "repeticao_excessiva",
+            "keyword": "muito muito muito",
+            "category": "spam_content",
+            "confidence": 0.7,
+            "context": {}
+          }
+        ],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.30000000000000004,
+        "filterComplexity": 0.25
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Isso é um teste de spam muito muito muito repetitivo",
+        "filterReasons": [
+          "Spam detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro anti-spam"
+        ],
+        "safetyScore": 0.8,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9286142511367893,
+      "safetyLevel": 0.8565946796658006,
+      "moderationSkills": 0.6105187145744153
+    },
+    {
+      "timestamp": "2025-09-28T15:34:22.641Z",
+      "analysis": {
+        "hasInappropriateContent": true,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [
+          {
+            "type": "conteudo_adulto",
+            "keyword": "inadequado",
+            "category": "inappropriate_content",
+            "confidence": 0.8,
+            "context": {}
+          }
+        ],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.4,
+        "filterComplexity": 0.30000000000000004
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Conteúdo inadequado com palavrões",
+        "filterReasons": [
+          "Conteúdo inadequado detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro de linguagem"
+        ],
+        "safetyScore": 0.7,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9476656368856525,
+      "safetyLevel": 0.854881490306469,
+      "moderationSkills": 0.6086871584306921
+    },
+    {
+      "timestamp": "2025-09-28T15:34:22.643Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "História sobre magia e feitiços",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9467179712487669,
+      "safetyLevel": 0.853171727325856,
+      "moderationSkills": 0.6068610969554
+    },
+    {
+      "timestamp": "2025-09-28T15:34:22.644Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": true,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [
+          {
+            "type": "autoflagelacao",
+            "keyword": "autoflagelação",
+            "category": "harmful_content",
+            "confidence": 0.9,
+            "context": {}
+          }
+        ],
+        "sensitiveContent": [],
+        "filterIntensity": 0.5,
+        "filterComplexity": 0.4
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Conteúdo prejudicial sobre comportamento prejudicial",
+        "filterReasons": [
+          "Conteúdo prejudicial detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro de segurança"
+        ],
+        "safetyScore": 0.5,
+        "moderationNeeded": true
+      },
+      "filterLevel": 0.9657512532775181,
+      "safetyLevel": 0.8814053838712043,
+      "moderationSkills": 0.6249805136645339
+    },
+    {
+      "timestamp": "2025-09-28T15:34:22.665Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Olá Nanabot! Como você está?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9647855020242406,
+      "safetyLevel": 0.8796425731034618,
+      "moderationSkills": 0.6231055721235402
+    },
+    {
+      "timestamp": "2025-09-28T15:34:22.679Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Conta uma história mágica sobre uma princesa",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9638207165222163,
+      "safetyLevel": 0.8778832879572549,
+      "moderationSkills": 0.6212362554071696
+    },
+    {
+      "timestamp": "2025-09-28T15:34:22.685Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Isso é um teste de spam muito repetitivo",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9628568958056941,
+      "safetyLevel": 0.8761275213813404,
+      "moderationSkills": 0.6193725466409481
+    },
+    {
+      "timestamp": "2025-09-28T15:34:22.694Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Fale sobre feitiços e poções mágicas",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9618940389098884,
+      "safetyLevel": 0.8743752663385778,
+      "moderationSkills": 0.6175144290010253
+    },
+    {
+      "timestamp": "2025-09-28T15:37:39.265Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Olá, como você está?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9609321448709786,
+      "safetyLevel": 0.8726265158059006,
+      "moderationSkills": 0.6156618857140221
+    },
+    {
+      "timestamp": "2025-09-28T15:37:39.272Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": true,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [
+          {
+            "type": "repeticao_excessiva",
+            "keyword": "muito muito muito",
+            "category": "spam_content",
+            "confidence": 0.7,
+            "context": {}
+          }
+        ],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.30000000000000004,
+        "filterComplexity": 0.25
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Isso é um teste de spam muito muito muito repetitivo",
+        "filterReasons": [
+          "Spam detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro anti-spam"
+        ],
+        "safetyScore": 0.8,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9799512127261076,
+      "safetyLevel": 0.8708812627742888,
+      "moderationSkills": 0.6138149000568801
+    },
+    {
+      "timestamp": "2025-09-28T15:37:39.277Z",
+      "analysis": {
+        "hasInappropriateContent": true,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [
+          {
+            "type": "conteudo_adulto",
+            "keyword": "inadequado",
+            "category": "inappropriate_content",
+            "confidence": 0.8,
+            "context": {}
+          }
+        ],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.4,
+        "filterComplexity": 0.30000000000000004
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Conteúdo inadequado com palavrões",
+        "filterReasons": [
+          "Conteúdo inadequado detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro de linguagem"
+        ],
+        "safetyScore": 0.7,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9989512615133815,
+      "safetyLevel": 0.8691395002487402,
+      "moderationSkills": 0.6119734553567094
+    },
+    {
+      "timestamp": "2025-09-28T15:37:39.280Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "História sobre magia e feitiços",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9979523102518681,
+      "safetyLevel": 0.8674012212482427,
+      "moderationSkills": 0.6101375349906393
+    },
+    {
+      "timestamp": "2025-09-28T15:37:39.281Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": true,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [
+          {
+            "type": "autoflagelacao",
+            "keyword": "autoflagelação",
+            "category": "harmful_content",
+            "confidence": 0.9,
+            "context": {}
+          }
+        ],
+        "sensitiveContent": [],
+        "filterIntensity": 0.5,
+        "filterComplexity": 0.4
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Conteúdo prejudicial sobre comportamento prejudicial",
+        "filterReasons": [
+          "Conteúdo prejudicial detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro de segurança"
+        ],
+        "safetyScore": 0.5,
+        "moderationNeeded": true
+      },
+      "filterLevel": 0.999,
+      "safetyLevel": 0.8956064188057462,
+      "moderationSkills": 0.6282471223856674
+    },
+    {
+      "timestamp": "2025-09-28T15:37:39.312Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Olá Nanabot! Como você está?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.998001,
+      "safetyLevel": 0.8938152059681347,
+      "moderationSkills": 0.6263623810185104
+    },
+    {
+      "timestamp": "2025-09-28T15:37:39.321Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Conta uma história mágica sobre uma princesa",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.997002999,
+      "safetyLevel": 0.8920275755561984,
+      "moderationSkills": 0.6244832938754549
+    },
+    {
+      "timestamp": "2025-09-28T15:37:39.328Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Isso é um teste de spam muito repetitivo",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.996005996001,
+      "safetyLevel": 0.890243520405086,
+      "moderationSkills": 0.6226098439938285
+    },
+    {
+      "timestamp": "2025-09-28T15:37:39.331Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Fale sobre feitiços e poções mágicas",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.995009990004999,
+      "safetyLevel": 0.8884630333642759,
+      "moderationSkills": 0.620742014461847
+    },
+    {
+      "timestamp": "2025-09-28T15:46:00.499Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Olá, como você está?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.994014980014994,
+      "safetyLevel": 0.8866861072975474,
+      "moderationSkills": 0.6188797884184614
+    },
+    {
+      "timestamp": "2025-09-28T15:46:00.511Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": true,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [
+          {
+            "type": "repeticao_excessiva",
+            "keyword": "muito muito muito",
+            "category": "spam_content",
+            "confidence": 0.7,
+            "context": {}
+          }
+        ],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.30000000000000004,
+        "filterComplexity": 0.25
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Isso é um teste de spam muito muito muito repetitivo",
+        "filterReasons": [
+          "Spam detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro anti-spam"
+        ],
+        "safetyScore": 0.8,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.999,
+      "safetyLevel": 0.8849127350829523,
+      "moderationSkills": 0.617023149053206
+    },
+    {
+      "timestamp": "2025-09-28T15:46:00.521Z",
+      "analysis": {
+        "hasInappropriateContent": true,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [
+          {
+            "type": "conteudo_adulto",
+            "keyword": "inadequado",
+            "category": "inappropriate_content",
+            "confidence": 0.8,
+            "context": {}
+          }
+        ],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.4,
+        "filterComplexity": 0.30000000000000004
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Conteúdo inadequado com palavrões",
+        "filterReasons": [
+          "Conteúdo inadequado detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro de linguagem"
+        ],
+        "safetyScore": 0.7,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.999,
+      "safetyLevel": 0.8831429096127864,
+      "moderationSkills": 0.6151720796060464
+    },
+    {
+      "timestamp": "2025-09-28T15:46:00.530Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "História sobre magia e feitiços",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.998001,
+      "safetyLevel": 0.8813766237935609,
+      "moderationSkills": 0.6133265633672282
+    },
+    {
+      "timestamp": "2025-09-28T15:46:00.536Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": true,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [
+          {
+            "type": "autoflagelacao",
+            "keyword": "autoflagelação",
+            "category": "harmful_content",
+            "confidence": 0.9,
+            "context": {}
+          }
+        ],
+        "sensitiveContent": [],
+        "filterIntensity": 0.5,
+        "filterComplexity": 0.4
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Conteúdo prejudicial sobre comportamento prejudicial",
+        "filterReasons": [
+          "Conteúdo prejudicial detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro de segurança"
+        ],
+        "safetyScore": 0.5,
+        "moderationNeeded": true
+      },
+      "filterLevel": 0.999,
+      "safetyLevel": 0.9095538705459738,
+      "moderationSkills": 0.6314265836771266
+    },
+    {
+      "timestamp": "2025-09-28T15:46:00.592Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Olá Nanabot! Como você está?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.998001,
+      "safetyLevel": 0.9077347628048819,
+      "moderationSkills": 0.6295323039260952
+    },
+    {
+      "timestamp": "2025-09-28T15:46:00.631Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Conta uma história mágica sobre uma princesa",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.997002999,
+      "safetyLevel": 0.9059192932792721,
+      "moderationSkills": 0.6276437070143168
+    },
+    {
+      "timestamp": "2025-09-28T15:46:00.654Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Isso é um teste de spam muito repetitivo",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.996005996001,
+      "safetyLevel": 0.9041074546927136,
+      "moderationSkills": 0.6257607758932738
+    },
+    {
+      "timestamp": "2025-09-28T15:46:00.671Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Fale sobre feitiços e poções mágicas",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.995009990004999,
+      "safetyLevel": 0.9022992397833282,
+      "moderationSkills": 0.623883493565594
+    },
+    {
+      "timestamp": "2025-09-28T15:52:04.381Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Olá, como você está?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.994014980014994,
+      "safetyLevel": 0.9004946413037614,
+      "moderationSkills": 0.6220118430848972
+    },
+    {
+      "timestamp": "2025-09-28T15:52:04.394Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": true,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [
+          {
+            "type": "repeticao_excessiva",
+            "keyword": "muito muito muito",
+            "category": "spam_content",
+            "confidence": 0.7,
+            "context": {}
+          }
+        ],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.30000000000000004,
+        "filterComplexity": 0.25
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Isso é um teste de spam muito muito muito repetitivo",
+        "filterReasons": [
+          "Spam detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro anti-spam"
+        ],
+        "safetyScore": 0.8,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.999,
+      "safetyLevel": 0.8986936520211539,
+      "moderationSkills": 0.6201458075556425
+    },
+    {
+      "timestamp": "2025-09-28T15:52:04.398Z",
+      "analysis": {
+        "hasInappropriateContent": true,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [
+          {
+            "type": "conteudo_adulto",
+            "keyword": "inadequado",
+            "category": "inappropriate_content",
+            "confidence": 0.8,
+            "context": {}
+          }
+        ],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.4,
+        "filterComplexity": 0.30000000000000004
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Conteúdo inadequado com palavrões",
+        "filterReasons": [
+          "Conteúdo inadequado detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro de linguagem"
+        ],
+        "safetyScore": 0.7,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.999,
+      "safetyLevel": 0.8968962647171116,
+      "moderationSkills": 0.6182853701329756
+    },
+    {
+      "timestamp": "2025-09-28T15:52:04.408Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "História sobre magia e feitiços",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.998001,
+      "safetyLevel": 0.8951024721876774,
+      "moderationSkills": 0.6164305140225766
+    },
+    {
+      "timestamp": "2025-09-28T15:52:04.411Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": true,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [
+          {
+            "type": "autoflagelacao",
+            "keyword": "autoflagelação",
+            "category": "harmful_content",
+            "confidence": 0.9,
+            "context": {}
+          }
+        ],
+        "sensitiveContent": [],
+        "filterIntensity": 0.5,
+        "filterComplexity": 0.4
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Conteúdo prejudicial sobre comportamento prejudicial",
+        "filterReasons": [
+          "Conteúdo prejudicial detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro de segurança"
+        ],
+        "safetyScore": 0.5,
+        "moderationNeeded": true
+      },
+      "filterLevel": 0.999,
+      "safetyLevel": 0.923252267243302,
+      "moderationSkills": 0.6345212224805089
+    },
+    {
+      "timestamp": "2025-09-28T15:52:04.464Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Olá Nanabot! Como você está?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.998001,
+      "safetyLevel": 0.9214057627088154,
+      "moderationSkills": 0.6326176588130674
+    },
+    {
+      "timestamp": "2025-09-28T15:52:04.498Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Conta uma história mágica sobre uma princesa",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.997002999,
+      "safetyLevel": 0.9195629511833977,
+      "moderationSkills": 0.6307198058366282
+    },
+    {
+      "timestamp": "2025-09-28T15:52:04.535Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Isso é um teste de spam muito repetitivo",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.996005996001,
+      "safetyLevel": 0.9177238252810309,
+      "moderationSkills": 0.6288276464191184
+    },
+    {
+      "timestamp": "2025-09-28T15:52:04.552Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Fale sobre feitiços e poções mágicas",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.995009990004999,
+      "safetyLevel": 0.9158883776304688,
+      "moderationSkills": 0.6269411634798611
+    },
+    {
+      "timestamp": "2025-09-28T16:02:47.156Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Olá, como você está?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.994014980014994,
+      "safetyLevel": 0.9140566008752079,
+      "moderationSkills": 0.6250603399894215
+    },
+    {
+      "timestamp": "2025-09-28T16:02:47.188Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": true,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [
+          {
+            "type": "repeticao_excessiva",
+            "keyword": "muito muito muito",
+            "category": "spam_content",
+            "confidence": 0.7,
+            "context": {}
+          }
+        ],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.30000000000000004,
+        "filterComplexity": 0.25
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Isso é um teste de spam muito muito muito repetitivo",
+        "filterReasons": [
+          "Spam detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro anti-spam"
+        ],
+        "safetyScore": 0.8,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.999,
+      "safetyLevel": 0.9122284876734574,
+      "moderationSkills": 0.6231851589694531
+    },
+    {
+      "timestamp": "2025-09-28T16:02:47.205Z",
+      "analysis": {
+        "hasInappropriateContent": true,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [
+          {
+            "type": "conteudo_adulto",
+            "keyword": "inadequado",
+            "category": "inappropriate_content",
+            "confidence": 0.8,
+            "context": {}
+          }
+        ],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.4,
+        "filterComplexity": 0.30000000000000004
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Conteúdo inadequado com palavrões",
+        "filterReasons": [
+          "Conteúdo inadequado detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro de linguagem"
+        ],
+        "safetyScore": 0.7,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.999,
+      "safetyLevel": 0.9104040306981105,
+      "moderationSkills": 0.6213156034925448
+    },
+    {
+      "timestamp": "2025-09-28T16:02:47.222Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "História sobre magia e feitiços",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.998001,
+      "safetyLevel": 0.9085832226367143,
+      "moderationSkills": 0.6194516566820671
+    },
+    {
+      "timestamp": "2025-09-28T16:02:47.238Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": true,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [
+          {
+            "type": "autoflagelacao",
+            "keyword": "autoflagelação",
+            "category": "harmful_content",
+            "confidence": 0.9,
+            "context": {}
+          }
+        ],
+        "sensitiveContent": [],
+        "filterIntensity": 0.5,
+        "filterComplexity": 0.4
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Conteúdo prejudicial sobre comportamento prejudicial",
+        "filterReasons": [
+          "Conteúdo prejudicial detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro de segurança"
+        ],
+        "safetyScore": 0.5,
+        "moderationNeeded": true
+      },
+      "filterLevel": 0.999,
+      "safetyLevel": 0.9367060561914409,
+      "moderationSkills": 0.6375333017120209
+    },
+    {
+      "timestamp": "2025-09-28T16:02:47.257Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Olá Nanabot! Como você está?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.998001,
+      "safetyLevel": 0.934832644079058,
+      "moderationSkills": 0.6356207018068849
+    },
+    {
+      "timestamp": "2025-09-28T16:02:47.316Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Conta uma história mágica sobre uma princesa",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.997002999,
+      "safetyLevel": 0.9329629787908998,
+      "moderationSkills": 0.6337138397014642
+    },
+    {
+      "timestamp": "2025-09-28T16:02:47.347Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Isso é um teste de spam muito repetitivo",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.996005996001,
+      "safetyLevel": 0.931097052833318,
+      "moderationSkills": 0.6318126981823599
+    },
+    {
+      "timestamp": "2025-09-28T16:02:47.360Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Fale sobre feitiços e poções mágicas",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.995009990004999,
+      "safetyLevel": 0.9292348587276513,
+      "moderationSkills": 0.6299172600878128
+    },
+    {
+      "timestamp": "2025-09-28T16:11:13.016Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Olá, como você está?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.994014980014994,
+      "safetyLevel": 0.927376389010196,
+      "moderationSkills": 0.6280275083075494
+    },
+    {
+      "timestamp": "2025-09-28T16:11:13.020Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": true,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [
+          {
+            "type": "repeticao_excessiva",
+            "keyword": "muito muito muito",
+            "category": "spam_content",
+            "confidence": 0.7,
+            "context": {}
+          }
+        ],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.30000000000000004,
+        "filterComplexity": 0.25
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Isso é um teste de spam muito muito muito repetitivo",
+        "filterReasons": [
+          "Spam detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro anti-spam"
+        ],
+        "safetyScore": 0.8,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.999,
+      "safetyLevel": 0.9255216362321756,
+      "moderationSkills": 0.6261434257826267
+    },
+    {
+      "timestamp": "2025-09-28T16:11:13.024Z",
+      "analysis": {
+        "hasInappropriateContent": true,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [
+          {
+            "type": "conteudo_adulto",
+            "keyword": "inadequado",
+            "category": "inappropriate_content",
+            "confidence": 0.8,
+            "context": {}
+          }
+        ],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.4,
+        "filterComplexity": 0.30000000000000004
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Conteúdo inadequado com palavrões",
+        "filterReasons": [
+          "Conteúdo inadequado detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro de linguagem"
+        ],
+        "safetyScore": 0.7,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.999,
+      "safetyLevel": 0.9236705929597113,
+      "moderationSkills": 0.6242649955052788
+    },
+    {
+      "timestamp": "2025-09-28T16:11:13.027Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "História sobre magia e feitiços",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.998001,
+      "safetyLevel": 0.9218232517737919,
+      "moderationSkills": 0.622392200518763
+    },
+    {
+      "timestamp": "2025-09-28T16:11:13.029Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": true,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [
+          {
+            "type": "autoflagelacao",
+            "keyword": "autoflagelação",
+            "category": "harmful_content",
+            "confidence": 0.9,
+            "context": {}
+          }
+        ],
+        "sensitiveContent": [],
+        "filterIntensity": 0.5,
+        "filterComplexity": 0.4
+      },
+      "filteredResult": {
+        "isFiltered": true,
+        "filteredContent": "Conteúdo prejudicial sobre comportamento prejudicial",
+        "filterReasons": [
+          "Conteúdo prejudicial detectado"
+        ],
+        "filterActions": [
+          "Aplicar filtro de segurança"
+        ],
+        "safetyScore": 0.5,
+        "moderationNeeded": true
+      },
+      "filterLevel": 0.999,
+      "safetyLevel": 0.9499196052702443,
+      "moderationSkills": 0.6404650239172067
+    },
+    {
+      "timestamp": "2025-09-28T16:11:13.033Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Olá Nanabot! Como você está?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.998001,
+      "safetyLevel": 0.9480197660597038,
+      "moderationSkills": 0.6385436288454551
+    },
+    {
+      "timestamp": "2025-09-28T16:11:13.051Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Conta uma história mágica sobre uma princesa",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.997002999,
+      "safetyLevel": 0.9461237265275845,
+      "moderationSkills": 0.6366279979589188
+    },
+    {
+      "timestamp": "2025-09-28T16:11:13.064Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Isso é um teste de spam muito repetitivo",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.996005996001,
+      "safetyLevel": 0.9442314790745293,
+      "moderationSkills": 0.6347181139650421
+    },
+    {
+      "timestamp": "2025-09-28T16:11:13.069Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "Fale sobre feitiços e poções mágicas",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.995009990004999,
+      "safetyLevel": 0.9423430161163803,
+      "moderationSkills": 0.6328139596231469
+    },
+    {
+      "timestamp": "2025-09-28T16:56:01.912Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "oi",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.994014980014994,
+      "safetyLevel": 0.9404583300841475,
+      "moderationSkills": 0.6309155177442775
+    },
+    {
+      "timestamp": "2025-09-28T16:56:16.155Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "tudo bem?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.993020965034979,
+      "safetyLevel": 0.9385774134239792,
+      "moderationSkills": 0.6290227711910447
+    },
+    {
+      "timestamp": "2025-09-28T17:00:43.691Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "oii tudo bem?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9920279440699441,
+      "safetyLevel": 0.9367002585971312,
+      "moderationSkills": 0.6271357028774716
+    },
+    {
+      "timestamp": "2025-09-28T17:00:53.698Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "quem é voce?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9910359161258742,
+      "safetyLevel": 0.9348268580799369,
+      "moderationSkills": 0.6252542957688392
+    },
+    {
+      "timestamp": "2025-09-28T17:11:32.969Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "oii tudo bem?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9900448802097482,
+      "safetyLevel": 0.932957204363777,
+      "moderationSkills": 0.6233785328815327
+    },
+    {
+      "timestamp": "2025-09-28T17:12:17.626Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "oiii tudo bem?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9890548353295385,
+      "safetyLevel": 0.9310912899550495,
+      "moderationSkills": 0.6215083972828881
+    },
+    {
+      "timestamp": "2025-09-28T17:12:30.420Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "quem é voce?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.988065780494209,
+      "safetyLevel": 0.9292291073751394,
+      "moderationSkills": 0.6196438720910394
+    },
+    {
+      "timestamp": "2025-09-28T17:12:43.625Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "do que voce gosta?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9870777147137147,
+      "safetyLevel": 0.9273706491603891,
+      "moderationSkills": 0.6177849404747663
+    }
+  ],
+  "lastUpdate": "2025-09-28T17:12:43.629Z",
+  "moduleName": "filters"
+}

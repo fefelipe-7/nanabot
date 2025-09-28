@@ -1,8 +1,7 @@
 // src/brain/core.js - Núcleo do Cérebro da Nanabot
 // Orquestra todos os sistemas cerebrais e coordena o processamento
 
-import fs from 'fs';
-import path from 'path';
+import { loadState, saveState } from '../utils/stateManager.js';
 
 class BrainCore {
   constructor() {
@@ -14,16 +13,7 @@ class BrainCore {
 
   // Carrega o estado atual do cérebro
   loadBrainState() {
-    try {
-      const statePath = path.resolve(__dirname, '../../data/brainState.json');
-      if (fs.existsSync(statePath)) {
-        const data = fs.readFileSync(statePath, 'utf-8');
-        return JSON.parse(data);
-      }
-    } catch (error) {
-      console.error('Erro ao carregar estado do cérebro:', error);
-    }
-    return this.getDefaultState();
+    return loadState('core', this.getDefaultState());
   }
 
   getDefaultState() {
@@ -49,19 +39,23 @@ class BrainCore {
       comfort: 0.7,
       safety: 0.8,
       love: 0.6,
-      stimulation: 0.5
+      stimulation: 0.5,
+      // Novos estados dos módulos fundamentais
+      abstractionLevel: 0.4,
+      playfulness: 0.7,
+      crisisLevel: 0.0,
+      dreamActivity: 0.3,
+      regulationSkills: 0.5,
+      motivationLevel: 0.6,
+      socialLearningRate: 0.6,
+      memoryDecayRate: 0.001
     };
   }
 
   // Salva o estado atual do cérebro
   saveBrainState() {
-    try {
-      this.state.lastUpdate = new Date().toISOString();
-      const statePath = path.resolve(__dirname, '../../data/brainState.json');
-      fs.writeFileSync(statePath, JSON.stringify(this.state, null, 2));
-    } catch (error) {
-      console.error('Erro ao salvar estado do cérebro:', error);
-    }
+    this.state.lastUpdate = new Date().toISOString();
+    saveState('core', this.state);
   }
 
   // Processa uma entrada (mensagem, evento, etc.)

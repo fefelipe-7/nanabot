@@ -1,0 +1,155 @@
+{
+  "learningRate": 0.07999999999999999,
+  "memoryConsolidation": 0.8,
+  "adaptationSpeed": 0.5,
+  "curiosityLevel": 0.7,
+  "experienceBuffer": [
+    {
+      "input": "oii tudo bem?",
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7"
+      },
+      "timestamp": "2025-09-28T17:11:33.007Z",
+      "learningType": "general"
+    },
+    {
+      "input": "oiii tudo bem?",
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7"
+      },
+      "timestamp": "2025-09-28T17:12:17.643Z",
+      "learningType": "general"
+    },
+    {
+      "input": "quem é voce?",
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7"
+      },
+      "timestamp": "2025-09-28T17:12:30.429Z",
+      "learningType": "general"
+    },
+    {
+      "input": "do que voce gosta?",
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7"
+      },
+      "timestamp": "2025-09-28T17:12:43.651Z",
+      "learningType": "general"
+    }
+  ],
+  "learningHistory": [
+    {
+      "timestamp": "2025-09-28T17:11:33.007Z",
+      "experience": {
+        "input": "oii tudo bem?",
+        "response": "",
+        "context": {
+          "role": "papai",
+          "username": "fefelipe7"
+        }
+      },
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7"
+      },
+      "learningType": "general",
+      "success": true,
+      "insights": [
+        {
+          "type": "curiosity",
+          "value": "high_novelty",
+          "confidence": 0.8,
+          "strategy": "explore_more"
+        }
+      ],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T17:12:17.643Z",
+      "experience": {
+        "input": "oiii tudo bem?",
+        "response": "",
+        "context": {
+          "role": "papai",
+          "username": "fefelipe7"
+        }
+      },
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7"
+      },
+      "learningType": "general",
+      "success": true,
+      "insights": [],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T17:12:30.429Z",
+      "experience": {
+        "input": "quem é voce?",
+        "response": "",
+        "context": {
+          "role": "papai",
+          "username": "fefelipe7"
+        }
+      },
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7"
+      },
+      "learningType": "general",
+      "success": true,
+      "insights": [
+        {
+          "type": "curiosity",
+          "value": "high_novelty",
+          "confidence": 0.8,
+          "strategy": "explore_more"
+        }
+      ],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T17:12:43.651Z",
+      "experience": {
+        "input": "do que voce gosta?",
+        "response": "",
+        "context": {
+          "role": "papai",
+          "username": "fefelipe7"
+        }
+      },
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7"
+      },
+      "learningType": "general",
+      "success": true,
+      "insights": [
+        {
+          "type": "curiosity",
+          "value": "high_novelty",
+          "confidence": 0.8,
+          "strategy": "explore_more"
+        }
+      ],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    }
+  ],
+  "skills": [],
+  "concepts": [],
+  "patterns": [],
+  "lastUpdate": "2025-09-28T17:12:43.651Z"
+}

@@ -1,0 +1,114 @@
+{
+  "diary": {
+    "date": "2025-09-28",
+    "timestamp": "2025-09-28T16:11:13.005Z",
+    "summary": Hoje foi um dia especial! Criei 0 memórias, senti 0 emoções diferentes, aprendi 0 coisas novas, criei 0 histórias, tive 10 interações carinhosas e alcancei 0 marcos de crescimento. Foi um dia cheio de descobertas e aprendizados!,
+    "memories": [],
+    "emotions": [],
+    "learnings": [],
+    "stories": [],
+    "interactions": [
+  {
+    "id": 1,
+    "user_id": "test_user",
+    "user_role": "test_role",
+    "input_text": "Teste de integração do banco de dados",
+    "response_text": "Resposta de teste",
+    "emotional_intensity": 0.7,
+    "processing_time": 100,
+    "created_at": "2025-09-28 15:19:51"
+  },
+  {
+    "id": 2,
+    "user_id": "test_user",
+    "user_role": "test_role",
+    "input_text": "Teste de integração do banco de dados",
+    "response_text": "Resposta de teste",
+    "emotional_intensity": 0.7,
+    "processing_time": 100,
+    "created_at": "2025-09-28 15:24:52"
+  },
+  {
+    "id": 3,
+    "user_id": "test_user",
+    "user_role": "test_role",
+    "input_text": "Teste de integração do banco de dados",
+    "response_text": "Resposta de teste",
+    "emotional_intensity": 0.7,
+    "processing_time": 100,
+    "created_at": "2025-09-28 15:27:28"
+  },
+  {
+    "id": 4,
+    "user_id": "test_user",
+    "user_role": "test_role",
+    "input_text": "Teste de integração do banco de dados",
+    "response_text": "Resposta de teste",
+    "emotional_intensity": 0.7,
+    "processing_time": 100,
+    "created_at": "2025-09-28 15:31:50"
+  },
+  {
+    "id": 5,
+    "user_id": "test_user",
+    "user_role": "test_role",
+    "input_text": "Teste de integração do banco de dados",
+    "response_text": "Resposta de teste",
+    "emotional_intensity": 0.7,
+    "processing_time": 100,
+    "created_at": "2025-09-28 15:34:22"
+  },
+  {
+    "id": 6,
+    "user_id": "test_user",
+    "user_role": "test_role",
+    "input_text": "Teste de integração do banco de dados",
+    "response_text": "Resposta de teste",
+    "emotional_intensity": 0.7,
+    "processing_time": 100,
+    "created_at": "2025-09-28 15:37:39"
+  },
+  {
+    "id": 7,
+    "user_id": "test_user",
+    "user_role": "test_role",
+    "input_text": "Teste de integração do banco de dados",
+    "response_text": "Resposta de teste",
+    "emotional_intensity": 0.7,
+    "processing_time": 100,
+    "created_at": "2025-09-28 15:46:00"
+  },
+  {
+    "id": 8,
+    "user_id": "test_user",
+    "user_role": "test_role",
+    "input_text": "Teste de integração do banco de dados",
+    "response_text": "Resposta de teste",
+    "emotional_intensity": 0.7,
+    "processing_time": 100,
+    "created_at": "2025-09-28 15:52:04"
+  },
+  {
+    "id": 9,
+    "user_id": "test_user",
+    "user_role": "test_role",
+    "input_text": "Teste de integração do banco de dados",
+    "response_text": "Resposta de teste",
+    "emotional_intensity": 0.7,
+    "processing_time": 100,
+    "created_at": "2025-09-28 16:02:46"
+  },
+  {
+    "id": 10,
+    "user_id": "test_user",
+    "user_role": "test_role",
+    "input_text": "Teste de integração do banco de dados",
+    "response_text": "Resposta de teste",
+    "emotional_intensity": 0.7,
+    "processing_time": 100,
+    "created_at": "2025-09-28 16:11:12"
+  }
+],
+    "growth": []
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "decayRate": 0.001,
+  "retentionThreshold": 0.1,
+  "importanceWeight": 0.8,
+  "emotionalWeight": 0.6,
+  "accessWeight": 0.4,
+  "decayHistory": [],
+  "lastDecayCheck": "2025-09-28T15:19:51.807Z",
+  "lastUpdate": "2025-09-28T15:19:51.807Z",
+  "moduleName": "memoryDecay"
+}

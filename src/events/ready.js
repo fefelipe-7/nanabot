@@ -1,6 +1,5 @@
 // src/events/ready.js
 import brainModule from '../core/brain.js';
-import modelTester from '../utils/modelTester.js';
 const { nanabotBrain } = brainModule;
 
 export default {
@@ -11,10 +10,10 @@ export default {
     const mentalAge = nanabotBrain.age.idadeMental.toFixed(1);
     console.log(`👧 ${botName} está online! Idade mental: ${mentalAge} anos.`);
     
-    // Testa modelos de API em background
-    setTimeout(async () => {
-      console.log('[INIT] 🧪 Testando modelos de API...');
-      await modelTester.testAllModels();
-    }, 5000); // Aguarda 5 segundos após inicialização
+    // Teste automático desabilitado para evitar rate limit
+    // Use n!teste-modelos-gradual para testar modelos manualmente
+    console.log('[INIT] ⚠️ Teste automático de modelos desabilitado para evitar rate limit');
+    console.log('[INIT] 💡 Use n!teste-modelos-gradual para testar modelos manualmente');
+    console.log('[INIT] 🎯 Bot pronto para uso com sistema de rate limit otimizado');
   }
 };

@@ -60,11 +60,26 @@ export default {
     status += `📊 **Estatísticas Gerais:**\n`;
     status += `• Total de Modelos: ${stats.totalModels}\n`;
     status += `• Modelos Ativos: ${stats.activeModels}\n`;
+    status += `• Modelos Confirmados: ${stats.confirmedModels}\n`;
+    status += `• Modelos em Teste: ${stats.testingModels}\n`;
     status += `• Requisições Totais: ${stats.totalRequests}\n`;
     status += `• Taxa de Sucesso: ${stats.successRate}\n`;
     status += `• Limite Diário Total: ${stats.totalDailyLimit}\n`;
     status += `• Requisições Usadas: ${stats.totalUsed}\n`;
     status += `• Requisições Restantes: ${stats.remainingRequests}\n\n`;
+    
+    // Status de rate limit
+    const inactiveModels = stats.models.filter(m => !m.isActive);
+    if (inactiveModels.length > 0) {
+      status += `🚫 **Modelos Inativos (${inactiveModels.length}):**\n`;
+      inactiveModels.slice(0, 5).forEach(model => {
+        status += `• ${model.name}\n`;
+      });
+      if (inactiveModels.length > 5) {
+        status += `• ... e mais ${inactiveModels.length - 5} modelos\n`;
+      }
+      status += `\n`;
+    }
     
     // Estatísticas por categoria
     status += `📈 **Por Categoria:**\n`;
@@ -73,6 +88,11 @@ export default {
       const usagePercent = ((catStats.totalUsed / catStats.totalLimit) * 100).toFixed(1);
       status += `• **${categoryName}**: ${catStats.active}/${catStats.total} ativos (${usagePercent}% usado)\n`;
     });
+    
+    // Aviso sobre rate limit
+    if (stats.activeModels < stats.totalModels * 0.5) {
+      status += `\n⚠️ **AVISO:** Muitos modelos estão inativos! Use \`n!teste-modelos-gradual\` para testar gradualmente.`;
+    }
     
     await message.reply(formatReply(status));
     console.log(`[MODELOS-COMMAND] ✅ Status dos modelos exibido`);
@@ -88,7 +108,7 @@ export default {
       // Lista específica de categoria
       const categoryModels = stats.models.filter(m => m.category === category);
       if (categoryModels.length === 0) {
-        await message.reply(formatReply(`Categoria "${category}" não encontrada! Use: premium, specialized, backup`));
+        await message.reply(formatReply(`Categoria "${category}" não encontrada! Use: confirmed, testing`));
         return;
       }
       
@@ -103,19 +123,19 @@ export default {
       });
     } else {
       // Lista todas as categorias
-      const categories = ['premium', 'specialized', 'backup'];
+      const categories = ['confirmed', 'testing'];
       
       categories.forEach(cat => {
         const categoryModels = stats.models.filter(m => m.category === cat);
         const categoryName = this.getCategoryDisplayName(cat);
         
         list += `📋 **${categoryName}:**\n`;
-        categoryModels.slice(0, 3).forEach(model => {
+        categoryModels.slice(0, 4).forEach(model => {
           const status = model.isActive ? '✅' : '❌';
           list += `${status} ${model.name} (${model.usagePercent}%)\n`;
         });
-        if (categoryModels.length > 3) {
-          list += `   ... e mais ${categoryModels.length - 3} modelos\n`;
+        if (categoryModels.length > 4) {
+          list += `   ... e mais ${categoryModels.length - 4} modelos\n`;
         }
         list += '\n';
       });
@@ -190,16 +210,14 @@ export default {
       `**Comandos disponíveis:**\n` +
       `• \`n!modelos status\` - Status geral dos modelos\n` +
       `• \`n!modelos list\` - Lista todos os modelos\n` +
-      `• \`n!modelos list premium\` - Lista modelos premium\n` +
-      `• \`n!modelos list specialized\` - Lista modelos especializados\n` +
-      `• \`n!modelos list backup\` - Lista modelos de backup\n` +
+      `• \`n!modelos list confirmed\` - Lista modelos confirmados\n` +
+      `• \`n!modelos list testing\` - Lista modelos em teste\n` +
       `• \`n!modelos test [nome]\` - Testa um modelo específico\n` +
       `• \`n!modelos rotate\` - Força rotação para próximo modelo\n` +
       `• \`n!modelos reset\` - Reseta todas as estatísticas\n\n` +
       `**Categorias:**\n` +
-      `• **Premium**: Modelos de alta qualidade\n` +
-      `• **Specialized**: Modelos especializados\n` +
-      `• **Backup**: Modelos de reserva\n\n` +
+      `• **Confirmed**: Modelos testados e funcionando ✅\n` +
+      `• **Testing**: Novos modelos para teste 🧪\n\n` +
       `**Exemplo:** \`n!modelos test nvidia/nemotron-nano-9b-v2:free\``;
     
     await message.reply(formatReply(help));
@@ -209,9 +227,8 @@ export default {
   // Obtém nome de exibição da categoria
   getCategoryDisplayName(category) {
     const names = {
-      'premium': '🌟 Premium',
-      'specialized': '🔧 Especializados',
-      'backup': '🔄 Backup'
+      'confirmed': '✅ Confirmados',
+      'testing': '🧪 Em Teste'
     };
     return names[category] || category;
   }

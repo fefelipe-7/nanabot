@@ -6,9 +6,9 @@ class APIRotator extends EventEmitter {
     super();
     
     // Lista de modelos disponíveis com suas configurações
-    // Modelos gratuitos do OpenRouter com diferentes capacidades
+    // Modelos gratuitos do OpenRouter - APENAS OS QUE FUNCIONAM + NOVOS PARA TESTE
     this.models = [
-      // === MODELOS GRATUITOS DE ALTA QUALIDADE ===
+      // === MODELOS FUNCIONANDO (CONFIRMADOS) ===
       {
         name: 'nvidia/nemotron-nano-9b-v2:free',
         provider: 'OpenRouter',
@@ -19,7 +19,7 @@ class APIRotator extends EventEmitter {
         requestsUsed: 0,
         lastReset: Date.now(),
         isActive: true,
-        category: 'premium',
+        category: 'confirmed',
         description: 'Modelo NVIDIA otimizado para conversação'
       },
       {
@@ -32,46 +32,20 @@ class APIRotator extends EventEmitter {
         requestsUsed: 0,
         lastReset: Date.now(),
         isActive: true,
-        category: 'premium',
+        category: 'confirmed',
         description: 'DeepSeek Chat v3.1 - Excelente para diálogos'
-      },
-      {
-        name: 'openai/gpt-oss-120b:free',
-        provider: 'OpenRouter',
-        maxTokens: 2048,
-        temperature: 0.7,
-        priority: 3,
-        dailyLimit: 1000,
-        requestsUsed: 0,
-        lastReset: Date.now(),
-        isActive: true,
-        category: 'premium',
-        description: 'GPT-OSS 120B - Modelo grande e poderoso'
-      },
-      {
-        name: 'moonshotai/kimi-k2:free',
-        provider: 'OpenRouter',
-        maxTokens: 1024,
-        temperature: 0.7,
-        priority: 4,
-        dailyLimit: 1500,
-        requestsUsed: 0,
-        lastReset: Date.now(),
-        isActive: true,
-        category: 'premium',
-        description: 'Kimi K2 - Modelo chinês avançado'
       },
       {
         name: 'moonshotai/kimi-dev-72b:free',
         provider: 'OpenRouter',
         maxTokens: 2048,
         temperature: 0.7,
-        priority: 5,
+        priority: 3,
         dailyLimit: 800,
         requestsUsed: 0,
         lastReset: Date.now(),
         isActive: true,
-        category: 'premium',
+        category: 'confirmed',
         description: 'Kimi Dev 72B - Versão de desenvolvimento'
       },
       {
@@ -79,12 +53,12 @@ class APIRotator extends EventEmitter {
         provider: 'OpenRouter',
         maxTokens: 1024,
         temperature: 0.7,
-        priority: 6,
+        priority: 4,
         dailyLimit: 1200,
         requestsUsed: 0,
         lastReset: Date.now(),
         isActive: true,
-        category: 'premium',
+        category: 'confirmed',
         description: 'Mistral Small 3.2 - Modelo francês eficiente'
       },
       {
@@ -92,18 +66,42 @@ class APIRotator extends EventEmitter {
         provider: 'OpenRouter',
         maxTokens: 1024,
         temperature: 0.7,
-        priority: 7,
+        priority: 5,
         dailyLimit: 1500,
         requestsUsed: 0,
         lastReset: Date.now(),
         isActive: true,
-        category: 'premium',
+        category: 'confirmed',
         description: 'Llama 3.3 8B - Última versão do Meta'
       },
-      
-      // === MODELOS ESPECIALIZADOS ===
       {
         name: 'qwen/qwen3-coder:free',
+        provider: 'OpenRouter',
+        maxTokens: 1024,
+        temperature: 0.7,
+        priority: 6,
+        dailyLimit: 1000,
+        requestsUsed: 0,
+        lastReset: Date.now(),
+        isActive: true,
+        category: 'confirmed',
+        description: 'Qwen3 Coder - Especializado em programação'
+      },
+      {
+        name: 'cognitivecomputations/dolphin-mistral-24b-venice-edition:free',
+        provider: 'OpenRouter',
+        maxTokens: 1024,
+        temperature: 0.7,
+        priority: 7,
+        dailyLimit: 800,
+        requestsUsed: 0,
+        lastReset: Date.now(),
+        isActive: true,
+        category: 'confirmed',
+        description: 'Dolphin Mistral - Modelo fine-tuned'
+      },
+      {
+        name: 'google/gemma-3n-e2b-it:free',
         provider: 'OpenRouter',
         maxTokens: 1024,
         temperature: 0.7,
@@ -112,91 +110,91 @@ class APIRotator extends EventEmitter {
         requestsUsed: 0,
         lastReset: Date.now(),
         isActive: true,
-        category: 'specialized',
-        description: 'Qwen3 Coder - Especializado em programação'
+        category: 'confirmed',
+        description: 'Gemma 3N - Modelo Google otimizado'
       },
+      
+      // === NOVOS MODELOS PARA TESTE ===
       {
-        name: 'cognitivecomputations/dolphin-mistral-24b-venice-edition:free',
+        name: 'mistralai/mistral-7b-instruct:free',
         provider: 'OpenRouter',
         maxTokens: 1024,
         temperature: 0.7,
         priority: 9,
-        dailyLimit: 800,
-        requestsUsed: 0,
-        lastReset: Date.now(),
-        isActive: true,
-        category: 'specialized',
-        description: 'Dolphin Mistral - Modelo fine-tuned'
-      },
-      {
-        name: 'google/gemma-3n-e2b-it:free',
-        provider: 'OpenRouter',
-        maxTokens: 1024,
-        temperature: 0.7,
-        priority: 10,
-        dailyLimit: 1000,
-        requestsUsed: 0,
-        lastReset: Date.now(),
-        isActive: true,
-        category: 'specialized',
-        description: 'Gemma 3N - Modelo Google otimizado'
-      },
-      
-      // === MODELOS DE BACKUP ===
-      {
-        name: 'openai/gpt-oss-20b:free',
-        provider: 'OpenRouter',
-        maxTokens: 1024,
-        temperature: 0.7,
-        priority: 11,
-        dailyLimit: 2000,
-        requestsUsed: 0,
-        lastReset: Date.now(),
-        isActive: true,
-        category: 'backup',
-        description: 'GPT-OSS 20B - Modelo menor e rápido'
-      },
-      {
-        name: 'z-ai/glm-4.5-air:free',
-        provider: 'OpenRouter',
-        maxTokens: 1024,
-        temperature: 0.7,
-        priority: 12,
         dailyLimit: 1500,
         requestsUsed: 0,
         lastReset: Date.now(),
         isActive: true,
-        category: 'backup',
-        description: 'GLM 4.5 Air - Modelo chinês leve'
+        category: 'testing',
+        description: 'Mistral 7B Instruct - Modelo compacto e eficiente'
       },
       {
-        name: 'tencent/hunyuan-a13b-instruct:free',
+        name: 'google/gemma-2-9b-it:free',
         provider: 'OpenRouter',
         maxTokens: 1024,
         temperature: 0.7,
-        priority: 13,
+        priority: 10,
+        dailyLimit: 1200,
+        requestsUsed: 0,
+        lastReset: Date.now(),
+        isActive: true,
+        category: 'testing',
+        description: 'Gemma 2 9B IT - Nova versão Google'
+      },
+      {
+        name: 'mistralai/mistral-nemo:free',
+        provider: 'OpenRouter',
+        maxTokens: 1024,
+        temperature: 0.7,
+        priority: 11,
         dailyLimit: 1000,
         requestsUsed: 0,
         lastReset: Date.now(),
         isActive: true,
-        category: 'backup',
-        description: 'Hunyuan A13B - Modelo Tencent'
+        category: 'testing',
+        description: 'Mistral Nemo - Modelo experimental'
       },
       {
-        name: 'tngtech/deepseek-r1t2-chimera:free',
+        name: 'qwen/qwen-2.5-72b-instruct:free',
         provider: 'OpenRouter',
-        maxTokens: 1024,
+        maxTokens: 2048,
         temperature: 0.7,
-        priority: 14,
+        priority: 12,
         dailyLimit: 800,
         requestsUsed: 0,
         lastReset: Date.now(),
         isActive: true,
-        category: 'backup',
-        description: 'DeepSeek R1T2 Chimera - Modelo experimental'
+        category: 'testing',
+        description: 'Qwen 2.5 72B - Modelo grande e poderoso'
       },
       {
-        name: 'deepseek/deepseek-r1-0528-qwen3-8b:free',
+        name: 'meta-llama/llama-3.2-3b-instruct:free',
+        provider: 'OpenRouter',
+        maxTokens: 1024,
+        temperature: 0.7,
+        priority: 13,
+        dailyLimit: 2000,
+        requestsUsed: 0,
+        lastReset: Date.now(),
+        isActive: true,
+        category: 'testing',
+        description: 'Llama 3.2 3B - Modelo leve e rápido'
+      },
+      {
+        name: 'meta-llama/llama-3.3-70b-instruct:free',
+        provider: 'OpenRouter',
+        maxTokens: 2048,
+        temperature: 0.7,
+        priority: 14,
+        dailyLimit: 600,
+        requestsUsed: 0,
+        lastReset: Date.now(),
+        isActive: true,
+        category: 'testing',
+        description: 'Llama 3.3 70B - Modelo grande e avançado'
+      },
+      {
+        name: 'google/gemini-2.0-flash-exp:free',
         provider: 'OpenRouter',
         maxTokens: 1024,
         temperature: 0.7,
@@ -205,21 +203,34 @@ class APIRotator extends EventEmitter {
         requestsUsed: 0,
         lastReset: Date.now(),
         isActive: true,
-        category: 'backup',
-        description: 'DeepSeek R1 Qwen3 8B - Modelo híbrido'
+        category: 'testing',
+        description: 'Gemini 2.0 Flash Experimental - Nova versão Google'
       },
       {
-        name: 'deepseek/deepseek-r1-0528:free',
+        name: 'deepseek/deepseek-r1-distill-llama-70b:free',
         provider: 'OpenRouter',
-        maxTokens: 1024,
+        maxTokens: 2048,
         temperature: 0.7,
         priority: 16,
-        dailyLimit: 1000,
+        dailyLimit: 600,
         requestsUsed: 0,
         lastReset: Date.now(),
         isActive: true,
-        category: 'backup',
-        description: 'DeepSeek R1 - Modelo de raciocínio'
+        category: 'testing',
+        description: 'DeepSeek R1 Distill Llama 70B - Modelo de raciocínio'
+      },
+      {
+        name: 'cognitivecomputations/dolphin3.0-mistral-24b:free',
+        provider: 'OpenRouter',
+        maxTokens: 1024,
+        temperature: 0.7,
+        priority: 17,
+        dailyLimit: 800,
+        requestsUsed: 0,
+        lastReset: Date.now(),
+        isActive: true,
+        category: 'testing',
+        description: 'Dolphin 3.0 Mistral 24B - Nova versão fine-tuned'
       }
     ];
 
@@ -368,9 +379,18 @@ class APIRotator extends EventEmitter {
 
   // Lida com rate limit
   async handleRateLimit(model) {
-    const waitTime = this.rateLimitDelay + (Math.random() * 2000); // 5-7 segundos
+    // Desativa o modelo temporariamente para evitar mais rate limits
+    model.isActive = false;
+    console.log(`[API-ROTATOR] 🚫 Desativando ${model.name} temporariamente devido ao rate limit`);
+    
+    // Aguarda mais tempo para rate limit
+    const waitTime = 15000 + (Math.random() * 10000); // 15-25 segundos
     console.log(`[API-ROTATOR] ⏳ Aguardando ${waitTime}ms antes de tentar novamente...`);
     await new Promise(resolve => setTimeout(resolve, waitTime));
+    
+    // Reativa o modelo após o delay
+    model.isActive = true;
+    console.log(`[API-ROTATOR] 🔄 Reativando ${model.name} após rate limit`);
   }
 
   // Reseta limites diários
@@ -393,7 +413,7 @@ class APIRotator extends EventEmitter {
     const activeModels = this.models.filter(m => m.isActive).length;
     const totalDailyLimit = this.models.reduce((sum, m) => sum + m.dailyLimit, 0);
     const totalUsed = this.models.reduce((sum, m) => sum + m.requestsUsed, 0);
-    const successRate = this.totalRequests > 0 ? 
+    const successRate = this.totalRequests > 0 ?
       (this.successfulRequests / this.totalRequests * 100).toFixed(1) : 0;
 
     // Estatísticas por categoria
@@ -424,6 +444,8 @@ class APIRotator extends EventEmitter {
       totalUsed: totalUsed,
       remainingRequests: totalDailyLimit - totalUsed,
       categoryStats: categoryStats,
+      confirmedModels: this.models.filter(m => m.category === 'confirmed' && m.isActive).length,
+      testingModels: this.models.filter(m => m.category === 'testing' && m.isActive).length,
       models: this.models.map(m => ({
         name: m.name,
         category: m.category,

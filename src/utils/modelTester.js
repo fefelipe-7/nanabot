@@ -50,7 +50,7 @@ class ModelTester {
     }
   }
 
-  // Testa todos os modelos do rotador
+  // Testa todos os modelos do rotador (APENAS PARA USO MANUAL)
   async testAllModels() {
     if (this.isTesting) {
       console.log('[MODEL-TESTER] ⏳ Teste já em andamento...');
@@ -59,6 +59,7 @@ class ModelTester {
 
     this.isTesting = true;
     console.log('[MODEL-TESTER] 🚀 Iniciando teste de todos os modelos...');
+    console.log('[MODEL-TESTER] ⚠️ AVISO: Este teste pode levar vários minutos devido aos delays de segurança');
 
     const workingModels = [];
     const failedModels = [];
@@ -74,8 +75,9 @@ class ModelTester {
         model.isActive = false;
       }
       
-      // Aguarda 1 segundo entre testes para evitar rate limit
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Aguarda 5 segundos entre testes para evitar rate limit (AUMENTADO)
+      console.log(`[MODEL-TESTER] ⏳ Aguardando 5 segundos antes do próximo teste...`);
+      await new Promise(resolve => setTimeout(resolve, 5000));
     }
 
     this.isTesting = false;
@@ -128,4 +130,3 @@ class ModelTester {
 }
 
 export default new ModelTester();
-

@@ -229,6 +229,29 @@ class TheoryOfMindSystem {
     return cues;
   }
 
+  // Detecta pistas de intenção
+  detectIntentionCues(input, context) {
+    const cues = [];
+    const lowerInput = input.toLowerCase();
+    
+    const intentionKeywords = [
+      'vou', 'vamos', 'quero', 'preciso', 'devo',
+      'tenho que', 'preciso de', 'quero que'
+    ];
+    
+    for (const keyword of intentionKeywords) {
+      if (lowerInput.includes(keyword)) {
+        cues.push({
+          keyword: keyword,
+          type: 'intention_cue',
+          confidence: 0.7
+        });
+      }
+    }
+    
+    return cues;
+  }
+
   // Detecta pistas de estado mental
   detectMentalStateCues(input, context) {
     const cues = [];
@@ -675,6 +698,72 @@ class TheoryOfMindSystem {
     this.socialContexts.clear();
     this.empathyHistory = [];
     this.lastUpdate = new Date().toISOString();
+  }
+
+  // Processa entrada e aplica teoria da mente
+  processInput(input, context = {}) {
+    try {
+      const emotionalCues = this.detectEmotionalCues(input, context);
+      const perspectiveCues = this.detectPerspectiveCues(input, context);
+      const intentionCues = this.detectIntentionCues(input, context);
+      const socialUnderstanding = this.assessSocialUnderstanding(input, context);
+      
+      const processedTheoryOfMind = {
+        input: input,
+        emotionalCues: emotionalCues,
+        perspectiveCues: perspectiveCues,
+        intentionCues: intentionCues,
+        socialUnderstanding: socialUnderstanding,
+        context: context,
+        timestamp: new Date().toISOString(),
+        theoryOfMindLevel: this.calculateTheoryOfMindLevel(emotionalCues, perspectiveCues, intentionCues)
+      };
+
+      // Adiciona à história de teoria da mente
+      this.theoryOfMindHistory.push({
+        input: input,
+        emotionalCues: emotionalCues,
+        perspectiveCues: perspectiveCues,
+        intentionCues: intentionCues,
+        socialUnderstanding: socialUnderstanding,
+        timestamp: new Date().toISOString()
+      });
+
+      // Mantém apenas os últimos 100 registros
+      if (this.theoryOfMindHistory.length > 100) {
+        this.theoryOfMindHistory = this.theoryOfMindHistory.slice(-100);
+      }
+
+      return processedTheoryOfMind;
+    } catch (error) {
+      console.error('Erro ao processar entrada no sistema de teoria da mente:', error);
+      return {
+        input: input,
+        emotionalCues: [],
+        perspectiveCues: [],
+        intentionCues: [],
+        socialUnderstanding: { level: 0, triggers: [] },
+        context: context,
+        timestamp: new Date().toISOString(),
+        theoryOfMindLevel: 0
+      };
+    }
+  }
+
+  // Calcula nível de teoria da mente
+  calculateTheoryOfMindLevel(emotionalCues, perspectiveCues, intentionCues) {
+    let level = 0;
+    
+    // Contribuição das pistas emocionais
+    level += emotionalCues.length * 0.3;
+    
+    // Contribuição das pistas de perspectiva
+    level += perspectiveCues.length * 0.4;
+    
+    // Contribuição das pistas de intenção
+    level += intentionCues.length * 0.3;
+    
+    return Math.min(1, level);
   }
 }
 

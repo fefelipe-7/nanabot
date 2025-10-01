@@ -544,6 +544,72 @@ class CrisesSystem {
     this.copingMechanisms.clear();
     this.lastUpdate = new Date().toISOString();
   }
+
+  // Processa entrada e detecta crises
+  processInput(input, context = {}) {
+    try {
+      const crisisTriggers = this.detectCrisisTriggers(input, context);
+      const overwhelmSignals = this.detectOverwhelm(input, context);
+      const emotionalCrisis = this.detectEmotionalCrisis(input, context);
+      const crisisLevel = this.assessCrisisLevel(input, context);
+      
+      const processedCrisis = {
+        input: input,
+        crisisTriggers: crisisTriggers,
+        overwhelmSignals: overwhelmSignals,
+        emotionalCrisis: emotionalCrisis,
+        crisisLevel: crisisLevel,
+        context: context,
+        timestamp: new Date().toISOString(),
+        crisisScore: this.calculateCrisisScore(crisisTriggers, overwhelmSignals, emotionalCrisis)
+      };
+
+      // Adiciona à história de crises
+      this.crisisHistory.push({
+        input: input,
+        crisisTriggers: crisisTriggers,
+        overwhelmSignals: overwhelmSignals,
+        emotionalCrisis: emotionalCrisis,
+        crisisLevel: crisisLevel,
+        timestamp: new Date().toISOString()
+      });
+
+      // Mantém apenas os últimos 100 registros
+      if (this.crisisHistory.length > 100) {
+        this.crisisHistory = this.crisisHistory.slice(-100);
+      }
+
+      return processedCrisis;
+    } catch (error) {
+      console.error('Erro ao processar entrada no sistema de crises:', error);
+      return {
+        input: input,
+        crisisTriggers: [],
+        overwhelmSignals: [],
+        emotionalCrisis: { level: 0, triggers: [] },
+        crisisLevel: { level: 0, triggers: [] },
+        context: context,
+        timestamp: new Date().toISOString(),
+        crisisScore: 0
+      };
+    }
+  }
+
+  // Calcula pontuação de crise
+  calculateCrisisScore(crisisTriggers, overwhelmSignals, emotionalCrisis) {
+    let score = 0;
+    
+    // Contribuição dos gatilhos de crise
+    score += crisisTriggers.length * 0.4;
+    
+    // Contribuição dos sinais de sobrecarga
+    score += overwhelmSignals.length * 0.3;
+    
+    // Contribuição da crise emocional
+    score += emotionalCrisis.level * 0.3;
+    
+    return Math.min(1, score);
+  }
 }
 
 export default CrisesSystem;

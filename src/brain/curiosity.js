@@ -201,6 +201,39 @@ class CuriositySystem {
     return 'general';
   }
 
+  // Detecta perguntas na entrada
+  detectQuestions(input) {
+    const questions = [];
+    const lowerInput = input.toLowerCase();
+    
+    const questionWords = [
+      'o que', 'quem', 'quando', 'onde', 'por que', 'como',
+      'qual', 'quais', 'porque', 'pra que', 'para que'
+    ];
+    
+    const questionMarks = input.includes('?');
+    
+    for (const word of questionWords) {
+      if (lowerInput.includes(word)) {
+        questions.push({
+          question: word,
+          type: 'question_word',
+          confidence: 0.8
+        });
+      }
+    }
+    
+    if (questionMarks) {
+      questions.push({
+        question: '?',
+        type: 'question_mark',
+        confidence: 0.9
+      });
+    }
+    
+    return questions;
+  }
+
   // Detecta tópicos novos
   detectNewTopics(input, context) {
     const topics = [];
@@ -641,6 +674,73 @@ class CuriositySystem {
     this.explorations.clear();
     this.curiosityHistory = [];
     this.lastUpdate = new Date().toISOString();
+  }
+
+  // Processa entrada e estimula curiosidade
+  processInput(input, context = {}) {
+    try {
+      const questions = this.detectQuestions(input);
+      const newTopics = this.detectNewTopics(input, context);
+      const exploration = this.assessExploration(input);
+      const curiosityLevel = this.calculateCuriosityLevel(input, context);
+      
+      const processedCuriosity = {
+        input: input,
+        questions: questions,
+        newTopics: newTopics,
+        exploration: exploration,
+        curiosityLevel: curiosityLevel,
+        context: context,
+        timestamp: new Date().toISOString()
+      };
+
+      // Adiciona à história de curiosidade
+      this.curiosityHistory.push({
+        input: input,
+        questions: questions,
+        newTopics: newTopics,
+        exploration: exploration,
+        curiosityLevel: curiosityLevel,
+        timestamp: new Date().toISOString()
+      });
+
+      // Mantém apenas os últimos 100 registros
+      if (this.curiosityHistory.length > 100) {
+        this.curiosityHistory = this.curiosityHistory.slice(-100);
+      }
+
+      return processedCuriosity;
+    } catch (error) {
+      console.error('Erro ao processar entrada no sistema de curiosidade:', error);
+      return {
+        input: input,
+        questions: [],
+        newTopics: [],
+        exploration: { level: 0, triggers: [] },
+        curiosityLevel: 0,
+        context: context,
+        timestamp: new Date().toISOString()
+      };
+    }
+  }
+
+  // Calcula nível de curiosidade
+  calculateCuriosityLevel(input, context) {
+    let level = 0;
+    
+    // Contribuição das perguntas
+    const questions = this.detectQuestions(input);
+    level += questions.length * 0.3;
+    
+    // Contribuição dos tópicos novos
+    const newTopics = this.detectNewTopics(input, context);
+    level += newTopics.length * 0.4;
+    
+    // Contribuição da exploração
+    const exploration = this.assessExploration(input);
+    level += exploration.level * 0.3;
+    
+    return Math.min(1, level);
   }
 }
 

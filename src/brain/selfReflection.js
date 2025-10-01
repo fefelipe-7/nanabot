@@ -234,6 +234,30 @@ class SelfReflectionSystem {
     return reflections;
   }
 
+  // Detecta reflexão cognitiva
+  detectCognitiveReflection(input, context) {
+    const reflections = [];
+    const lowerInput = input.toLowerCase();
+    
+    const cognitiveKeywords = [
+      'eu penso', 'eu acho', 'eu acredito', 'eu sei',
+      'eu entendo', 'eu não entendo', 'eu aprendo',
+      'eu lembro', 'eu esqueço', 'eu imagino'
+    ];
+    
+    for (const keyword of cognitiveKeywords) {
+      if (lowerInput.includes(keyword)) {
+        reflections.push({
+          keyword: keyword,
+          type: 'cognitive_reflection',
+          confidence: 0.8
+        });
+      }
+    }
+    
+    return reflections;
+  }
+
   // Detecta reflexão de objetivos
   detectGoalReflection(input, context) {
     const reflections = [];
@@ -675,6 +699,72 @@ class SelfReflectionSystem {
     this.values.clear();
     this.reflectionHistory = [];
     this.lastUpdate = new Date().toISOString();
+  }
+
+  // Processa entrada e gera autorreflexão
+  processInput(input, context = {}) {
+    try {
+      const emotionalReflection = this.detectEmotionalReflection(input, context);
+      const behavioralReflection = this.detectBehavioralReflection(input, context);
+      const cognitiveReflection = this.detectCognitiveReflection(input, context);
+      const selfAwareness = this.assessSelfAwareness(input, context);
+      
+      const processedReflection = {
+        input: input,
+        emotionalReflection: emotionalReflection,
+        behavioralReflection: behavioralReflection,
+        cognitiveReflection: cognitiveReflection,
+        selfAwareness: selfAwareness,
+        context: context,
+        timestamp: new Date().toISOString(),
+        reflectionLevel: this.calculateReflectionLevel(emotionalReflection, behavioralReflection, cognitiveReflection)
+      };
+
+      // Adiciona à história de reflexão
+      this.reflectionHistory.push({
+        input: input,
+        emotionalReflection: emotionalReflection,
+        behavioralReflection: behavioralReflection,
+        cognitiveReflection: cognitiveReflection,
+        selfAwareness: selfAwareness,
+        timestamp: new Date().toISOString()
+      });
+
+      // Mantém apenas os últimos 100 registros
+      if (this.reflectionHistory.length > 100) {
+        this.reflectionHistory = this.reflectionHistory.slice(-100);
+      }
+
+      return processedReflection;
+    } catch (error) {
+      console.error('Erro ao processar entrada no sistema de autorreflexão:', error);
+      return {
+        input: input,
+        emotionalReflection: [],
+        behavioralReflection: [],
+        cognitiveReflection: [],
+        selfAwareness: { level: 0, triggers: [] },
+        context: context,
+        timestamp: new Date().toISOString(),
+        reflectionLevel: 0
+      };
+    }
+  }
+
+  // Calcula nível de reflexão
+  calculateReflectionLevel(emotionalReflection, behavioralReflection, cognitiveReflection) {
+    let level = 0;
+    
+    // Contribuição da reflexão emocional
+    level += emotionalReflection.length * 0.3;
+    
+    // Contribuição da reflexão comportamental
+    level += behavioralReflection.length * 0.3;
+    
+    // Contribuição da reflexão cognitiva
+    level += cognitiveReflection.length * 0.4;
+    
+    return Math.min(1, level);
   }
 }
 

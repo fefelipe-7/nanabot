@@ -516,6 +516,72 @@ class EmotionRegulationSystem {
     this.regulationTechniques.clear();
     this.lastUpdate = new Date().toISOString();
   }
+
+  // Processa entrada e regula emoções
+  processInput(input, context = {}) {
+    try {
+      const emotionalTriggers = this.detectEmotionalTriggers(input, context);
+      const regulationStrategies = this.selectRegulationStrategies(input, context);
+      const emotionalState = this.assessEmotionalState(input, context);
+      const regulationEffectiveness = this.assessRegulationEffectiveness(input, context);
+      
+      const processedEmotionRegulation = {
+        input: input,
+        emotionalTriggers: emotionalTriggers,
+        regulationStrategies: regulationStrategies,
+        emotionalState: emotionalState,
+        regulationEffectiveness: regulationEffectiveness,
+        context: context,
+        timestamp: new Date().toISOString(),
+        regulationLevel: this.calculateRegulationLevel(emotionalTriggers, regulationStrategies, emotionalState)
+      };
+
+      // Adiciona à história de regulação
+      this.regulationHistory.push({
+        input: input,
+        emotionalTriggers: emotionalTriggers,
+        regulationStrategies: regulationStrategies,
+        emotionalState: emotionalState,
+        regulationEffectiveness: regulationEffectiveness,
+        timestamp: new Date().toISOString()
+      });
+
+      // Mantém apenas os últimos 100 registros
+      if (this.regulationHistory.length > 100) {
+        this.regulationHistory = this.regulationHistory.slice(-100);
+      }
+
+      return processedEmotionRegulation;
+    } catch (error) {
+      console.error('Erro ao processar entrada no sistema de regulação emocional:', error);
+      return {
+        input: input,
+        emotionalTriggers: [],
+        regulationStrategies: [],
+        emotionalState: { level: 0, triggers: [] },
+        regulationEffectiveness: { level: 0, triggers: [] },
+        context: context,
+        timestamp: new Date().toISOString(),
+        regulationLevel: 0
+      };
+    }
+  }
+
+  // Calcula nível de regulação
+  calculateRegulationLevel(emotionalTriggers, regulationStrategies, emotionalState) {
+    let level = 0;
+    
+    // Contribuição dos gatilhos emocionais
+    level += emotionalTriggers.length * 0.3;
+    
+    // Contribuição das estratégias de regulação
+    level += regulationStrategies.length * 0.4;
+    
+    // Contribuição do estado emocional
+    level += emotionalState.level * 0.3;
+    
+    return Math.min(1, level);
+  }
 }
 
 export default EmotionRegulationSystem;

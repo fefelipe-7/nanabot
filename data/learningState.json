@@ -1,5 +1,5 @@
 {
-  "learningRate": 0.07999999999999999,
+  "learningRate": 0.01,
   "memoryConsolidation": 0.8,
   "adaptationSpeed": 0.5,
   "curiosityLevel": 0.7,
@@ -39,6 +39,296 @@
       },
       "timestamp": "2025-09-28T17:12:43.651Z",
       "learningType": "general"
+    },
+    {
+      "input": "oiii tudo bem com voce?",
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "timestamp": "2025-09-28T18:01:21.470Z",
+      "learningType": "general"
+    },
+    {
+      "input": "como voce ta se sentindo agr?",
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "timestamp": "2025-09-28T18:01:44.677Z",
+      "learningType": "skill"
+    },
+    {
+      "input": "oiii tudo bem com voce?",
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "timestamp": "2025-09-28T18:15:11.882Z",
+      "learningType": "general"
+    },
+    {
+      "input": "como é meu nome?",
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "timestamp": "2025-09-28T18:15:26.113Z",
+      "learningType": "skill"
+    },
+    {
+      "input": "e o nome da sua mãe?",
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "timestamp": "2025-09-28T18:15:41.358Z",
+      "learningType": "general"
+    },
+    {
+      "input": "eu te amoo",
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "timestamp": "2025-09-28T18:16:08.114Z",
+      "learningType": "general"
+    },
+    {
+      "input": "/teste",
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "timestamp": "2025-09-28T18:16:30.980Z",
+      "learningType": "general"
+    },
+    {
+      "input": "oii",
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "timestamp": "2025-09-28T18:25:24.013Z",
+      "learningType": "general"
+    },
+    {
+      "input": "tudo bem com voce?",
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "timestamp": "2025-09-28T18:25:40.275Z",
+      "learningType": "general"
+    },
+    {
+      "input": "olaa",
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "timestamp": "2025-09-28T18:26:53.727Z",
+      "learningType": "general"
+    },
+    {
+      "input": "tudo bem com voce?",
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "timestamp": "2025-09-28T18:27:12.739Z",
+      "learningType": "general"
+    },
+    {
+      "input": "oiiii meu amor",
+      "context": {
+        "role": "mamãe",
+        "username": "kircii",
+        "userId": "787524878642577429"
+      },
+      "timestamp": "2025-09-28T18:27:40.883Z",
+      "learningType": "general"
+    },
+    {
+      "input": "oii nenem",
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "timestamp": "2025-09-28T18:31:22.954Z",
+      "learningType": "general"
+    },
+    {
+      "input": "oi voce me ama?",
+      "context": {
+        "role": "mamãe",
+        "username": "kircii",
+        "userId": "787524878642577429"
+      },
+      "timestamp": "2025-09-28T18:31:42.306Z",
+      "learningType": "general"
+    },
+    {
+      "input": "para de falar dobrado",
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "timestamp": "2025-09-28T18:33:32.649Z",
+      "learningType": "general"
+    },
+    {
+      "input": "agr pode falar",
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "timestamp": "2025-09-28T18:35:55.873Z",
+      "learningType": "general"
+    },
+    {
+      "input": "oii tudo bem?",
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "timestamp": "2025-09-28T18:43:14.497Z",
+      "learningType": "general"
+    },
+    {
+      "input": "me conta um fato curioso fofo",
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "timestamp": "2025-09-28T18:44:12.119Z",
+      "learningType": "general"
+    },
+    {
+      "input": "oii tudo bem?",
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "timestamp": "2025-09-28T18:48:14.434Z",
+      "learningType": "general"
+    },
+    {
+      "input": "oiii",
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "timestamp": "2025-09-28T18:51:17.606Z",
+      "learningType": "general"
+    },
+    {
+      "input": "oiii tudo bem?",
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "timestamp": "2025-09-28T18:54:17.897Z",
+      "learningType": "general"
+    },
+    {
+      "input": "oii tudo bem?",
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "timestamp": "2025-09-28T18:59:09.935Z",
+      "learningType": "general"
+    },
+    {
+      "input": "oii",
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "timestamp": "2025-09-28T19:02:46.993Z",
+      "learningType": "general"
+    },
+    {
+      "input": "oii tudo bem?",
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "timestamp": "2025-09-28T20:41:44.567Z",
+      "learningType": "general"
+    },
+    {
+      "input": "oiii tudo bem?",
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "timestamp": "2025-09-28T20:46:33.149Z",
+      "learningType": "general"
+    },
+    {
+      "input": "oii",
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "timestamp": "2025-09-28T20:57:07.214Z",
+      "learningType": "general"
+    },
+    {
+      "input": "como vc se chama?",
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "timestamp": "2025-09-28T21:29:26.871Z",
+      "learningType": "skill"
+    },
+    {
+      "input": "como vove",
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "timestamp": "2025-09-28T21:35:18.143Z",
+      "learningType": "skill"
+    },
+    {
+      "input": "como vc se chama?",
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "timestamp": "2025-09-28T21:35:48.892Z",
+      "learningType": "skill"
     }
   ],
   "learningHistory": [
@@ -146,10 +436,831 @@
       "skillsLearned": [],
       "conceptsLearned": [],
       "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T18:01:21.470Z",
+      "experience": {
+        "input": "oiii tudo bem com voce?",
+        "response": "",
+        "context": {
+          "role": "papai",
+          "username": "fefelipe7",
+          "userId": "1276314597967532124"
+        }
+      },
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "learningType": "general",
+      "success": true,
+      "insights": [
+        {
+          "type": "curiosity",
+          "value": "high_novelty",
+          "confidence": 0.8,
+          "strategy": "explore_more"
+        }
+      ],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T18:01:44.677Z",
+      "experience": {
+        "input": "como voce ta se sentindo agr?",
+        "response": "",
+        "context": {
+          "role": "papai",
+          "username": "fefelipe7",
+          "userId": "1276314597967532124"
+        }
+      },
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "learningType": "skill",
+      "success": true,
+      "insights": [],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T18:15:11.882Z",
+      "experience": {
+        "input": "oiii tudo bem com voce?",
+        "response": "",
+        "context": {
+          "role": "papai",
+          "username": "fefelipe7",
+          "userId": "1276314597967532124"
+        }
+      },
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "learningType": "general",
+      "success": true,
+      "insights": [
+        {
+          "type": "curiosity",
+          "value": "high_novelty",
+          "confidence": 0.8,
+          "strategy": "explore_more"
+        }
+      ],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T18:15:26.113Z",
+      "experience": {
+        "input": "como é meu nome?",
+        "response": "",
+        "context": {
+          "role": "papai",
+          "username": "fefelipe7",
+          "userId": "1276314597967532124"
+        }
+      },
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "learningType": "skill",
+      "success": true,
+      "insights": [],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T18:15:41.358Z",
+      "experience": {
+        "input": "e o nome da sua mãe?",
+        "response": "",
+        "context": {
+          "role": "papai",
+          "username": "fefelipe7",
+          "userId": "1276314597967532124"
+        }
+      },
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "learningType": "general",
+      "success": true,
+      "insights": [
+        {
+          "type": "curiosity",
+          "value": "high_novelty",
+          "confidence": 0.8,
+          "strategy": "explore_more"
+        }
+      ],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T18:16:08.114Z",
+      "experience": {
+        "input": "eu te amoo",
+        "response": "",
+        "context": {
+          "role": "papai",
+          "username": "fefelipe7",
+          "userId": "1276314597967532124"
+        }
+      },
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "learningType": "general",
+      "success": true,
+      "insights": [
+        {
+          "type": "curiosity",
+          "value": "high_novelty",
+          "confidence": 0.8,
+          "strategy": "explore_more"
+        }
+      ],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T18:16:30.980Z",
+      "experience": {
+        "input": "/teste",
+        "response": "",
+        "context": {
+          "role": "papai",
+          "username": "fefelipe7",
+          "userId": "1276314597967532124"
+        }
+      },
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "learningType": "general",
+      "success": true,
+      "insights": [
+        {
+          "type": "curiosity",
+          "value": "high_novelty",
+          "confidence": 0.8,
+          "strategy": "explore_more"
+        }
+      ],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T18:25:24.013Z",
+      "experience": {
+        "input": "oii",
+        "response": "",
+        "context": {
+          "role": "papai",
+          "username": "fefelipe7",
+          "userId": "1276314597967532124"
+        }
+      },
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "learningType": "general",
+      "success": true,
+      "insights": [
+        {
+          "type": "curiosity",
+          "value": "high_novelty",
+          "confidence": 0.8,
+          "strategy": "explore_more"
+        }
+      ],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T18:25:40.275Z",
+      "experience": {
+        "input": "tudo bem com voce?",
+        "response": "",
+        "context": {
+          "role": "papai",
+          "username": "fefelipe7",
+          "userId": "1276314597967532124"
+        }
+      },
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "learningType": "general",
+      "success": true,
+      "insights": [
+        {
+          "type": "curiosity",
+          "value": "high_novelty",
+          "confidence": 0.8,
+          "strategy": "explore_more"
+        }
+      ],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T18:26:53.727Z",
+      "experience": {
+        "input": "olaa",
+        "response": "",
+        "context": {
+          "role": "papai",
+          "username": "fefelipe7",
+          "userId": "1276314597967532124"
+        }
+      },
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "learningType": "general",
+      "success": true,
+      "insights": [
+        {
+          "type": "curiosity",
+          "value": "high_novelty",
+          "confidence": 0.8,
+          "strategy": "explore_more"
+        }
+      ],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T18:27:12.739Z",
+      "experience": {
+        "input": "tudo bem com voce?",
+        "response": "",
+        "context": {
+          "role": "papai",
+          "username": "fefelipe7",
+          "userId": "1276314597967532124"
+        }
+      },
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "learningType": "general",
+      "success": true,
+      "insights": [
+        {
+          "type": "curiosity",
+          "value": "high_novelty",
+          "confidence": 0.8,
+          "strategy": "explore_more"
+        }
+      ],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T18:27:40.883Z",
+      "experience": {
+        "input": "oiiii meu amor",
+        "response": "",
+        "context": {
+          "role": "mamãe",
+          "username": "kircii",
+          "userId": "787524878642577429"
+        }
+      },
+      "context": {
+        "role": "mamãe",
+        "username": "kircii",
+        "userId": "787524878642577429"
+      },
+      "learningType": "general",
+      "success": true,
+      "insights": [
+        {
+          "type": "curiosity",
+          "value": "high_novelty",
+          "confidence": 0.8,
+          "strategy": "explore_more"
+        }
+      ],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T18:31:22.954Z",
+      "experience": {
+        "input": "oii nenem",
+        "response": "",
+        "context": {
+          "role": "papai",
+          "username": "fefelipe7",
+          "userId": "1276314597967532124"
+        }
+      },
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "learningType": "general",
+      "success": true,
+      "insights": [
+        {
+          "type": "curiosity",
+          "value": "high_novelty",
+          "confidence": 0.8,
+          "strategy": "explore_more"
+        }
+      ],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T18:31:42.306Z",
+      "experience": {
+        "input": "oi voce me ama?",
+        "response": "",
+        "context": {
+          "role": "mamãe",
+          "username": "kircii",
+          "userId": "787524878642577429"
+        }
+      },
+      "context": {
+        "role": "mamãe",
+        "username": "kircii",
+        "userId": "787524878642577429"
+      },
+      "learningType": "general",
+      "success": true,
+      "insights": [
+        {
+          "type": "curiosity",
+          "value": "high_novelty",
+          "confidence": 0.8,
+          "strategy": "explore_more"
+        }
+      ],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T18:33:32.649Z",
+      "experience": {
+        "input": "para de falar dobrado",
+        "response": "",
+        "context": {
+          "role": "papai",
+          "username": "fefelipe7",
+          "userId": "1276314597967532124"
+        }
+      },
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "learningType": "general",
+      "success": true,
+      "insights": [
+        {
+          "type": "curiosity",
+          "value": "high_novelty",
+          "confidence": 0.8,
+          "strategy": "explore_more"
+        }
+      ],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T18:35:55.873Z",
+      "experience": {
+        "input": "agr pode falar",
+        "response": "",
+        "context": {
+          "role": "papai",
+          "username": "fefelipe7",
+          "userId": "1276314597967532124"
+        }
+      },
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "learningType": "general",
+      "success": true,
+      "insights": [
+        {
+          "type": "curiosity",
+          "value": "high_novelty",
+          "confidence": 0.8,
+          "strategy": "explore_more"
+        }
+      ],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T18:43:14.497Z",
+      "experience": {
+        "input": "oii tudo bem?",
+        "response": "",
+        "context": {
+          "role": "outro de papai",
+          "username": "fefelipc_76909",
+          "userId": "1339376778778644593"
+        }
+      },
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "learningType": "general",
+      "success": true,
+      "insights": [
+        {
+          "type": "curiosity",
+          "value": "high_novelty",
+          "confidence": 0.8,
+          "strategy": "explore_more"
+        }
+      ],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T18:44:12.119Z",
+      "experience": {
+        "input": "me conta um fato curioso fofo",
+        "response": "",
+        "context": {
+          "role": "outro de papai",
+          "username": "fefelipc_76909",
+          "userId": "1339376778778644593"
+        }
+      },
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "learningType": "general",
+      "success": true,
+      "insights": [
+        {
+          "type": "curiosity",
+          "value": "high_novelty",
+          "confidence": 0.8,
+          "strategy": "explore_more"
+        }
+      ],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T18:48:14.434Z",
+      "experience": {
+        "input": "oii tudo bem?",
+        "response": "",
+        "context": {
+          "role": "outro de papai",
+          "username": "fefelipc_76909",
+          "userId": "1339376778778644593"
+        }
+      },
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "learningType": "general",
+      "success": true,
+      "insights": [
+        {
+          "type": "curiosity",
+          "value": "high_novelty",
+          "confidence": 0.8,
+          "strategy": "explore_more"
+        }
+      ],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T18:51:17.606Z",
+      "experience": {
+        "input": "oiii",
+        "response": "",
+        "context": {
+          "role": "outro de papai",
+          "username": "fefelipc_76909",
+          "userId": "1339376778778644593"
+        }
+      },
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "learningType": "general",
+      "success": true,
+      "insights": [
+        {
+          "type": "curiosity",
+          "value": "high_novelty",
+          "confidence": 0.8,
+          "strategy": "explore_more"
+        }
+      ],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T18:54:17.897Z",
+      "experience": {
+        "input": "oiii tudo bem?",
+        "response": "",
+        "context": {
+          "role": "outro de papai",
+          "username": "fefelipc_76909",
+          "userId": "1339376778778644593"
+        }
+      },
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "learningType": "general",
+      "success": true,
+      "insights": [
+        {
+          "type": "curiosity",
+          "value": "high_novelty",
+          "confidence": 0.8,
+          "strategy": "explore_more"
+        }
+      ],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T18:59:09.935Z",
+      "experience": {
+        "input": "oii tudo bem?",
+        "response": "",
+        "context": {
+          "role": "outro de papai",
+          "username": "fefelipc_76909",
+          "userId": "1339376778778644593"
+        }
+      },
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "learningType": "general",
+      "success": true,
+      "insights": [
+        {
+          "type": "curiosity",
+          "value": "high_novelty",
+          "confidence": 0.8,
+          "strategy": "explore_more"
+        }
+      ],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T19:02:46.993Z",
+      "experience": {
+        "input": "oii",
+        "response": "",
+        "context": {
+          "role": "outro de papai",
+          "username": "fefelipc_76909",
+          "userId": "1339376778778644593"
+        }
+      },
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "learningType": "general",
+      "success": true,
+      "insights": [
+        {
+          "type": "curiosity",
+          "value": "high_novelty",
+          "confidence": 0.8,
+          "strategy": "explore_more"
+        }
+      ],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T20:41:44.567Z",
+      "experience": {
+        "input": "oii tudo bem?",
+        "response": "",
+        "context": {
+          "role": "outro de papai",
+          "username": "fefelipc_76909",
+          "userId": "1339376778778644593"
+        }
+      },
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "learningType": "general",
+      "success": true,
+      "insights": [],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T20:46:33.149Z",
+      "experience": {
+        "input": "oiii tudo bem?",
+        "response": "",
+        "context": {
+          "role": "outro de papai",
+          "username": "fefelipc_76909",
+          "userId": "1339376778778644593"
+        }
+      },
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "learningType": "general",
+      "success": true,
+      "insights": [],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T20:57:07.214Z",
+      "experience": {
+        "input": "oii",
+        "response": "",
+        "context": {
+          "role": "outro de papai",
+          "username": "fefelipc_76909",
+          "userId": "1339376778778644593"
+        }
+      },
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "learningType": "general",
+      "success": true,
+      "insights": [
+        {
+          "type": "curiosity",
+          "value": "high_novelty",
+          "confidence": 0.8,
+          "strategy": "explore_more"
+        }
+      ],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T21:29:26.871Z",
+      "experience": {
+        "input": "como vc se chama?",
+        "response": "",
+        "context": {
+          "role": "outro de papai",
+          "username": "fefelipc_76909",
+          "userId": "1339376778778644593"
+        }
+      },
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "learningType": "skill",
+      "success": true,
+      "insights": [],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T21:35:18.143Z",
+      "experience": {
+        "input": "como vove",
+        "response": "",
+        "context": {
+          "role": "outro de papai",
+          "username": "fefelipc_76909",
+          "userId": "1339376778778644593"
+        }
+      },
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "learningType": "skill",
+      "success": true,
+      "insights": [],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
+    },
+    {
+      "timestamp": "2025-09-28T21:35:48.892Z",
+      "experience": {
+        "input": "como vc se chama?",
+        "response": "",
+        "context": {
+          "role": "outro de papai",
+          "username": "fefelipc_76909",
+          "userId": "1339376778778644593"
+        }
+      },
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "learningType": "skill",
+      "success": true,
+      "insights": [],
+      "skillsLearned": [],
+      "conceptsLearned": [],
+      "patternsLearned": []
     }
   ],
   "skills": [],
   "concepts": [],
   "patterns": [],
-  "lastUpdate": "2025-09-28T17:12:43.651Z"
+  "lastUpdate": "2025-09-28T21:35:48.892Z"
 }

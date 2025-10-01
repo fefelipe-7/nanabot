@@ -1,11 +1,11 @@
-// src/commands/reset.js - Comando para resetar o cérebro da Nanabot
+// src/commands/reset.js - Comando para resetar o cérebro da Alice
 import { SlashCommandBuilder, PermissionFlagsBits } from 'discord.js';
 import brainModule from '../core/brain.js';
 const { resetBrain } = brainModule;
 
 const data = new SlashCommandBuilder()
   .setName('reset')
-  .setDescription('Reseta o cérebro da Nanabot (apenas para administradores)')
+  .setDescription('Reseta o cérebro da Alice (apenas para administradores)')
   .setDefaultMemberPermissions(PermissionFlagsBits.Administrator)
   .addStringOption(option =>
     option
@@ -28,7 +28,7 @@ async function execute(interaction) {
     // Reseta o cérebro
     resetBrain();
     
-    await interaction.editReply('🧠 **Cérebro da Nanabot resetado com sucesso!**\n\n' +
+    await interaction.editReply('🧠 **Cérebro da Alice resetado com sucesso!**\n\n' +
       'Todos os sistemas foram reinicializados:\n' +
       '✅ Emoções\n' +
       '✅ Humor\n' +
@@ -38,7 +38,7 @@ async function execute(interaction) {
       '✅ Curiosidade\n' +
       '✅ Auto-reflexão\n' +
       '✅ Teoria da mente\n\n' +
-      'A Nanabot voltou ao estado inicial! 🎉');
+      'A Alice voltou ao estado inicial! 🎉');
       
   } catch (error) {
     console.error('Erro ao resetar cérebro:', error);

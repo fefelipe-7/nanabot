@@ -639,6 +639,72 @@ class FazDeContaSystem {
     this.playHistory = [];
     this.lastUpdate = new Date().toISOString();
   }
+
+  // Processa entrada e detecta faz de conta
+  processInput(input, context = {}) {
+    try {
+      const rolePlayElements = this.detectRolePlayElements(input);
+      const imaginationElements = this.detectImaginationElements(input, context);
+      const fantasyScenarios = this.detectFantasyScenarios(input, context);
+      const creativePlay = this.assessCreativePlay(input, context);
+      
+      const processedFazDeConta = {
+        input: input,
+        rolePlayElements: rolePlayElements,
+        imaginationElements: imaginationElements,
+        fantasyScenarios: fantasyScenarios,
+        creativePlay: creativePlay,
+        context: context,
+        timestamp: new Date().toISOString(),
+        playLevel: this.calculatePlayLevel(rolePlayElements, imaginationElements, fantasyScenarios)
+      };
+
+      // Adiciona à história de faz de conta
+      this.playHistory.push({
+        input: input,
+        rolePlayElements: rolePlayElements,
+        imaginationElements: imaginationElements,
+        fantasyScenarios: fantasyScenarios,
+        creativePlay: creativePlay,
+        timestamp: new Date().toISOString()
+      });
+
+      // Mantém apenas os últimos 100 registros
+      if (this.playHistory.length > 100) {
+        this.playHistory = this.playHistory.slice(-100);
+      }
+
+      return processedFazDeConta;
+    } catch (error) {
+      console.error('Erro ao processar entrada no sistema de faz de conta:', error);
+      return {
+        input: input,
+        rolePlayElements: [],
+        imaginationElements: [],
+        fantasyScenarios: [],
+        creativePlay: { level: 0, triggers: [] },
+        context: context,
+        timestamp: new Date().toISOString(),
+        playLevel: 0
+      };
+    }
+  }
+
+  // Calcula nível de brincadeira
+  calculatePlayLevel(rolePlayElements, imaginationElements, fantasyScenarios) {
+    let level = 0;
+    
+    // Contribuição dos elementos de role play
+    level += rolePlayElements.length * 0.3;
+    
+    // Contribuição dos elementos de imaginação
+    level += imaginationElements.length * 0.4;
+    
+    // Contribuição dos cenários de fantasia
+    level += fantasyScenarios.length * 0.3;
+    
+    return Math.min(1, level);
+  }
 }
 
 export default FazDeContaSystem;

@@ -231,6 +231,25 @@ class ImaginationSystem {
     return scenarios;
   }
 
+  // Avalia criatividade da entrada
+  assessCreativity(input) {
+    const creativeWords = [
+      'criativo', 'imaginativo', 'artístico', 'original', 'único',
+      'inventivo', 'inspirado', 'colorido', 'mágico', 'fantástico'
+    ];
+    
+    const creativeLevel = creativeWords.some(word => 
+      input.toLowerCase().includes(word)
+    ) ? 0.8 : 0.3;
+    
+    return {
+      level: creativeLevel,
+      triggers: creativeWords.filter(word => 
+        input.toLowerCase().includes(word)
+      )
+    };
+  }
+
   // Gera imaginação baseada na análise
   generateImagination(analysis, context) {
     const imagination = {
@@ -549,6 +568,68 @@ class ImaginationSystem {
     this.dreams.clear();
     this.imaginationHistory = [];
     this.lastUpdate = new Date().toISOString();
+  }
+
+  // Processa entrada e gera imaginação
+  processInput(input, context = {}) {
+    try {
+      const stories = this.detectStories(input);
+      const scenarios = this.detectScenarios(input);
+      const creativity = this.assessCreativity(input);
+      
+      const processedImagination = {
+        input: input,
+        stories: stories,
+        scenarios: scenarios,
+        creativity: creativity,
+        context: context,
+        timestamp: new Date().toISOString(),
+        imaginationLevel: this.calculateImaginationLevel(stories, scenarios, creativity)
+      };
+
+      // Adiciona à história de imaginação
+      this.imaginationHistory.push({
+        input: input,
+        stories: stories,
+        scenarios: scenarios,
+        creativity: creativity,
+        timestamp: new Date().toISOString()
+      });
+
+      // Mantém apenas os últimos 100 registros
+      if (this.imaginationHistory.length > 100) {
+        this.imaginationHistory = this.imaginationHistory.slice(-100);
+      }
+
+      return processedImagination;
+    } catch (error) {
+      console.error('Erro ao processar entrada no sistema de imaginação:', error);
+      return {
+        input: input,
+        stories: [],
+        scenarios: [],
+        creativity: { level: 0, triggers: [] },
+        context: context,
+        timestamp: new Date().toISOString(),
+        imaginationLevel: 0
+      };
+    }
+  }
+
+  // Calcula nível de imaginação
+  calculateImaginationLevel(stories, scenarios, creativity) {
+    let level = 0;
+    
+    // Contribuição das histórias
+    level += stories.length * 0.3;
+    
+    // Contribuição dos cenários
+    level += scenarios.length * 0.4;
+    
+    // Contribuição da criatividade
+    level += creativity.level * 0.3;
+    
+    return Math.min(1, level);
   }
 }
 

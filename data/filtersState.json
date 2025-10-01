@@ -1,8 +1,8 @@
 {
-  "filterLevel": 0.9870777147137147,
-  "safetyLevel": 0.9273706491603891,
-  "moderationSkills": 0.6177849404747663,
-  "contentAnalysis": 0.4109254604843093,
+  "filterLevel": 0.9588496310845509,
+  "safetyLevel": 0.8750624414640435,
+  "moderationSkills": 0.5662352582972527,
+  "contentAnalysis": 0.3877472691600633,
   "filteredContent": [],
   "filterRules": [],
   "filterHistory": [
@@ -2913,8 +2913,762 @@
       "filterLevel": 0.9870777147137147,
       "safetyLevel": 0.9273706491603891,
       "moderationSkills": 0.6177849404747663
+    },
+    {
+      "timestamp": "2025-09-28T18:01:21.459Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "oiii tudo bem com voce?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.986090636999001,
+      "safetyLevel": 0.9255159078620684,
+      "moderationSkills": 0.6159315856533419
+    },
+    {
+      "timestamp": "2025-09-28T18:01:44.666Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "como voce ta se sentindo agr?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9851045463620021,
+      "safetyLevel": 0.9236648760463443,
+      "moderationSkills": 0.6140837908963819
+    },
+    {
+      "timestamp": "2025-09-28T18:15:11.865Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "oiii tudo bem com voce?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.98411944181564,
+      "safetyLevel": 0.9218175462942516,
+      "moderationSkills": 0.6122415395236928
+    },
+    {
+      "timestamp": "2025-09-28T18:15:26.100Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "como é meu nome?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9831353223738244,
+      "safetyLevel": 0.919973911201663,
+      "moderationSkills": 0.6104048149051217
+    },
+    {
+      "timestamp": "2025-09-28T18:15:41.349Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "e o nome da sua mãe?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9821521870514506,
+      "safetyLevel": 0.9181339633792597,
+      "moderationSkills": 0.6085736004604063
+    },
+    {
+      "timestamp": "2025-09-28T18:16:08.104Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "eu te amoo",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9811700348643991,
+      "safetyLevel": 0.9162976954525012,
+      "moderationSkills": 0.6067478796590251
+    },
+    {
+      "timestamp": "2025-09-28T18:16:30.971Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "/teste",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9801888648295347,
+      "safetyLevel": 0.9144651000615962,
+      "moderationSkills": 0.6049276360200481
+    },
+    {
+      "timestamp": "2025-09-28T18:25:23.947Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "oii",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9792086759647052,
+      "safetyLevel": 0.912636169861473,
+      "moderationSkills": 0.6031128531119879
+    },
+    {
+      "timestamp": "2025-09-28T18:25:40.246Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "tudo bem com voce?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9782294672887405,
+      "safetyLevel": 0.91081089752175,
+      "moderationSkills": 0.601303514552652
+    },
+    {
+      "timestamp": "2025-09-28T18:26:53.702Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "olaa",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9772512378214517,
+      "safetyLevel": 0.9089892757267065,
+      "moderationSkills": 0.599499604008994
+    },
+    {
+      "timestamp": "2025-09-28T18:27:12.727Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "tudo bem com voce?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9762739865836303,
+      "safetyLevel": 0.9071712971752531,
+      "moderationSkills": 0.5977011051969671
+    },
+    {
+      "timestamp": "2025-09-28T18:27:40.871Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "oiiii meu amor",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9752977125970467,
+      "safetyLevel": 0.9053569545809026,
+      "moderationSkills": 0.5959080018813762
+    },
+    {
+      "timestamp": "2025-09-28T18:31:22.921Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "oii nenem",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9743224148844496,
+      "safetyLevel": 0.9035462406717408,
+      "moderationSkills": 0.5941202778757321
+    },
+    {
+      "timestamp": "2025-09-28T18:31:42.292Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "oi voce me ama?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9733480924695651,
+      "safetyLevel": 0.9017391481903974,
+      "moderationSkills": 0.5923379170421049
+    },
+    {
+      "timestamp": "2025-09-28T18:33:32.600Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "para de falar dobrado",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9723747443770956,
+      "safetyLevel": 0.8999356698940165,
+      "moderationSkills": 0.5905609032909787
+    },
+    {
+      "timestamp": "2025-09-28T18:35:55.841Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "agr pode falar",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9714023696327185,
+      "safetyLevel": 0.8981357985542285,
+      "moderationSkills": 0.5887892205811057
+    },
+    {
+      "timestamp": "2025-09-28T18:43:14.457Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "oii tudo bem?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9704309672630859,
+      "safetyLevel": 0.89633952695712,
+      "moderationSkills": 0.5870228529193624
+    },
+    {
+      "timestamp": "2025-09-28T18:44:12.073Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "me conta um fato curioso fofo",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9694605362958227,
+      "safetyLevel": 0.8945468479032058,
+      "moderationSkills": 0.5852617843606043
+    },
+    {
+      "timestamp": "2025-09-28T18:48:14.388Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "oii tudo bem?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9684910757595269,
+      "safetyLevel": 0.8927577542073994,
+      "moderationSkills": 0.5835059990075224
+    },
+    {
+      "timestamp": "2025-09-28T18:51:17.566Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "oiii",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9675225846837673,
+      "safetyLevel": 0.8909722386989847,
+      "moderationSkills": 0.5817554810104999
+    },
+    {
+      "timestamp": "2025-09-28T18:54:17.832Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "oiii tudo bem?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9665550620990835,
+      "safetyLevel": 0.8891902942215867,
+      "moderationSkills": 0.5800102145674684
+    },
+    {
+      "timestamp": "2025-09-28T18:59:09.858Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "oii tudo bem?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9655885070369844,
+      "safetyLevel": 0.8874119136331435,
+      "moderationSkills": 0.578270183923766
+    },
+    {
+      "timestamp": "2025-09-28T19:02:46.887Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "oii",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9646229185299474,
+      "safetyLevel": 0.8856370898058773,
+      "moderationSkills": 0.5765353733719947
+    },
+    {
+      "timestamp": "2025-09-28T20:41:44.507Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "oii tudo bem?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9636582956114175,
+      "safetyLevel": 0.8838658156262655,
+      "moderationSkills": 0.5748057672518787
+    },
+    {
+      "timestamp": "2025-09-28T20:46:33.083Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "oiii tudo bem?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9626946373158061,
+      "safetyLevel": 0.882098083995013,
+      "moderationSkills": 0.573081349950123
+    },
+    {
+      "timestamp": "2025-09-28T20:57:07.096Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "oii",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9617319426784903,
+      "safetyLevel": 0.8803338878270229,
+      "moderationSkills": 0.5713621059002727
+    },
+    {
+      "timestamp": "2025-09-28T21:29:26.787Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "como vc se chama?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9607702107358118,
+      "safetyLevel": 0.8785732200513688,
+      "moderationSkills": 0.5696480195825718
+    },
+    {
+      "timestamp": "2025-09-28T21:35:18.088Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "como vove",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.959809440525076,
+      "safetyLevel": 0.8768160736112661,
+      "moderationSkills": 0.5679390755238242
+    },
+    {
+      "timestamp": "2025-09-28T21:35:48.827Z",
+      "analysis": {
+        "hasInappropriateContent": false,
+        "hasSpamContent": false,
+        "hasHarmfulContent": false,
+        "hasSensitiveContent": false,
+        "inappropriateContent": [],
+        "spamContent": [],
+        "harmfulContent": [],
+        "sensitiveContent": [],
+        "filterIntensity": 0.1,
+        "filterComplexity": 0.1
+      },
+      "filteredResult": {
+        "isFiltered": false,
+        "filteredContent": "como vc se chama?",
+        "filterReasons": [],
+        "filterActions": [],
+        "safetyScore": 1,
+        "moderationNeeded": false
+      },
+      "filterLevel": 0.9588496310845509,
+      "safetyLevel": 0.8750624414640435,
+      "moderationSkills": 0.5662352582972527
     }
   ],
-  "lastUpdate": "2025-09-28T17:12:43.629Z",
+  "lastUpdate": "2025-09-28T21:35:48.831Z",
   "moduleName": "filters"
 }

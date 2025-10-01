@@ -561,6 +561,67 @@ class KnowledgeSystem {
     this.sources.clear();
     this.lastUpdate = new Date().toISOString();
   }
+
+  // Processa entrada e extrai conhecimento
+  processInput(input, context = {}) {
+    try {
+      const extractedKnowledge = this.extractKnowledge(input);
+      const processedKnowledge = {
+        input: input,
+        extractedFacts: extractedKnowledge,
+        context: context,
+        timestamp: new Date().toISOString(),
+        confidence: this.calculateOverallConfidence(extractedKnowledge)
+      };
+
+      // Adiciona conhecimento extraído
+      extractedKnowledge.forEach(fact => {
+        this.addKnowledge(fact.fact, fact.category, fact.confidence, 'user_input');
+      });
+
+      return processedKnowledge;
+    } catch (error) {
+      console.error('Erro ao processar entrada no sistema de conhecimento:', error);
+      return {
+        input: input,
+        extractedFacts: [],
+        context: context,
+        timestamp: new Date().toISOString(),
+        confidence: 0
+      };
+    }
+  }
+
+  // Extrai conhecimento da entrada
+  extractKnowledge(input) {
+    const facts = [];
+    const words = input.toLowerCase().split(/\s+/);
+    
+    // Procura por padrões de conhecimento
+    for (const [category, config] of Object.entries(this.categories)) {
+      const matches = words.filter(word => 
+        config.keywords.some(keyword => word.includes(keyword))
+      );
+      
+      if (matches.length > 0) {
+        facts.push({
+          fact: input,
+          category: category,
+          confidence: Math.min(0.8, matches.length * 0.2),
+          keywords: matches
+        });
+      }
+    }
+    
+    return facts;
+  }
+
+  // Calcula confiança geral
+  calculateOverallConfidence(facts) {
+    if (facts.length === 0) return 0;
+    const totalConfidence = facts.reduce((sum, fact) => sum + fact.confidence, 0);
+    return totalConfidence / facts.length;
+  }
 }
 
 export default KnowledgeSystem;

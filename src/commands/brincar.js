@@ -1,9 +1,13 @@
-import { SlashCommandBuilder } from 'discord.js';
+// src/commands/brincar.js - Comando unificado n!brincar
+import { formatReply } from '../utils/formatReply.js';
+
 export default {
-  data: new SlashCommandBuilder()
-    .setName('brincar')
-    .setDescription('A Nana quer brincar com você!'),
-  async execute(interaction) {
-    await interaction.reply('Vamos brincar de faz de conta? Eu adoro inventar mundos! 🧸');
+  commandName: 'brincar',
+  description: 'A Alice quer brincar com você!',
+  category: 'personalidade',
+  aliases: ['brincadeira', 'play', 'jogar'],
+  
+  async execute(message, client) {
+    await message.reply(formatReply('Vamos brincar de faz de conta? Eu adoro inventar mundos! 🧸 *fica toda animada*'));
   }
 };

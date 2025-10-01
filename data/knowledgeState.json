@@ -1,0 +1,120 @@
+{
+  "knowledgeBase": [
+    [
+      "knowledge_1759084060888_s5czb1",
+      {
+        "id": "knowledge_1759084060888_s5czb1",
+        "fact": "oiiii meu amor",
+        "category": "emoções",
+        "confidence": 0.2,
+        "source": "user_input",
+        "timestamp": "2025-09-28T18:27:40.889Z",
+        "lastAccessed": "2025-09-28T18:27:40.889Z",
+        "accessCount": 0,
+        "importance": 1,
+        "associations": []
+      }
+    ],
+    [
+      "knowledge_1759084060891_s5czb1",
+      {
+        "id": "knowledge_1759084060891_s5czb1",
+        "fact": "oiiii meu amor",
+        "category": "conceitos",
+        "confidence": 0.2,
+        "source": "user_input",
+        "timestamp": "2025-09-28T18:27:40.891Z",
+        "lastAccessed": "2025-09-28T18:27:40.891Z",
+        "accessCount": 0,
+        "importance": 0.9,
+        "associations": []
+      }
+    ],
+    [
+      "knowledge_1759085052128_z4ra3v",
+      {
+        "id": "knowledge_1759085052128_z4ra3v",
+        "fact": "me conta um fato curioso fofo",
+        "category": "fatos",
+        "confidence": 0.2,
+        "source": "user_input",
+        "timestamp": "2025-09-28T18:44:12.130Z",
+        "lastAccessed": "2025-09-28T18:44:12.130Z",
+        "accessCount": 0,
+        "importance": 0.7,
+        "associations": []
+      }
+    ]
+  ],
+  "associations": [
+    [
+      "oiiii",
+      {}
+    ],
+    [
+      "meu",
+      {}
+    ],
+    [
+      "amor",
+      {}
+    ],
+    [
+      "emoções",
+      {}
+    ],
+    [
+      "conceitos",
+      {}
+    ],
+    [
+      "conta",
+      {}
+    ],
+    [
+      "fato",
+      {}
+    ],
+    [
+      "curioso",
+      {}
+    ],
+    [
+      "fofo",
+      {}
+    ],
+    [
+      "fatos",
+      {}
+    ]
+  ],
+  "confidence": [
+    [
+      "knowledge_1759084060888_s5czb1",
+      0.2
+    ],
+    [
+      "knowledge_1759084060891_s5czb1",
+      0.2
+    ],
+    [
+      "knowledge_1759085052128_z4ra3v",
+      0.2
+    ]
+  ],
+  "sources": [
+    [
+      "knowledge_1759084060888_s5czb1",
+      "user_input"
+    ],
+    [
+      "knowledge_1759084060891_s5czb1",
+      "user_input"
+    ],
+    [
+      "knowledge_1759085052128_z4ra3v",
+      "user_input"
+    ]
+  ],
+  "lastUpdate": "2025-09-28T18:44:12.130Z"
+}

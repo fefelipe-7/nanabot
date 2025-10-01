@@ -577,6 +577,72 @@ class EpisodicMemorySystem {
     this.memoryStrength.clear();
     this.lastUpdate = new Date().toISOString();
   }
+
+  // Processa entrada e forma memórias episódicas
+  processInput(input, context = {}) {
+    try {
+      const events = this.detectEvents(input);
+      const narratives = this.detectNarratives(input, context);
+      const temporalMarkers = this.detectTemporalMarkers(input);
+      const contextualDetails = this.extractContextualDetails(input, context);
+      
+      const processedEpisodicMemory = {
+        input: input,
+        events: events,
+        narratives: narratives,
+        temporalMarkers: temporalMarkers,
+        contextualDetails: contextualDetails,
+        context: context,
+        timestamp: new Date().toISOString(),
+        memoryStrength: this.calculateMemoryStrength(events, narratives, temporalMarkers)
+      };
+
+      // Adiciona à linha do tempo de memórias
+      this.memoryTimeline.push({
+        input: input,
+        events: events,
+        narratives: narratives,
+        temporalMarkers: temporalMarkers,
+        contextualDetails: contextualDetails,
+        timestamp: new Date().toISOString()
+      });
+
+      // Mantém apenas os últimos 100 registros
+      if (this.memoryTimeline.length > 100) {
+        this.memoryTimeline = this.memoryTimeline.slice(-100);
+      }
+
+      return processedEpisodicMemory;
+    } catch (error) {
+      console.error('Erro ao processar entrada no sistema de memória episódica:', error);
+      return {
+        input: input,
+        events: [],
+        narratives: [],
+        temporalMarkers: [],
+        contextualDetails: {},
+        context: context,
+        timestamp: new Date().toISOString(),
+        memoryStrength: 0
+      };
+    }
+  }
+
+  // Calcula força da memória
+  calculateMemoryStrength(events, narratives, temporalMarkers) {
+    let strength = 0;
+    
+    // Contribuição dos eventos
+    strength += events.length * 0.3;
+    
+    // Contribuição das narrativas
+    strength += narratives.length * 0.4;
+    
+    // Contribuição dos marcadores temporais
+    strength += temporalMarkers.length * 0.3;
+    
+    return Math.min(1, strength);
+  }
 }
 
 export default EpisodicMemorySystem;

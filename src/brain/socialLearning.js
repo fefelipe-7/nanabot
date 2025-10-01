@@ -624,6 +624,64 @@ class SocialLearningSystem {
     this.socialLearningHistory = [];
     this.lastUpdate = new Date().toISOString();
   }
+
+  // Processa entrada e detecta aprendizado social
+  processInput(input, context = {}) {
+    try {
+      const analysis = this.analyzeSocialLearningElements(input, context);
+      const socialLearning = this.processSocialLearning(input, context);
+      
+      const processedSocialLearning = {
+        input: input,
+        analysis: analysis,
+        socialLearning: socialLearning,
+        context: context,
+        timestamp: new Date().toISOString(),
+        socialLearningScore: this.calculateSocialLearningIntensity(analysis, context)
+      };
+
+      // Adiciona à história de aprendizado social
+      this.socialLearningHistory.push({
+        input: input,
+        analysis: analysis,
+        socialLearning: socialLearning,
+        timestamp: new Date().toISOString()
+      });
+
+      // Mantém apenas os últimos 100 registros
+      if (this.socialLearningHistory.length > 100) {
+        this.socialLearningHistory = this.socialLearningHistory.slice(-100);
+      }
+
+      return processedSocialLearning;
+    } catch (error) {
+      console.error('Erro ao processar entrada no sistema de aprendizado social:', error);
+      return {
+        input: input,
+        analysis: { hasSocialCues: false, hasBehavioralExamples: false, hasSocialNorms: false, hasEmotionalCues: false },
+        socialLearning: { socialBehaviors: [], socialModels: [], socialContexts: [], socialInsights: [], socialSkills: [] },
+        context: context,
+        timestamp: new Date().toISOString(),
+        socialLearningScore: 0
+      };
+    }
+  }
+
+  // Calcula pontuação de aprendizado social
+  calculateSocialLearningScore(socialBehaviors, socialModels, socialNorms) {
+    let score = 0;
+    
+    // Contribuição dos comportamentos sociais
+    score += socialBehaviors.length * 0.3;
+    
+    // Contribuição dos modelos sociais
+    score += socialModels.length * 0.3;
+    
+    // Contribuição das normas sociais
+    score += socialNorms.length * 0.4;
+    
+    return Math.min(1, score);
+  }
 }
 
 export default SocialLearningSystem;

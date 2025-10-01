@@ -480,6 +480,78 @@ class ReinforcementSystem {
     this.discountFactor = 0.9;
     this.lastUpdate = new Date().toISOString();
   }
+
+  // Processa entrada e aplica reforço
+  processInput(input, context = {}) {
+    try {
+      const behavior = this.extractBehavior(input);
+      const reinforcement = this.calculateReinforcement(behavior, context);
+      
+      const processedReinforcement = {
+        input: input,
+        behavior: behavior,
+        reinforcement: reinforcement,
+        context: context,
+        timestamp: new Date().toISOString(),
+        qValue: this.getQValue(behavior, context)
+      };
+
+      // Aplica reforço se necessário
+      if (reinforcement.value > 0) {
+        this.applyReward(behavior, reinforcement.intensity, reinforcement.value);
+      } else if (reinforcement.value < 0) {
+        this.applyPunishment(behavior, reinforcement.intensity, Math.abs(reinforcement.value));
+      }
+
+      return processedReinforcement;
+    } catch (error) {
+      console.error('Erro ao processar entrada no sistema de reforço:', error);
+      return {
+        input: input,
+        behavior: 'unknown',
+        reinforcement: { value: 0, intensity: 0 },
+        context: context,
+        timestamp: new Date().toISOString(),
+        qValue: 0
+      };
+    }
+  }
+
+  // Extrai comportamento da entrada
+  extractBehavior(input) {
+    const words = input.toLowerCase().split(/\s+/);
+    
+    // Comportamentos positivos
+    if (words.some(w => ['obrigado', 'obrigada', 'valeu', 'legal', 'bom', 'ótimo'].includes(w))) {
+      return 'positive_response';
+    }
+    if (words.some(w => ['ajuda', 'ajudar', 'ajude'].includes(w))) {
+      return 'help_request';
+    }
+    if (words.some(w => ['brincar', 'jogar', 'diversão'].includes(w))) {
+      return 'play_request';
+    }
+    
+    // Comportamentos negativos
+    if (words.some(w => ['não', 'pare', 'stop', 'chato'].includes(w))) {
+      return 'negative_response';
+    }
+    
+    return 'neutral_interaction';
+  }
+
+  // Calcula reforço baseado no comportamento
+  calculateReinforcement(behavior, context) {
+    const reinforcementMap = {
+      'positive_response': { value: 1, intensity: 0.8 },
+      'help_request': { value: 0.5, intensity: 0.6 },
+      'play_request': { value: 0.7, intensity: 0.7 },
+      'negative_response': { value: -0.5, intensity: 0.4 },
+      'neutral_interaction': { value: 0.1, intensity: 0.2 }
+    };
+    
+    return reinforcementMap[behavior] || { value: 0, intensity: 0 };
+  }
 }
 
 export default ReinforcementSystem;

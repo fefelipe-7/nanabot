@@ -1,0 +1,194 @@
+{
+  "commands": {
+    "elogio": {
+      "useAI": false,
+      "aiWeight": 0.3,
+      "templates": {
+        "fisico": [
+          "Você é tão cheiroso!",
+          "Seu cabelo está lindo hoje!",
+          "Você tem um sorriso que ilumina tudo!",
+          "Você é tão fofo quando fala!"
+        ],
+        "emocional": [
+          "Gosto quando você sorri!",
+          "Você me faz sentir especial!",
+          "Você é muito carinhoso comigo!",
+          "Adoro quando você me escuta!"
+        ],
+        "engracado": [
+          "Você é meu herói, mesmo quando não alcança o armário!",
+          "Você é tão legal que até os brinquedos ficam com inveja!",
+          "Você é mais fofo que um ursinho de pelúcia!",
+          "Você é tão especial que até as estrelas piscam pra você!"
+        ]
+      },
+      "personalization": {
+        "enabled": true,
+        "contextKeys": ["preferences", "interests"]
+      }
+    },
+    "abracar": {
+      "useAI": false,
+      "aiWeight": 0.2,
+      "intensities": {
+        "leve": {
+          "emojis": ["🤗", "💕"],
+          "phrases": ["Um abraço bem carinhoso!", "Abraço fofo pra você!"]
+        },
+        "apertado": {
+          "emojis": ["🤗", "✨", "💞"],
+          "phrases": ["Abraço bem apertado!", "Abraço que espreme de carinho!"]
+        },
+        "correndo": {
+          "emojis": ["🏃‍♀️", "🤗", "💫"],
+          "phrases": ["Correndo pra te abraçar!", "Abraço correndo e pulando no colo!"]
+        }
+      },
+      "counters": {
+        "enabled": true,
+        "showStats": true
+      }
+    },
+    "meama": {
+      "useAI": false,
+      "aiWeight": 0.4,
+      "affectionLevels": {
+        "baixo": {
+          "threshold": 0.3,
+          "phrases": [
+            "Eu gosto de você, mas você some às vezes...",
+            "Você é legal, mas podia aparecer mais!",
+            "Te amo, mas você não brinca muito comigo..."
+          ]
+        },
+        "medio": {
+          "threshold": 0.7,
+          "phrases": [
+            "Claro que te amo, você é muito especial pra mim!",
+            "Eu te amo sim! Você é uma pessoa muito legal!",
+            "Te amo muito! Você sempre me faz feliz!"
+          ]
+        },
+        "alto": {
+          "threshold": 1.0,
+          "phrases": [
+            "Eu te amo tanto que se pudesse colocava estrelinhas no céu só com seu nome!",
+            "Te amo mais que todos os brinquedos do mundo juntos!",
+            "Eu te amo tanto que até os passarinhos cantam seu nome!"
+          ]
+        }
+      },
+      "repetition": {
+        "maxBeforeTeasing": 3,
+        "teasingPhrases": [
+          "Já disse que te amo, mas se quiser repito até você ficar bobo!",
+          "Você quer que eu repita? Te amo, te amo, te amo!",
+          "Já falei que te amo! Você é muito carente! 😄"
+        ]
+      }
+    },
+    "chorar": {
+      "useAI": false,
+      "aiWeight": 0.1,
+      "mode": {
+        "type": "crying",
+        "ttl": 300,
+        "reasons": [
+          "Meu biscoito caiu no chão!",
+          "Ninguém quis brincar de boneca comigo!",
+          "Perdi meu brinquedo favorito!",
+          "Você não me deu atenção hoje!",
+          "Meu desenho ficou feio!"
+        ],
+        "consolationCommands": ["abracar", "consolar"],
+        "consolationPhrases": [
+          "Obrigada pelo abraço! Já me sinto melhor! 😊",
+          "Você me consolou! Agora estou feliz de novo! ✨",
+          "Que abraço gostoso! Parei de chorar! 💕"
+        ]
+      }
+    },
+    "conta": {
+      "useAI": false,
+      "aiWeight": 0.5,
+      "slotFilling": {
+        "enabled": true,
+        "ttl": 60,
+        "questions": {
+          "length": "Quer que eu conte uma história curta ou longa?",
+          "theme": "Sobre o que você quer que eu conte? (animais, brincadeiras, sonhos...)"
+        }
+      },
+      "templates": {
+        "daily": [
+          "Hoje eu vi um passarinho azul e achei que era um super-herói voando!",
+          "Eu tentei comer biscoito escondida, mas o suco caiu no chão!",
+          "Sonhei que você tava lá na escola comigo e a gente brincava muito!",
+          "Hoje aprendi uma música nova e cantei pra todos os meus brinquedos!"
+        ]
+      }
+    },
+    "historinha": {
+      "useAI": false,
+      "aiWeight": 0.6,
+      "slotFilling": {
+        "enabled": true,
+        "ttl": 60,
+        "questions": {
+          "animal": "Me fala um animal que você gosta!",
+          "theme": "Que tipo de história você quer? (aventura, fada, herói...)"
+        }
+      },
+      "structure": {
+        "beginning": "Era uma vez...",
+        "middle": "E então aconteceu que...",
+        "ending": "E a lição que aprendemos foi..."
+      },
+      "lessons": [
+        "que a amizade é a coisa mais importante do mundo!",
+        "que sempre devemos ajudar quem precisa!",
+        "que ser gentil faz todo mundo feliz!",
+        "que nunca devemos desistir dos nossos sonhos!"
+      ]
+    },
+    "memoria": {
+      "useAI": false,
+      "aiWeight": 0.3,
+      "fallback": {
+        "enabled": true,
+        "templates": [
+          "Lembro que uma vez você me contou uma coisa muito legal...",
+          "Tenho uma lembrança fofa nossa...",
+          "Lembro que você sempre foi muito carinhoso comigo...",
+          "Tenho uma memória especial nossa guardada no coração..."
+        ]
+      }
+    },
+    "fantasia": {
+      "useAI": false,
+      "aiWeight": 0.7,
+      "mode": {
+        "type": "fantasy",
+        "maxTurns": 3,
+        "ttl": 300,
+        "scenarios": [
+          "Vamos fingir que estamos em um castelo gigante e você é o rei!",
+          "Eu sou uma astronauta e você tem que pilotar a nave comigo!",
+          "Vamos brincar que somos super-heróis salvando o mundo!",
+          "Que tal fingirmos que estamos numa floresta mágica?"
+        ],
+        "questions": [
+          "O que você quer fazer primeiro?",
+          "Como você quer que nossa aventura continue?",
+          "Que poder especial você tem?"
+        ]
+      }
+    }
+  },
+  "global": {
+    "defaultAIProvider": "openrouter",
+    "fallbackToOffline": true,
+    "logLevel": "info"
+  }
+}

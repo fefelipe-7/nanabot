@@ -316,6 +316,131 @@ class LoveTracker {
     };
     this.lastUpdate = new Date().toISOString();
   }
+
+  // Processa entrada e detecta expressões de amor
+  processInput(input, context = {}) {
+    try {
+      const loveExpressions = this.detectLoveExpressions(input, context);
+      const loveIntensity = this.calculateLoveIntensity(input, context);
+      const loveRecipients = this.detectLoveRecipients(input, context);
+      
+      const processedLove = {
+        input: input,
+        loveExpressions: loveExpressions,
+        loveIntensity: loveIntensity,
+        loveRecipients: loveRecipients,
+        context: context,
+        timestamp: new Date().toISOString(),
+        loveLevel: this.loveLevel
+      };
+
+      // Atualiza nível de amor baseado na entrada
+      if (loveExpressions.length > 0) {
+        this.updateLoveLevel(loveIntensity, context);
+      }
+
+      // Adiciona à história de amor
+      this.loveHistory.set(new Date().toISOString(), {
+        input: input,
+        loveExpressions: loveExpressions,
+        loveIntensity: loveIntensity,
+        loveRecipients: loveRecipients,
+        context: context
+      });
+
+      // Mantém apenas os últimos 100 registros
+      if (this.loveHistory.size > 100) {
+        const entries = Array.from(this.loveHistory.entries());
+        this.loveHistory = new Map(entries.slice(-100));
+      }
+
+      return processedLove;
+    } catch (error) {
+      console.error('Erro ao processar entrada no sistema de rastreamento de amor:', error);
+      return {
+        input: input,
+        loveExpressions: [],
+        loveIntensity: 0,
+        loveRecipients: [],
+        context: context,
+        timestamp: new Date().toISOString(),
+        loveLevel: this.loveLevel
+      };
+    }
+  }
+
+  // Detecta expressões de amor
+  detectLoveExpressions(input, context) {
+    const expressions = [];
+    const lowerInput = input.toLowerCase();
+    
+    const loveKeywords = {
+      'amor': ['amor', 'amar', 'amado', 'amada'],
+      'carinho': ['carinho', 'carinhoso', 'carinhosa', 'afeto'],
+      'beijo': ['beijo', 'beijar', 'beijinho'],
+      'abraço': ['abraço', 'abraçar', 'abraçinho'],
+      'feliz': ['feliz', 'alegria', 'alegre'],
+      'gratidão': ['obrigado', 'obrigada', 'valeu', 'grato']
+    };
+    
+    for (const [type, keywords] of Object.entries(loveKeywords)) {
+      for (const keyword of keywords) {
+        if (lowerInput.includes(keyword)) {
+          expressions.push({
+            type: type,
+            keyword: keyword,
+            intensity: 0.7,
+            context: context
+          });
+        }
+      }
+    }
+    
+    return expressions;
+  }
+
+  // Calcula intensidade do amor
+  calculateLoveIntensity(input, context) {
+    const expressions = this.detectLoveExpressions(input, context);
+    let intensity = 0;
+    
+    expressions.forEach(expr => {
+      intensity += expr.intensity;
+    });
+    
+    // Ajusta baseado no contexto
+    if (context.userRole === 'mamãe' || context.userRole === 'papai') {
+      intensity *= 1.5;
+    }
+    
+    return Math.min(1, intensity);
+  }
+
+  // Detecta destinatários do amor
+  detectLoveRecipients(input, context) {
+    const recipients = [];
+    const lowerInput = input.toLowerCase();
+    
+    const recipientKeywords = ['mamãe', 'papai', 'família', 'amigo', 'amiga'];
+    
+    for (const keyword of recipientKeywords) {
+      if (lowerInput.includes(keyword)) {
+        recipients.push({
+          recipient: keyword,
+          context: context
+        });
+      }
+    }
+    
+    return recipients;
+  }
+
+  // Atualiza nível de amor
+  updateLoveLevel(intensity, context) {
+    const change = intensity * 0.1;
+    this.loveLevel = Math.max(0, Math.min(1, this.loveLevel + change));
+    this.saveLoveState();
+  }
 }
 
 export default LoveTracker;

@@ -5,12 +5,51 @@
       {
         "category": "activities",
         "item": "histórias",
-        "level": 0.9999572848958332,
+        "level": 0.9997745854398149,
         "interactions": 4,
         "positiveInteractions": 4,
         "negativeInteractions": 0,
         "lastUpdate": "2025-09-28T16:11:13.062Z",
         "confidence": 0.7
+      }
+    ],
+    [
+      "people:mamãe",
+      {
+        "category": "people",
+        "item": "mamãe",
+        "level": 0.9998610240046297,
+        "interactions": 1,
+        "positiveInteractions": 1,
+        "negativeInteractions": 0,
+        "lastUpdate": "2025-09-28T18:15:41.354Z",
+        "confidence": 0.55
+      }
+    ],
+    [
+      "emotions:amor",
+      {
+        "category": "emotions",
+        "item": "amor",
+        "level": 0.9998693518402778,
+        "interactions": 1,
+        "positiveInteractions": 1,
+        "negativeInteractions": 0,
+        "lastUpdate": "2025-09-28T18:27:40.878Z",
+        "confidence": 0.55
+      }
+    ],
+    [
+      "environments:casa",
+      {
+        "category": "environments",
+        "item": "casa",
+        "level": 0.9998750808912036,
+        "interactions": 2,
+        "positiveInteractions": 2,
+        "negativeInteractions": 0,
+        "lastUpdate": "2025-09-28T18:35:55.869Z",
+        "confidence": 0.6
       }
     ]
   ],
@@ -382,9 +421,420 @@
         "username": "fefelipe7"
       },
       "totalPreferences": 1
+    },
+    {
+      "timestamp": "2025-09-28T18:01:21.467Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "totalPreferences": 1
+    },
+    {
+      "timestamp": "2025-09-28T18:01:44.675Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "totalPreferences": 1
+    },
+    {
+      "timestamp": "2025-09-28T18:15:11.878Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "totalPreferences": 1
+    },
+    {
+      "timestamp": "2025-09-28T18:15:26.107Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "totalPreferences": 1
+    },
+    {
+      "timestamp": "2025-09-28T18:15:41.354Z",
+      "detected": [
+        {
+          "category": "people",
+          "item": "mamãe",
+          "intensity": 0.2,
+          "matches": 1,
+          "base": 0.95,
+          "context": {
+            "role": "papai",
+            "username": "fefelipe7",
+            "userId": "1276314597967532124"
+          }
+        }
+      ],
+      "changes": [
+        {
+          "key": "people:mamãe",
+          "category": "people",
+          "item": "mamãe",
+          "oldLevel": 0.95,
+          "newLevel": 1,
+          "change": 0.050000000000000044,
+          "confidence": 0.55
+        }
+      ],
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "totalPreferences": 2
+    },
+    {
+      "timestamp": "2025-09-28T18:16:08.110Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "totalPreferences": 2
+    },
+    {
+      "timestamp": "2025-09-28T18:16:30.977Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "totalPreferences": 2
+    },
+    {
+      "timestamp": "2025-09-28T18:25:23.993Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "totalPreferences": 2
+    },
+    {
+      "timestamp": "2025-09-28T18:25:40.266Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "totalPreferences": 2
+    },
+    {
+      "timestamp": "2025-09-28T18:26:53.722Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "totalPreferences": 2
+    },
+    {
+      "timestamp": "2025-09-28T18:27:12.734Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "totalPreferences": 2
+    },
+    {
+      "timestamp": "2025-09-28T18:27:40.879Z",
+      "detected": [
+        {
+          "category": "emotions",
+          "item": "amor",
+          "intensity": 0.2,
+          "matches": 1,
+          "base": 0.95,
+          "context": {
+            "role": "mamãe",
+            "username": "kircii",
+            "userId": "787524878642577429"
+          }
+        }
+      ],
+      "changes": [
+        {
+          "key": "emotions:amor",
+          "category": "emotions",
+          "item": "amor",
+          "oldLevel": 0.95,
+          "newLevel": 1,
+          "change": 0.050000000000000044,
+          "confidence": 0.55
+        }
+      ],
+      "context": {
+        "role": "mamãe",
+        "username": "kircii",
+        "userId": "787524878642577429"
+      },
+      "totalPreferences": 3
+    },
+    {
+      "timestamp": "2025-09-28T18:31:22.949Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "totalPreferences": 3
+    },
+    {
+      "timestamp": "2025-09-28T18:31:42.301Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "mamãe",
+        "username": "kircii",
+        "userId": "787524878642577429"
+      },
+      "totalPreferences": 3
+    },
+    {
+      "timestamp": "2025-09-28T18:33:32.634Z",
+      "detected": [
+        {
+          "category": "environments",
+          "item": "casa",
+          "intensity": 0.2,
+          "matches": 1,
+          "base": 0.9,
+          "context": {
+            "role": "papai",
+            "username": "fefelipe7",
+            "userId": "1276314597967532124"
+          }
+        }
+      ],
+      "changes": [
+        {
+          "key": "environments:casa",
+          "category": "environments",
+          "item": "casa",
+          "oldLevel": 0.9,
+          "newLevel": 1,
+          "change": 0.09999999999999998,
+          "confidence": 0.55
+        }
+      ],
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "totalPreferences": 4
+    },
+    {
+      "timestamp": "2025-09-28T18:35:55.869Z",
+      "detected": [
+        {
+          "category": "environments",
+          "item": "casa",
+          "intensity": 0.2,
+          "matches": 1,
+          "base": 0.9,
+          "context": {
+            "role": "papai",
+            "username": "fefelipe7",
+            "userId": "1276314597967532124"
+          }
+        }
+      ],
+      "changes": [
+        {
+          "key": "environments:casa",
+          "category": "environments",
+          "item": "casa",
+          "oldLevel": 0.999998342175926,
+          "newLevel": 1,
+          "change": 0.0000016578240740194872,
+          "confidence": 0.6
+        }
+      ],
+      "context": {
+        "role": "papai",
+        "username": "fefelipe7",
+        "userId": "1276314597967532124"
+      },
+      "totalPreferences": 4
+    },
+    {
+      "timestamp": "2025-09-28T18:43:14.488Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "totalPreferences": 4
+    },
+    {
+      "timestamp": "2025-09-28T18:44:12.106Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "totalPreferences": 4
+    },
+    {
+      "timestamp": "2025-09-28T18:48:14.427Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "totalPreferences": 4
+    },
+    {
+      "timestamp": "2025-09-28T18:51:17.592Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "totalPreferences": 4
+    },
+    {
+      "timestamp": "2025-09-28T18:54:17.888Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "totalPreferences": 4
+    },
+    {
+      "timestamp": "2025-09-28T18:59:09.924Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "totalPreferences": 4
+    },
+    {
+      "timestamp": "2025-09-28T19:02:46.975Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "totalPreferences": 4
+    },
+    {
+      "timestamp": "2025-09-28T20:41:44.559Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "totalPreferences": 4
+    },
+    {
+      "timestamp": "2025-09-28T20:46:33.127Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "totalPreferences": 4
+    },
+    {
+      "timestamp": "2025-09-28T20:57:07.162Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "totalPreferences": 4
+    },
+    {
+      "timestamp": "2025-09-28T21:29:26.855Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "totalPreferences": 4
+    },
+    {
+      "timestamp": "2025-09-28T21:35:18.131Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "totalPreferences": 4
+    },
+    {
+      "timestamp": "2025-09-28T21:35:48.882Z",
+      "detected": [],
+      "changes": [],
+      "context": {
+        "role": "outro de papai",
+        "username": "fefelipc_76909",
+        "userId": "1339376778778644593"
+      },
+      "totalPreferences": 4
     }
   ],
-  "lastUpdate": "2025-09-28T17:12:43.646Z",
+  "lastUpdate": "2025-09-28T21:35:48.879Z",
   "categories": {
     "activities": {
       "brincar": {

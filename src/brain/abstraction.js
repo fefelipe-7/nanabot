@@ -202,6 +202,29 @@ class AbstractionSystem {
     return categories;
   }
 
+  // Detecta conceitos
+  detectConcepts(input) {
+    const concepts = [];
+    const lowerInput = input.toLowerCase();
+    
+    const conceptKeywords = [
+      'amor', 'felicidade', 'tristeza', 'medo', 'alegria',
+      'amizade', 'família', 'casa', 'escola', 'brincadeira'
+    ];
+    
+    for (const keyword of conceptKeywords) {
+      if (lowerInput.includes(keyword)) {
+        concepts.push({
+          concept: keyword,
+          type: 'abstract_concept',
+          confidence: 0.8
+        });
+      }
+    }
+    
+    return concepts;
+  }
+
   // Detecta relacionamentos
   detectRelationships(input, context) {
     const relationships = [];
@@ -562,6 +585,72 @@ class AbstractionSystem {
     this.relationships.clear();
     this.abstractionHistory = [];
     this.lastUpdate = new Date().toISOString();
+  }
+
+  // Processa entrada e aplica abstração
+  processInput(input, context = {}) {
+    try {
+      const concepts = this.detectConcepts(input);
+      const categories = this.detectCategories(input);
+      const relationships = this.detectRelationships(input, context);
+      const abstractionLevel = this.assessAbstractionLevel(input);
+      
+      const processedAbstraction = {
+        input: input,
+        concepts: concepts,
+        categories: categories,
+        relationships: relationships,
+        abstractionLevel: abstractionLevel,
+        context: context,
+        timestamp: new Date().toISOString(),
+        abstractionScore: this.calculateAbstractionScore(concepts, categories, relationships)
+      };
+
+      // Adiciona à história de abstração
+      this.abstractionHistory.push({
+        input: input,
+        concepts: concepts,
+        categories: categories,
+        relationships: relationships,
+        abstractionLevel: abstractionLevel,
+        timestamp: new Date().toISOString()
+      });
+
+      // Mantém apenas os últimos 100 registros
+      if (this.abstractionHistory.length > 100) {
+        this.abstractionHistory = this.abstractionHistory.slice(-100);
+      }
+
+      return processedAbstraction;
+    } catch (error) {
+      console.error('Erro ao processar entrada no sistema de abstração:', error);
+      return {
+        input: input,
+        concepts: [],
+        categories: [],
+        relationships: [],
+        abstractionLevel: { level: 0, triggers: [] },
+        context: context,
+        timestamp: new Date().toISOString(),
+        abstractionScore: 0
+      };
+    }
+  }
+
+  // Calcula pontuação de abstração
+  calculateAbstractionScore(concepts, categories, relationships) {
+    let score = 0;
+    
+    // Contribuição dos conceitos
+    score += concepts.length * 0.3;
+    
+    // Contribuição das categorias
+    score += categories.length * 0.3;
+    
+    // Contribuição dos relacionamentos
+    score += relationships.length * 0.4;
+    
+    return Math.min(1, score);
   }
 }
 

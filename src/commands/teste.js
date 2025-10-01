@@ -5,7 +5,7 @@ const { getCompleteStats, getBrainStatus } = brainModule;
 
 const data = new SlashCommandBuilder()
   .setName('teste')
-  .setDescription('Testa todos os sistemas da Nanabot')
+  .setDescription('Testa todos os sistemas da Alice')
   .addStringOption(option =>
     option
       .setName('sistema')
@@ -50,7 +50,7 @@ async function execute(interaction) {
       // Testa todos os sistemas
       const stats = getCompleteStats();
       
-      let response = '🧠 **Status Completo da Nanabot**\n\n';
+      let response = '🧠 **Status Completo da Alice**\n\n';
       
       // Cérebro
       response += `**🧠 Cérebro:**\n`;

@@ -604,6 +604,72 @@ class AttachmentObjectsSystem {
     this.objectHistory = [];
     this.lastUpdate = new Date().toISOString();
   }
+
+  // Processa entrada e detecta objetos de apego
+  processInput(input, context = {}) {
+    try {
+      const attachmentObjects = this.detectAttachmentObjects(input, context);
+      const comfortObjects = this.detectComfortObjects(input, context);
+      const transitionObjects = this.detectTransitionObjects(input, context);
+      const specialObjects = this.detectSpecialObjects(input, context);
+      
+      const processedAttachmentObjects = {
+        input: input,
+        attachmentObjects: attachmentObjects,
+        comfortObjects: comfortObjects,
+        transitionObjects: transitionObjects,
+        specialObjects: specialObjects,
+        context: context,
+        timestamp: new Date().toISOString(),
+        attachmentLevel: this.calculateAttachmentLevel(attachmentObjects, comfortObjects, transitionObjects)
+      };
+
+      // Adiciona à história de objetos
+      this.objectHistory.push({
+        input: input,
+        attachmentObjects: attachmentObjects,
+        comfortObjects: comfortObjects,
+        transitionObjects: transitionObjects,
+        specialObjects: specialObjects,
+        timestamp: new Date().toISOString()
+      });
+
+      // Mantém apenas os últimos 100 registros
+      if (this.objectHistory.length > 100) {
+        this.objectHistory = this.objectHistory.slice(-100);
+      }
+
+      return processedAttachmentObjects;
+    } catch (error) {
+      console.error('Erro ao processar entrada no sistema de objetos de apego:', error);
+      return {
+        input: input,
+        attachmentObjects: [],
+        comfortObjects: [],
+        transitionObjects: [],
+        specialObjects: [],
+        context: context,
+        timestamp: new Date().toISOString(),
+        attachmentLevel: 0
+      };
+    }
+  }
+
+  // Calcula nível de apego
+  calculateAttachmentLevel(attachmentObjects, comfortObjects, transitionObjects) {
+    let level = 0;
+    
+    // Contribuição dos objetos de apego
+    level += attachmentObjects.length * 0.4;
+    
+    // Contribuição dos objetos de conforto
+    level += comfortObjects.length * 0.3;
+    
+    // Contribuição dos objetos de transição
+    level += transitionObjects.length * 0.3;
+    
+    return Math.min(1, level);
+  }
 }
 
 export default AttachmentObjectsSystem;

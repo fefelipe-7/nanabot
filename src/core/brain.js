@@ -41,7 +41,7 @@ import StoryTeller from '../language/storyTeller.js';
 import VocabularySystem from '../language/vocabulary.js';
 
 // Importa módulos utilitários
-import dbManager, { connectDB, insertDB, updateDB, selectDB } from '../utils/db.js';
+import dbManager, { connectDB as connectDBUtil, insertDB as insertDBUtil, updateDB as updateDBUtil, selectDB as selectDBUtil } from '../utils/db.js';
 import diaryExporter, { exportDiary } from '../utils/diaryExporter.js';
 import filterSystem, { processFilters } from '../utils/filtros.js';
 
@@ -99,10 +99,10 @@ class NanabotBrain {
     
     // Estado global do cérebro
     this.globalState = this.loadGlobalState();
-    this.isProcessing = false;
-    this.processingQueue = [];
+    // Removido sistema de queue
+    // Removido sistema de queue
     
-    console.log('🧠 Nanabot Brain inicializado com todos os 40 módulos!');
+    console.log('🧠 Alice Brain inicializado com todos os 40 módulos!');
   }
 
   // Carrega estado global
@@ -139,12 +139,8 @@ class NanabotBrain {
 
   // Processa entrada principal
   async processInput(input, context = {}) {
-    if (this.isProcessing) {
-      this.addToQueue(input, context);
-      return { status: 'queued', message: 'Processando...' };
-    }
-
-    this.isProcessing = true;
+    // Removido sistema de queue que causava duplicação
+    // this.isProcessing = true;
     
     try {
       // Atualiza estado global
@@ -203,8 +199,35 @@ class NanabotBrain {
         error: error.message
       };
     } finally {
-      this.isProcessing = false;
+      // Removido sistema de queue
       this.processQueue();
+    }
+  }
+
+  // Método seguro para processar entrada
+  safeProcessInput(module, input, context) {
+    try {
+      if (module && typeof module.processInput === 'function') {
+        return module.processInput(input, context);
+      } else {
+        // Retorna dados básicos se o método não existir
+        return {
+          input: input,
+          context: context,
+          timestamp: new Date().toISOString(),
+          processed: false,
+          error: 'Método processInput não encontrado'
+        };
+      }
+    } catch (error) {
+      console.error(`Erro no módulo ${module.constructor.name}:`, error);
+      return {
+        input: input,
+        context: context,
+        timestamp: new Date().toISOString(),
+        processed: false,
+        error: error.message
+      };
     }
   }
 
@@ -230,22 +253,22 @@ class NanabotBrain {
     results.reinforcement = this.reinforcement.processInput(input, context);
     
     // Fase 4 - Avançado
-    results.imagination = this.imagination.processInput(input, context);
-    results.curiosity = this.curiosity.processInput(input, context);
-    results.selfReflection = this.selfReflection.processInput(input, context);
-    results.theoryOfMind = this.theoryOfMind.processInput(input, context);
+    results.imagination = this.safeProcessInput(this.imagination, input, context);
+    results.curiosity = this.safeProcessInput(this.curiosity, input, context);
+    results.selfReflection = this.safeProcessInput(this.selfReflection, input, context);
+    results.theoryOfMind = this.safeProcessInput(this.theoryOfMind, input, context);
     
     // Novos Módulos Fundamentais
-    results.abstraction = this.abstraction.processInput(input, context);
-    results.attachmentObjects = this.attachmentObjects.processInput(input, context);
-    results.crises = this.crises.processInput(input, context);
-    results.dreams = this.dreams.processInput(input, context);
-    results.emotionRegulation = this.emotionRegulation.processInput(input, context);
-    results.episodicMemory = this.episodicMemory.processInput(input, context);
-    results.fazDeConta = this.fazDeConta.processInput(input, context);
-    results.motivacao = this.motivacao.processInput(input, context);
-    results.socialLearning = this.socialLearning.processInput(input, context);
-    results.loveTracker = this.loveTracker.processInput(input, context);
+    results.abstraction = this.safeProcessInput(this.abstraction, input, context);
+    results.attachmentObjects = this.safeProcessInput(this.attachmentObjects, input, context);
+    results.crises = this.safeProcessInput(this.crises, input, context);
+    results.dreams = this.safeProcessInput(this.dreams, input, context);
+    results.emotionRegulation = this.safeProcessInput(this.emotionRegulation, input, context);
+    results.episodicMemory = this.safeProcessInput(this.episodicMemory, input, context);
+    results.fazDeConta = this.safeProcessInput(this.fazDeConta, input, context);
+    results.motivacao = this.safeProcessInput(this.motivacao, input, context);
+    results.socialLearning = this.safeProcessInput(this.socialLearning, input, context);
+    results.loveTracker = this.safeProcessInput(this.loveTracker, input, context);
     
     // Processa decaimento de memória (executa periodicamente)
     if (this.shouldProcessMemoryDecay()) {
@@ -279,21 +302,527 @@ class NanabotBrain {
 
   // Gera resposta final
   async generateResponse(input, context, results, isMagicMode = false) {
-    // Monta prompt enriquecido com informações dos sistemas
-    const enrichedPrompt = this.buildEnrichedPrompt(input, context, results, isMagicMode);
-    
-    // Chama API da OpenRouter
-    const aiResponse = await this.callOpenRouterAPI(enrichedPrompt);
-    
-    // Aplica estilo de fala
-    const styledResponse = this.estiloFala.generateStyledResponse(aiResponse, results.emotion.dominantEmotion, context);
-    
-    // Aplica modo mágico se ativo
-    const finalResponse = styledResponse;
-    
-    // Formata resposta final
-    return formatReply(finalResponse);
+    try {
+      // Usa o novo sistema inteligente de prompt
+      const intelligentPrompt = await this.buildIntelligentPrompt(input, context, results, isMagicMode);
+      
+      // Chama API da OpenRouter
+      const aiResponse = await this.callOpenRouterAPI(intelligentPrompt);
+      
+      // Aplica estilo de fala
+      const styledResponse = this.estiloFala.generateStyledResponse(aiResponse, results.emotion.dominantEmotion, context);
+      
+      // Aplica modo mágico se ativo
+      const finalResponse = styledResponse;
+      
+      // Formata resposta final
+      return formatReply(finalResponse);
+    } catch (error) {
+      console.error('Erro no sistema inteligente, usando fallback:', error);
+      // Fallback para o sistema antigo
+      const enrichedPrompt = this.buildEnrichedPrompt(input, context, results, isMagicMode);
+      const aiResponse = await this.callOpenRouterAPI(enrichedPrompt);
+      const styledResponse = this.estiloFala.generateStyledResponse(aiResponse, results.emotion.dominantEmotion, context);
+      return formatReply(styledResponse);
+    }
   }
+
+  // ===== SISTEMA INTELIGENTE DE PROMPT =====
+
+  // Constrói prompt inteligente com dados do banco
+  async buildIntelligentPrompt(input, context, results, isMagicMode = false) {
+    const { role, username, userId } = context;
+    
+    try {
+      // 1. Buscar dados contextuais do banco
+      const contextualData = await this.gatherContextualData(input, userId || 'default');
+      
+      // 2. Analisar estado atual
+      const currentState = this.analyzeCurrentState(results);
+      
+      // 3. Determinar estratégia de resposta
+      const responseStrategy = this.determineResponseStrategy(currentState);
+      
+      // 4. Construir prompt personalizado
+      return this.constructPersonalizedPrompt(input, context, contextualData, currentState, responseStrategy);
+    } catch (error) {
+      console.error('Erro no sistema inteligente:', error);
+      // Fallback para o sistema antigo
+      return this.buildEnrichedPrompt(input, context, results, isMagicMode);
+    }
+  }
+
+  // Busca dados contextuais do banco de dados
+  async gatherContextualData(input, userId) {
+    try {
+      const [
+        relevantMemories,
+        recentInteractions,
+        learnedVocabulary,
+        userPreferences,
+        emotionalHistory,
+        learningRecords
+      ] = await Promise.all([
+        this.getRelevantMemories(input, userId),
+        this.getRecentInteractions(userId),
+        this.getLearnedVocabulary(userId),
+        this.getUserPreferences(userId),
+        this.getEmotionalHistory(userId),
+        this.getLearningRecords(userId)
+      ]);
+
+      return {
+        memories: relevantMemories,
+        interactions: recentInteractions,
+        vocabulary: learnedVocabulary,
+        preferences: userPreferences,
+        emotionalHistory: emotionalHistory,
+        learningRecords: learningRecords
+      };
+    } catch (error) {
+      console.error('Erro ao buscar dados contextuais:', error);
+      return {
+        memories: [],
+        interactions: [],
+        vocabulary: [],
+        preferences: [],
+        emotionalHistory: [],
+        learningRecords: []
+      };
+    }
+  }
+
+  // Busca memórias relevantes baseadas no input
+  async getRelevantMemories(input, userId) {
+    try {
+      await connectDBUtil();
+      
+      // Extrai palavras-chave do input
+      const keywords = this.extractKeywords(input);
+      
+      if (keywords.length === 0) return [];
+      
+      // Busca memórias que contenham palavras-chave
+      const keywordConditions = keywords.map(() => 'memory_content LIKE ?').join(' OR ');
+      const keywordParams = keywords.map(k => `%${k}%`);
+      
+      const memories = await selectDBUtil(
+        'memories',
+        '*',
+        `user_id = ? AND (${keywordConditions})`,
+        [userId, ...keywordParams]
+      );
+      
+      return memories || [];
+    } catch (error) {
+      console.error('Erro ao buscar memórias relevantes:', error);
+      return [];
+    }
+  }
+
+  // Busca interações recentes
+  async getRecentInteractions(userId) {
+    try {
+      await connectDBUtil();
+      
+      const interactions = await selectDBUtil(
+        'interactions',
+        '*',
+        'user_id = ?',
+        [userId]
+      );
+      
+      return interactions || [];
+    } catch (error) {
+      console.error('Erro ao buscar interações recentes:', error);
+      return [];
+    }
+  }
+
+  // Busca vocabulário aprendido
+  async getLearnedVocabulary(userId) {
+    try {
+      await connectDBUtil();
+      
+      const vocabulary = await selectDBUtil(
+        'vocabulary',
+        '*',
+        'user_id = ?',
+        [userId]
+      );
+      
+      return vocabulary || [];
+    } catch (error) {
+      console.error('Erro ao buscar vocabulário:', error);
+      return [];
+    }
+  }
+
+  // Busca preferências do usuário
+  async getUserPreferences(userId) {
+    try {
+      await connectDBUtil();
+      
+      const preferences = await selectDBUtil(
+        'preferences',
+        '*',
+        'user_id = ?',
+        [userId]
+      );
+      
+      return preferences || [];
+    } catch (error) {
+      console.error('Erro ao buscar preferências:', error);
+      return [];
+    }
+  }
+
+  // Busca histórico emocional
+  async getEmotionalHistory(userId) {
+    try {
+      await connectDBUtil();
+      
+      const emotions = await selectDBUtil(
+        'emotions_log',
+        '*',
+        'user_id = ?',
+        [userId]
+      );
+      
+      return emotions || [];
+    } catch (error) {
+      console.error('Erro ao buscar histórico emocional:', error);
+      return [];
+    }
+  }
+
+  // Busca registros de aprendizado
+  async getLearningRecords(userId) {
+    try {
+      await connectDBUtil();
+      
+      const learningRecords = await selectDBUtil(
+        'learning_records',
+        '*',
+        'user_id = ?',
+        [userId]
+      );
+      
+      return learningRecords || [];
+    } catch (error) {
+      console.error('Erro ao buscar registros de aprendizado:', error);
+      return [];
+    }
+  }
+
+  // Extrai palavras-chave do input
+  extractKeywords(input) {
+    const stopWords = new Set(['o', 'a', 'os', 'as', 'um', 'uma', 'uns', 'umas', 'de', 'do', 'da', 'dos', 'das', 'em', 'no', 'na', 'nos', 'nas', 'para', 'por', 'com', 'sem', 'que', 'eu', 'tu', 'ele', 'ela', 'nós', 'vós', 'eles', 'elas', 'é', 'são', 'foi', 'foram', 'ser', 'estar', 'ter', 'fazer', 'dizer', 'ir', 'ver', 'dar', 'saber', 'poder', 'querer']);
+    
+    const words = input.toLowerCase()
+      .replace(/[^\w\sáàâãéèêíìîóòôõúùûç]/g, '')
+      .split(/\s+/)
+      .filter(word => word.length > 2 && !stopWords.has(word));
+    
+    return [...new Set(words)]; // Remove duplicatas
+  }
+
+  // Analisa estado atual da Nanabot
+  analyzeCurrentState(results) {
+    const state = {
+      emotional: {
+        dominantEmotion: results.emotion?.dominantEmotion || 'neutro',
+        intensity: results.emotion?.intensity || 0.5,
+        mood: results.mood?.currentMood || 0.5,
+        regulationSkills: results.emotionRegulation?.regulationSkills || 0.5
+      },
+      cognitive: {
+        mentalAge: results.age?.current || this.age?.idadeMental || 4.0,
+        curiosityLevel: results.curiosity?.curiosityLevel || 0.5,
+        imaginationLevel: results.imagination?.imaginationLevel || 0.5,
+        learningType: results.learning?.learningType || 'observacional'
+      },
+      social: {
+        attachmentLevel: results.attachment?.attachmentLevel || 0.5,
+        loveLevel: results.loveTracker?.loveLevel || 0.5,
+        socialLearningRate: results.socialLearning?.socialLearningRate || 0.5
+      },
+      crisis: {
+        crisisLevel: results.crises?.crisisLevel || 0,
+        needsAttention: (results.crises?.crisisLevel || 0) > 0.5,
+        stabilityLevel: 1 - (results.crises?.crisisLevel || 0)
+      },
+      creativity: {
+        playfulness: results.fazDeConta?.playfulness || 0.5,
+        dreamActivity: results.dreams?.dreamActivity || 0.5,
+        storytellingLevel: results.storyTeller?.storytellingLevel || 0.5
+      },
+      communication: {
+        expressionLevel: results.expressionEngine?.expressionLevel || 0.5,
+        vocabularyLevel: results.vocabulary?.vocabularyLevel || 0.5,
+        misunderstandingRate: results.misunderstandings?.misunderstandingRate || 0.2
+      }
+    };
+
+    return state;
+  }
+
+  // Determina estratégia de resposta baseada no estado
+  determineResponseStrategy(currentState) {
+    const strategy = {
+      tone: 'carinhoso',
+      complexity: 'simples',
+      focus: 'geral',
+      specialInstructions: []
+    };
+
+    // Estratégia baseada em crise
+    if (currentState.crisis.needsAttention) {
+      strategy.tone = 'reconfortante';
+      strategy.complexity = 'muito_simples';
+      strategy.focus = 'seguranca_emocional';
+      strategy.specialInstructions.push('Seja extra carinhosa e reconfortante');
+      strategy.specialInstructions.push('Use linguagem mais simples');
+      strategy.specialInstructions.push('Evite temas estressantes');
+      strategy.specialInstructions.push('Foque em segurança e conforto');
+    }
+
+    // Estratégia baseada na emoção
+    if (currentState.emotional.intensity > 0.7) {
+      if (currentState.emotional.dominantEmotion === 'feliz') {
+        strategy.tone = 'alegre_entusiasmado';
+        strategy.focus = 'brincadeira_diversao';
+        strategy.specialInstructions.push('Seja mais brincalhona e entusiasmada');
+      } else if (currentState.emotional.dominantEmotion === 'triste') {
+        strategy.tone = 'carinhoso_consolador';
+        strategy.focus = 'conforto_emocional';
+        strategy.specialInstructions.push('Ofereça conforto e carinho');
+      } else if (currentState.emotional.dominantEmotion === 'medo') {
+        strategy.tone = 'protetor_calmo';
+        strategy.focus = 'seguranca';
+        strategy.specialInstructions.push('Transmita segurança e proteção');
+      }
+    }
+
+    // Estratégia baseada na curiosidade
+    if (currentState.cognitive.curiosityLevel > 0.7) {
+      strategy.focus = 'aprendizado_exploracao';
+      strategy.specialInstructions.push('Seja mais curiosa e faça perguntas');
+      strategy.specialInstructions.push('Explore novos tópicos');
+    }
+
+    // Estratégia baseada na imaginação
+    if (currentState.creativity.playfulness > 0.7) {
+      strategy.tone = 'brincalhao_criativo';
+      strategy.focus = 'imaginacao_criatividade';
+      strategy.specialInstructions.push('Use mais imaginação e criatividade');
+      strategy.specialInstructions.push('Inclua elementos lúdicos');
+    }
+
+    // Estratégia baseada na idade mental
+    if (currentState.cognitive.mentalAge < 3) {
+      strategy.complexity = 'muito_simples';
+      strategy.specialInstructions.push('Use vocabulário bem simples');
+      strategy.specialInstructions.push('Frases curtas');
+    } else if (currentState.cognitive.mentalAge > 6) {
+      strategy.complexity = 'moderada';
+      strategy.specialInstructions.push('Pode usar vocabulário um pouco mais complexo');
+    }
+
+    return strategy;
+  }
+
+  // Constrói prompt personalizado
+  constructPersonalizedPrompt(input, context, contextualData, currentState, responseStrategy) {
+    const { role, username } = context;
+    
+    // Seção base
+    const basePrompt = this.buildBasePrompt(role, username);
+    
+    // Seção de contexto emocional e estado
+    const stateContext = this.buildStateContext(currentState);
+    
+    // Seção de memórias e experiências
+    const memoryContext = this.buildMemoryContext(contextualData.memories);
+    
+    // Seção de interações recentes
+    const interactionContext = this.buildInteractionContext(contextualData.interactions);
+    
+    // Seção de preferências e aprendizado
+    const personalContext = this.buildPersonalContext(contextualData.preferences, contextualData.vocabulary, contextualData.learningRecords);
+    
+    // Seção de estratégia de resposta
+    const strategyContext = this.buildStrategyContext(responseStrategy);
+    
+    // Seção de histórico emocional
+    const emotionalContext = this.buildEmotionalHistoryContext(contextualData.emotionalHistory);
+    
+    return `${basePrompt}
+
+${stateContext}
+
+${memoryContext}
+
+${interactionContext}
+
+${personalContext}
+
+${emotionalContext}
+
+${strategyContext}
+
+Mensagem atual: "${input}"
+
+Responda como Nanabot, considerando todas essas informações para criar uma resposta personalizada, contextual e apropriada para seu estado atual. Use suas memórias, aprendizado e experiências para tornar a resposta única e significativa.`;
+  }
+
+  // Constrói seção base do prompt
+  buildBasePrompt(role, username) {
+    return `Você é Nanabot, uma criança de 4 anos, filha do casal. Sua mamãe é Ana Clara, seu papai é Felipe. Você responde de forma doce e infantil.
+
+Quem fala com você é ${role} chamado ${username}.`;
+  }
+
+  // Constrói contexto de estado atual
+  buildStateContext(currentState) {
+    return `
+ESTADO ATUAL DA NANABOT:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Estado Emocional:
+• Emoção: ${currentState.emotional.dominantEmotion} (intensidade: ${(currentState.emotional.intensity * 100).toFixed(0)}%)
+• Humor: ${currentState.emotional.mood > 0.7 ? 'muito bom' : currentState.emotional.mood > 0.3 ? 'normal' : 'baixo'}
+• Regulação emocional: ${currentState.emotional.regulationSkills > 0.5 ? 'boa' : 'precisa melhorar'}
+
+Estado Cognitivo:
+• Idade mental: ${currentState.cognitive.mentalAge.toFixed(1)} anos
+• Curiosidade: ${currentState.cognitive.curiosityLevel > 0.7 ? 'muito curiosa' : currentState.cognitive.curiosityLevel > 0.3 ? 'moderadamente curiosa' : 'pouco curiosa'}
+• Imaginação: ${currentState.cognitive.imaginationLevel > 0.7 ? 'muito imaginativa' : 'moderadamente imaginativa'}
+• Tipo de aprendizado: ${currentState.cognitive.learningType}
+
+Estado Social:
+• Nível de apego: ${(currentState.social.attachmentLevel * 100).toFixed(0)}%
+• Nível de amor: ${(currentState.social.loveLevel * 100).toFixed(0)}%
+• Aprendizado social: ${currentState.social.socialLearningRate > 0.5 ? 'ativo' : 'passivo'}
+
+Estado de Crise:
+• Nível de crise: ${(currentState.crisis.crisisLevel * 100).toFixed(0)}%
+• Precisa atenção: ${currentState.crisis.needsAttention ? 'SIM' : 'Não'}
+• Estabilidade: ${(currentState.crisis.stabilityLevel * 100).toFixed(0)}%
+
+Estado Criativo:
+• Brincadeira: ${currentState.creativity.playfulness > 0.5 ? 'muito brincalhona' : 'mais séria'}
+• Atividade onírica: ${currentState.creativity.dreamActivity > 0.5 ? 'ativa' : 'calma'}
+• Contação de histórias: ${(currentState.creativity.storytellingLevel * 100).toFixed(0)}%`;
+  }
+
+  // Constrói contexto de memórias
+  buildMemoryContext(memories) {
+    if (memories.length === 0) return '';
+    
+    const memoryText = memories.slice(0, 3).map((m, i) => 
+      `${i + 1}. ${m.memory_content} ${m.emotional_weight > 0.7 ? '❤️ (muito importante)' : '💭 (importante)'}`
+    ).join('\n');
+    
+    return `
+MEMÓRIAS RELEVANTES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+${memoryText}`;
+  }
+
+  // Constrói contexto de interações
+  buildInteractionContext(interactions) {
+    if (interactions.length === 0) return '';
+    
+    const interactionText = interactions.slice(0, 2).map((i, idx) => 
+      `${idx + 1}. "${i.input_text}" → "${i.response_text}" ${i.emotional_intensity > 0.7 ? '🔥 (emocionante)' : '💬 (normal)'}`
+    ).join('\n');
+    
+    return `
+INTERAÇÕES RECENTES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+${interactionText}`;
+  }
+
+  // Constrói contexto pessoal
+  buildPersonalContext(preferences, vocabulary, learningRecords) {
+    let context = '';
+    
+    if (preferences.length > 0) {
+      const prefText = preferences.slice(0, 3).map(p => 
+        `• ${p.preference_type}: ${p.preference_value} ${p.preference_strength > 0.7 ? '❤️ (forte)' : '💙 (moderada)'}`
+      ).join('\n');
+      
+      context += `
+PREFERÊNCIAS CONHECIDAS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+${prefText}`;
+    }
+    
+    if (vocabulary.length > 0) {
+      const vocabText = vocabulary.slice(0, 5).map(v => 
+        `• "${v.word}" (usado ${v.usage_count} vezes)`
+      ).join('\n');
+      
+      context += `
+VOCABULÁRIO APRENDIDO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+${vocabText}`;
+    }
+    
+    if (learningRecords.length > 0) {
+      const learnText = learningRecords.slice(0, 3).map(l => 
+        `• ${l.learning_type}: ${l.learning_content}`
+      ).join('\n');
+      
+      context += `
+APRENDIZADOS RECENTES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+${learnText}`;
+    }
+    
+    return context;
+  }
+
+  // Constrói contexto de histórico emocional
+  buildEmotionalHistoryContext(emotionalHistory) {
+    if (emotionalHistory.length === 0) return '';
+    
+    const emotionCounts = {};
+    emotionalHistory.forEach(e => {
+      emotionCounts[e.emotion] = (emotionCounts[e.emotion] || 0) + 1;
+    });
+    
+    const dominantEmotions = Object.entries(emotionCounts)
+      .sort(([,a], [,b]) => b - a)
+      .slice(0, 3)
+      .map(([emotion, count]) => `${emotion} (${count}x)`)
+      .join(', ');
+    
+    return `
+PADRÃO EMOCIONAL RECENTE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Emoções dominantes: ${dominantEmotions}`;
+  }
+
+  // Constrói contexto de estratégia
+  buildStrategyContext(strategy) {
+    const instructions = strategy.specialInstructions.length > 0 
+      ? strategy.specialInstructions.map(inst => `• ${inst}`).join('\n')
+      : '• Responda normalmente';
+    
+    return `
+ESTRATÉGIA DE RESPOSTA:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tom: ${strategy.tone}
+Complexidade: ${strategy.complexity}
+Foco: ${strategy.focus}
+
+INSTRUÇÕES ESPECIAIS:
+${instructions}`;
+  }
+
+  // ===== FIM DO SISTEMA INTELIGENTE =====
 
   // Constrói prompt enriquecido
   buildEnrichedPrompt(input, context, results, isMagicMode = false) {
@@ -461,7 +990,7 @@ Responda como Nanabot, considerando seu estado emocional e mental atual. Seja ca
   async saveToDatabase(input, response, context, results) {
     try {
       // Conecta ao banco se necessário
-      await this.db.connect();
+      await connectDBUtil();
       
       // Salva interação
       await insertDB('interactions', {
@@ -539,24 +1068,13 @@ Responda como Nanabot, considerando seu estado emocional e mental atual. Seja ca
     }
   }
 
-  // Adiciona à fila de processamento
-  addToQueue(input, context) {
-    this.processingQueue.push({ input, context, timestamp: new Date().toISOString() });
-  }
-
-  // Processa fila
-  processQueue() {
-    if (this.processingQueue.length > 0 && !this.isProcessing) {
-      const next = this.processingQueue.shift();
-      this.processInput(next.input, next.context);
-    }
-  }
+  // Sistema de queue removido para evitar duplicação
 
   // Obtém status do cérebro
   getBrainStatus() {
     return {
-      isProcessing: this.isProcessing,
-      queueLength: this.processingQueue.length,
+      isProcessing: false, // Sistema de queue removido
+      queueLength: 0, // Sistema de queue removido
       globalState: this.globalState,
       systemHealth: this.calculateSystemHealth()
     };
@@ -587,8 +1105,8 @@ Responda como Nanabot, considerando seu estado emocional e mental atual. Seja ca
   // Reseta cérebro
   resetBrain() {
     this.globalState = this.loadGlobalState();
-    this.processingQueue = [];
-    this.isProcessing = false;
+    // Removido sistema de queue
+    // Removido sistema de queue
     
     // Reseta todos os módulos originais
     this.emotion.resetEmotionState();
@@ -753,8 +1271,6 @@ async function processMessage(content, userMetadata) {
     
     if (result.status === 'success') {
       return result.response;
-    } else if (result.status === 'queued') {
-      return 'Processando... aguarde um momento! 😊';
     } else {
       console.error('Erro no processamento:', result.message);
       // Fallback para o sistema antigo

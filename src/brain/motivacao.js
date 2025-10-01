@@ -643,6 +643,72 @@ class MotivacaoSystem {
     this.motivationHistory = [];
     this.lastUpdate = new Date().toISOString();
   }
+
+  // Processa entrada e detecta motivação
+  processInput(input, context = {}) {
+    try {
+      const goals = this.detectGoals(input, context);
+      const achievements = this.detectAchievements(input, context);
+      const challenges = this.detectChallenges(input, context);
+      const motivationLevel = this.assessMotivationLevel(input, context);
+      
+      const processedMotivation = {
+        input: input,
+        goals: goals,
+        achievements: achievements,
+        challenges: challenges,
+        motivationLevel: motivationLevel,
+        context: context,
+        timestamp: new Date().toISOString(),
+        motivationScore: this.calculateMotivationScore(goals, achievements, challenges)
+      };
+
+      // Adiciona à história de motivação
+      this.motivationHistory.push({
+        input: input,
+        goals: goals,
+        achievements: achievements,
+        challenges: challenges,
+        motivationLevel: motivationLevel,
+        timestamp: new Date().toISOString()
+      });
+
+      // Mantém apenas os últimos 100 registros
+      if (this.motivationHistory.length > 100) {
+        this.motivationHistory = this.motivationHistory.slice(-100);
+      }
+
+      return processedMotivation;
+    } catch (error) {
+      console.error('Erro ao processar entrada no sistema de motivação:', error);
+      return {
+        input: input,
+        goals: [],
+        achievements: [],
+        challenges: [],
+        motivationLevel: { level: 0, triggers: [] },
+        context: context,
+        timestamp: new Date().toISOString(),
+        motivationScore: 0
+      };
+    }
+  }
+
+  // Calcula pontuação de motivação
+  calculateMotivationScore(goals, achievements, challenges) {
+    let score = 0;
+    
+    // Contribuição dos objetivos
+    score += goals.length * 0.3;
+    
+    // Contribuição das conquistas
+    score += achievements.length * 0.4;
+    
+    // Contribuição dos desafios
+    score += challenges.length * 0.3;
+    
+    return Math.min(1, score);
+  }
 }
 
 export default MotivacaoSystem;

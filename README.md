@@ -52,20 +52,36 @@ nanabot/
 ## Como usar o bot
 
 ### Sistema de Ativação
-O bot responde de duas formas:
+A Alice responde de duas formas:
 - **Prefixo**: `n!` seguido da mensagem
-- **Menção**: Mencionando o bot `@Nanabot` seguido da mensagem
+- **Menção**: Mencionando a Alice `@Alice` seguido da mensagem
 
 ### Exemplos:
-- `n! Olá, como você está?`
-- `@Nanabot Conta uma história para mim`
+- `n! Olá Alice, como você está?`
+- `@Alice Conta uma história para mim`
 
 ### Comandos Slash
-O bot também possui comandos slash do Discord:
-- `/ping` - Testa a latência
-- `/teste` - Testa a integração dos sistemas
-- `/utils` - Testa módulos utilitários
-- `/reset` - Reseta o cérebro da Nanabot
+A Alice possui comandos slash do Discord:
+- `/ping` - Testa se a Alice está online
+- `/teste` - Testa todos os sistemas da Alice
+- `/reset` - Reseta o cérebro da Alice
+- `/surpresa` - A Alice faz uma surpresa!
+- `/filter` - Verifica status do filtro de mensagens
+- `/api status` - Mostra estatísticas dos modelos de API
+- `/api rotate` - Força rotação para o próximo modelo
+- `/api reset` - Reseta estatísticas dos modelos
+- `/config add-model` - Adiciona novo modelo à rotação
+- `/config remove-model` - Remove modelo da rotação
+- `/config list-models` - Lista todos os modelos configurados
+
+### Sistema de Rotação de API
+A Alice usa um sistema inteligente de rotação entre diferentes modelos de IA:
+
+- **5 modelos diferentes** configurados por padrão
+- **Rotação automática** baseada em uso e prioridade
+- **Detecção de rate limits** e recuperação automática
+- **Fallback inteligente** quando todos os modelos falham
+- **Estatísticas em tempo real** de uso e performance
 
 ## Como contribuir
 - Adicione novos comandos em `src/commands/`

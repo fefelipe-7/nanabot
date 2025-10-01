@@ -16,7 +16,12 @@ const client = new Client({
 
 client.commands = new Collection();
 
-// === Carregar comandos (arquivos e subpastas) ===
+// === SISTEMA DE COMANDOS UNIFICADO n![comando] ===
+// Slash commands desativados - usando apenas n![comando]
+
+import commandRouter from './utils/commandRouter.js';
+
+// Carrega comandos unificados para o sistema n!
 const commandsPath = path.resolve('./src/commands');
 const commandItems = fs.readdirSync(commandsPath);
 for (const item of commandItems) {
@@ -28,24 +33,26 @@ for (const item of commandItems) {
       const subFilePath = path.join(itemPath, subFile);
       try {
         const command = (await import('file://' + path.resolve(subFilePath))).default;
-        if ('data' in command && 'execute' in command) {
-          client.commands.set(command.data.name, command);
+        if ('commandName' in command && 'execute' in command) {
+          commandRouter.registerCommand(command.commandName, command);
         }
       } catch (err) {
-        logger.error(`Erro ao importar comando (${subFilePath}): ${err.message}`);
+        logger.error(`Erro ao importar comando unificado (${subFilePath}): ${err.message}`);
       }
     }
   } else if (item.endsWith('.js')) {
     try {
       const command = (await import('file://' + path.resolve(itemPath))).default;
-      if ('data' in command && 'execute' in command) {
-        client.commands.set(command.data.name, command);
+      if ('commandName' in command && 'execute' in command) {
+        commandRouter.registerCommand(command.commandName, command);
       }
     } catch (err) {
-      logger.error(`Erro ao importar comando (${itemPath}): ${err.message}`);
+      logger.error(`Erro ao importar comando unificado (${itemPath}): ${err.message}`);
     }
   }
 }
+
+console.log(`[INIT] 🎯 Sistema de comandos unificado carregado com ${commandRouter.commands.size} comandos`);
 
 // === Carregar eventos (arquivos .js) ===
 const eventsPath = path.resolve('./src/events');

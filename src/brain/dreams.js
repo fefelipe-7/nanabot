@@ -593,6 +593,72 @@ class DreamsSystem {
     this.dreamHistory = [];
     this.lastUpdate = new Date().toISOString();
   }
+
+  // Processa entrada e detecta sonhos
+  processInput(input, context = {}) {
+    try {
+      const dreamElements = this.detectDreamElements(input);
+      const symbolicContent = this.detectSymbolicContent(input, context);
+      const dreamThemes = this.detectDreamThemes(input, context);
+      const subconsciousPatterns = this.detectSubconsciousPatterns(input, context);
+      
+      const processedDreams = {
+        input: input,
+        dreamElements: dreamElements,
+        symbolicContent: symbolicContent,
+        dreamThemes: dreamThemes,
+        subconsciousPatterns: subconsciousPatterns,
+        context: context,
+        timestamp: new Date().toISOString(),
+        dreamLevel: this.calculateDreamLevel(dreamElements, symbolicContent, dreamThemes)
+      };
+
+      // Adiciona à história de sonhos
+      this.dreamHistory.push({
+        input: input,
+        dreamElements: dreamElements,
+        symbolicContent: symbolicContent,
+        dreamThemes: dreamThemes,
+        subconsciousPatterns: subconsciousPatterns,
+        timestamp: new Date().toISOString()
+      });
+
+      // Mantém apenas os últimos 100 registros
+      if (this.dreamHistory.length > 100) {
+        this.dreamHistory = this.dreamHistory.slice(-100);
+      }
+
+      return processedDreams;
+    } catch (error) {
+      console.error('Erro ao processar entrada no sistema de sonhos:', error);
+      return {
+        input: input,
+        dreamElements: [],
+        symbolicContent: [],
+        dreamThemes: [],
+        subconsciousPatterns: [],
+        context: context,
+        timestamp: new Date().toISOString(),
+        dreamLevel: 0
+      };
+    }
+  }
+
+  // Calcula nível de sonho
+  calculateDreamLevel(dreamElements, symbolicContent, dreamThemes) {
+    let level = 0;
+    
+    // Contribuição dos elementos de sonho
+    level += dreamElements.length * 0.3;
+    
+    // Contribuição do conteúdo simbólico
+    level += symbolicContent.length * 0.4;
+    
+    // Contribuição dos temas de sonho
+    level += dreamThemes.length * 0.3;
+    
+    return Math.min(1, level);
+  }
 }
 
 export default DreamsSystem;

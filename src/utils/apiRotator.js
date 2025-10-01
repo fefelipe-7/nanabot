@@ -6,40 +6,220 @@ class APIRotator extends EventEmitter {
     super();
     
     // Lista de modelos disponíveis com suas configurações
-    // Usando apenas modelos básicos que sabemos que funcionam
+    // Modelos gratuitos do OpenRouter com diferentes capacidades
     this.models = [
+      // === MODELOS GRATUITOS DE ALTA QUALIDADE ===
       {
-        name: 'meta-llama/llama-3.1-8b-instruct',
+        name: 'nvidia/nemotron-nano-9b-v2:free',
         provider: 'OpenRouter',
-        maxTokens: 512,
+        maxTokens: 1024,
         temperature: 0.7,
         priority: 1,
+        dailyLimit: 2000,
+        requestsUsed: 0,
+        lastReset: Date.now(),
+        isActive: true,
+        category: 'premium',
+        description: 'Modelo NVIDIA otimizado para conversação'
+      },
+      {
+        name: 'deepseek/deepseek-chat-v3.1:free',
+        provider: 'OpenRouter',
+        maxTokens: 1024,
+        temperature: 0.7,
+        priority: 2,
+        dailyLimit: 1500,
+        requestsUsed: 0,
+        lastReset: Date.now(),
+        isActive: true,
+        category: 'premium',
+        description: 'DeepSeek Chat v3.1 - Excelente para diálogos'
+      },
+      {
+        name: 'openai/gpt-oss-120b:free',
+        provider: 'OpenRouter',
+        maxTokens: 2048,
+        temperature: 0.7,
+        priority: 3,
         dailyLimit: 1000,
         requestsUsed: 0,
         lastReset: Date.now(),
-        isActive: true
+        isActive: true,
+        category: 'premium',
+        description: 'GPT-OSS 120B - Modelo grande e poderoso'
       },
       {
-        name: 'google/gemini-pro',
+        name: 'moonshotai/kimi-k2:free',
         provider: 'OpenRouter',
-        maxTokens: 512,
+        maxTokens: 1024,
         temperature: 0.7,
-        priority: 2,
-        dailyLimit: 500,
+        priority: 4,
+        dailyLimit: 1500,
         requestsUsed: 0,
         lastReset: Date.now(),
-        isActive: true
+        isActive: true,
+        category: 'premium',
+        description: 'Kimi K2 - Modelo chinês avançado'
       },
       {
-        name: 'anthropic/claude-3-haiku',
+        name: 'moonshotai/kimi-dev-72b:free',
         provider: 'OpenRouter',
-        maxTokens: 512,
+        maxTokens: 2048,
         temperature: 0.7,
-        priority: 3,
-        dailyLimit: 200,
+        priority: 5,
+        dailyLimit: 800,
         requestsUsed: 0,
         lastReset: Date.now(),
-        isActive: true
+        isActive: true,
+        category: 'premium',
+        description: 'Kimi Dev 72B - Versão de desenvolvimento'
+      },
+      {
+        name: 'mistralai/mistral-small-3.2-24b-instruct:free',
+        provider: 'OpenRouter',
+        maxTokens: 1024,
+        temperature: 0.7,
+        priority: 6,
+        dailyLimit: 1200,
+        requestsUsed: 0,
+        lastReset: Date.now(),
+        isActive: true,
+        category: 'premium',
+        description: 'Mistral Small 3.2 - Modelo francês eficiente'
+      },
+      {
+        name: 'meta-llama/llama-3.3-8b-instruct:free',
+        provider: 'OpenRouter',
+        maxTokens: 1024,
+        temperature: 0.7,
+        priority: 7,
+        dailyLimit: 1500,
+        requestsUsed: 0,
+        lastReset: Date.now(),
+        isActive: true,
+        category: 'premium',
+        description: 'Llama 3.3 8B - Última versão do Meta'
+      },
+      
+      // === MODELOS ESPECIALIZADOS ===
+      {
+        name: 'qwen/qwen3-coder:free',
+        provider: 'OpenRouter',
+        maxTokens: 1024,
+        temperature: 0.7,
+        priority: 8,
+        dailyLimit: 1000,
+        requestsUsed: 0,
+        lastReset: Date.now(),
+        isActive: true,
+        category: 'specialized',
+        description: 'Qwen3 Coder - Especializado em programação'
+      },
+      {
+        name: 'cognitivecomputations/dolphin-mistral-24b-venice-edition:free',
+        provider: 'OpenRouter',
+        maxTokens: 1024,
+        temperature: 0.7,
+        priority: 9,
+        dailyLimit: 800,
+        requestsUsed: 0,
+        lastReset: Date.now(),
+        isActive: true,
+        category: 'specialized',
+        description: 'Dolphin Mistral - Modelo fine-tuned'
+      },
+      {
+        name: 'google/gemma-3n-e2b-it:free',
+        provider: 'OpenRouter',
+        maxTokens: 1024,
+        temperature: 0.7,
+        priority: 10,
+        dailyLimit: 1000,
+        requestsUsed: 0,
+        lastReset: Date.now(),
+        isActive: true,
+        category: 'specialized',
+        description: 'Gemma 3N - Modelo Google otimizado'
+      },
+      
+      // === MODELOS DE BACKUP ===
+      {
+        name: 'openai/gpt-oss-20b:free',
+        provider: 'OpenRouter',
+        maxTokens: 1024,
+        temperature: 0.7,
+        priority: 11,
+        dailyLimit: 2000,
+        requestsUsed: 0,
+        lastReset: Date.now(),
+        isActive: true,
+        category: 'backup',
+        description: 'GPT-OSS 20B - Modelo menor e rápido'
+      },
+      {
+        name: 'z-ai/glm-4.5-air:free',
+        provider: 'OpenRouter',
+        maxTokens: 1024,
+        temperature: 0.7,
+        priority: 12,
+        dailyLimit: 1500,
+        requestsUsed: 0,
+        lastReset: Date.now(),
+        isActive: true,
+        category: 'backup',
+        description: 'GLM 4.5 Air - Modelo chinês leve'
+      },
+      {
+        name: 'tencent/hunyuan-a13b-instruct:free',
+        provider: 'OpenRouter',
+        maxTokens: 1024,
+        temperature: 0.7,
+        priority: 13,
+        dailyLimit: 1000,
+        requestsUsed: 0,
+        lastReset: Date.now(),
+        isActive: true,
+        category: 'backup',
+        description: 'Hunyuan A13B - Modelo Tencent'
+      },
+      {
+        name: 'tngtech/deepseek-r1t2-chimera:free',
+        provider: 'OpenRouter',
+        maxTokens: 1024,
+        temperature: 0.7,
+        priority: 14,
+        dailyLimit: 800,
+        requestsUsed: 0,
+        lastReset: Date.now(),
+        isActive: true,
+        category: 'backup',
+        description: 'DeepSeek R1T2 Chimera - Modelo experimental'
+      },
+      {
+        name: 'deepseek/deepseek-r1-0528-qwen3-8b:free',
+        provider: 'OpenRouter',
+        maxTokens: 1024,
+        temperature: 0.7,
+        priority: 15,
+        dailyLimit: 1000,
+        requestsUsed: 0,
+        lastReset: Date.now(),
+        isActive: true,
+        category: 'backup',
+        description: 'DeepSeek R1 Qwen3 8B - Modelo híbrido'
+      },
+      {
+        name: 'deepseek/deepseek-r1-0528:free',
+        provider: 'OpenRouter',
+        maxTokens: 1024,
+        temperature: 0.7,
+        priority: 16,
+        dailyLimit: 1000,
+        requestsUsed: 0,
+        lastReset: Date.now(),
+        isActive: true,
+        category: 'backup',
+        description: 'DeepSeek R1 - Modelo de raciocínio'
       }
     ];
 
@@ -216,6 +396,23 @@ class APIRotator extends EventEmitter {
     const successRate = this.totalRequests > 0 ? 
       (this.successfulRequests / this.totalRequests * 100).toFixed(1) : 0;
 
+    // Estatísticas por categoria
+    const categoryStats = {};
+    this.models.forEach(model => {
+      if (!categoryStats[model.category]) {
+        categoryStats[model.category] = {
+          total: 0,
+          active: 0,
+          totalLimit: 0,
+          totalUsed: 0
+        };
+      }
+      categoryStats[model.category].total++;
+      if (model.isActive) categoryStats[model.category].active++;
+      categoryStats[model.category].totalLimit += model.dailyLimit;
+      categoryStats[model.category].totalUsed += model.requestsUsed;
+    });
+
     return {
       totalModels: this.models.length,
       activeModels: activeModels,
@@ -226,12 +423,16 @@ class APIRotator extends EventEmitter {
       totalDailyLimit: totalDailyLimit,
       totalUsed: totalUsed,
       remainingRequests: totalDailyLimit - totalUsed,
+      categoryStats: categoryStats,
       models: this.models.map(m => ({
         name: m.name,
+        category: m.category,
+        description: m.description,
         used: m.requestsUsed,
         limit: m.dailyLimit,
         isActive: m.isActive,
-        usage: `${m.requestsUsed}/${m.dailyLimit}`
+        usage: `${m.requestsUsed}/${m.dailyLimit}`,
+        usagePercent: ((m.requestsUsed / m.dailyLimit) * 100).toFixed(1)
       }))
     };
   }

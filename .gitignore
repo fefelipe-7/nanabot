@@ -1,9 +1,263 @@
+# ===========================================
+# ALICE BOT - GITIGNORE
+# ===========================================
+# Arquivos e diretórios que devem ser ignorados pelo Git
+# para manter a segurança e evitar commits desnecessários
+# ===========================================
+
+# ===========================================
+# DEPENDÊNCIAS
+# ===========================================
 node_modules/
 package-lock.json
-.env
-.env.*.local
-
-.cursor/plans/d-4d89851c.plan.md
 package-lock-backup.json
+yarn.lock
+pnpm-lock.yaml
 
+# ===========================================
+# VARIÁVEIS DE AMBIENTE E CONFIGURAÇÕES SENSÍVEIS
+# ===========================================
+.env
+.env.*
+.env.local
+.env.production
+.env.staging
+.env.development
+.env.test
+
+# Configurações locais
+config/local.json
+config/production.json
+config/staging.json
+config/development.json
+
+# ===========================================
+# LOGS E ARQUIVOS TEMPORÁRIOS
+# ===========================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# ===========================================
+# DADOS SENSÍVEIS E BANCOS DE DADOS
+# ===========================================
+data/
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Backups de banco de dados
+*.backup
+*.bak
+*.dump
+
+# ===========================================
+# CHAVES, CERTIFICADOS E CREDENCIAIS
+# ===========================================
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.truststore
+
+# Chaves SSH
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+known_hosts
+
+# ===========================================
+# ARQUIVOS DE SEGURANÇA
+# ===========================================
+security-logs-*.json
+security-export-*.json
+audit-*.json
+incident-*.json
+
+# ===========================================
+# ARQUIVOS DO SISTEMA OPERACIONAL
+# ===========================================
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ===========================================
+# ARQUIVOS DE DESENVOLVIMENTO
+# ===========================================
+# IDEs e editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# ===========================================
+# ARQUIVOS DE BUILD E DISTRIBUIÇÃO
+# ===========================================
+dist/
+build/
+out/
+target/
+*.tgz
+*.tar.gz
+
+# ===========================================
+# ARQUIVOS DE TESTE
+# ===========================================
+test-results/
+coverage/
+.nyc_output/
+junit.xml
+
+# ===========================================
+# ARQUIVOS ESPECÍFICOS DO PROJETO
+# ===========================================
+# Estado do bot
+brainState.json
+botState.json
+sessionState.json
+
+# Cache
+.cache/
+cache/
+*.cache
+
+# Arquivos temporários específicos
+temp/
+tmp/
+*.tmp
+*.temp
+
+# ===========================================
+# ARQUIVOS DE DEPLOY E CI/CD
+# ===========================================
+# Render
+.render/
+
+# Vercel
+.vercel/
+
+# Netlify
+.netlify/
+
+# Heroku
+.heroku/
+
+# ===========================================
+# ARQUIVOS DE BACKUP E VERSIONAMENTO
+# ===========================================
+*.backup
+*.bak
+*.old
+*.orig
+*.rej
+*.swp
+*.tmp
+
+# ===========================================
+# ARQUIVOS DE MÍDIA E UPLOADS
+# ===========================================
+uploads/
+media/
+images/
+videos/
+audio/
+files/
+
+# ===========================================
+# ARQUIVOS DE CONFIGURAÇÃO ESPECÍFICOS
+# ===========================================
+# Cursor AI
+.cursor/
+.cursor/plans/
+
+# Microsoft GPG (específico do projeto)
 microsoft.gpg
+
+# ===========================================
+# NOTAS IMPORTANTES
+# ===========================================
+# 
+# ⚠️  IMPORTANTE: 
+# - NUNCA commite arquivos .env ou chaves de API
+# - Mantenha dados sensíveis fora do controle de versão
+# - Revise este arquivo regularmente
+# - Adicione novos padrões conforme necessário
+#
+# 📝 Para adicionar novos padrões:
+# 1. Identifique o tipo de arquivo/diretório
+# 2. Adicione na seção apropriada
+# 3. Teste com `git status` antes de commitar
+#
+# 🔒 Segurança:
+# - Este arquivo é público no repositório
+# - Não inclua informações sensíveis nos comentários
+# - Use padrões genéricos quando possível
+#
+# ===========================================

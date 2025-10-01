@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "node src/index.js",
+    "start:server": "node src/server.js",
+    "start:both": "node src/server.js & node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +25,7 @@
     "chalk": "^5.4.1",
     "discord.js": "^14.22.1",
     "dotenv": "^17.2.3",
+    "express": "^4.18.2",
     "node-fetch": "^2.7.0",
     "sqlite3": "^5.1.7"
   }

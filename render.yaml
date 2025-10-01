@@ -1,0 +1,14 @@
+services:
+  - type: worker
+    name: alice-bot
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: NODE_ENV
+        value: production

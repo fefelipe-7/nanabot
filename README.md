@@ -41,7 +41,7 @@ nanabot/
    
    # OpenRouter API Configuration
    OPENROUTER_API_KEY=sua_chave_da_openrouter_aqui
-   OPENROUTER_MODEL=anthropic/claude-3-haiku
+   OPENROUTER_MODEL=nvidia/nemotron-nano-9b-v2:free
    ```
 
 3. Inicie o bot:

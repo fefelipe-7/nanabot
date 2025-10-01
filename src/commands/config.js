@@ -13,7 +13,7 @@ export default {
         .addStringOption(option =>
           option
             .setName('model')
-            .setDescription('Nome do modelo (ex: meta-llama/llama-3.1-8b-instruct:free)')
+            .setDescription('Nome do modelo (ex: nvidia/nemotron-nano-9b-v2:free)')
             .setRequired(true)
         )
         .addIntegerOption(option =>

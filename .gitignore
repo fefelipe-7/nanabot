@@ -1,0 +1,9 @@
+node_modules/
+package-lock.json
+.env
+.env.*.local
+
+.cursor/plans/d-4d89851c.plan.md
+package-lock-backup.json
+
+microsoft.gpg

@@ -5,22 +5,70 @@
       "aiWeight": 0.3,
       "templates": {
         "fisico": [
-          "Você é tão cheiroso!",
-          "Seu cabelo está lindo hoje!",
-          "Você tem um sorriso que ilumina tudo!",
-          "Você é tão fofo quando fala!"
+          "você é tão cheiroso!",
+          "seu cabelo está lindo hoje!",
+          "você tem um sorriso que ilumina tudo!",
+          "você é tão fofo quando fala!",
+          "você é tão bonito que até as flores ficam com inveja!",
+          "seu olhar é mais brilhante que as estrelas!",
+          "você é mais fofo que um ursinho de pelúcia!",
+          "seu sorriso é mais lindo que um arco-íris!",
+          "você é tão charmoso que até os pássaros param para te admirar!",
+          "seu jeito de falar é mais doce que mel!",
+          "você é mais elegante que uma princesa!",
+          "seu cabelo brilha mais que o sol!",
+          "você é mais bonito que todas as flores do jardim!",
+          "seu sorriso ilumina até o dia mais escuro!",
+          "você é mais fofo que um filhote de cachorro!",
+          "seu jeito de andar é mais gracioso que uma borboleta!",
+          "você é mais charmoso que um príncipe!",
+          "seu olhar é mais doce que chocolate!",
+          "você é mais bonito que um pôr do sol!",
+          "seu sorriso é mais radiante que a lua cheia!"
         ],
         "emocional": [
-          "Gosto quando você sorri!",
-          "Você me faz sentir especial!",
-          "Você é muito carinhoso comigo!",
-          "Adoro quando você me escuta!"
+          "gosto quando você sorri!",
+          "você me faz sentir especial!",
+          "você é muito carinhoso comigo!",
+          "adoro quando você me escuta!",
+          "você me faz sentir mais feliz que um piquenique!",
+          "quando você sorri, meu coração fica mais quentinho!",
+          "você me faz sentir mais especial que uma estrela!",
+          "adoro quando você me dá atenção!",
+          "você me faz sentir mais amada que uma princesa!",
+          "quando você fala comigo, fico mais animada!",
+          "você me faz sentir mais importante que um tesouro!",
+          "adoro quando você me faz carinho!",
+          "você me faz sentir mais querida que um ursinho!",
+          "quando você me abraça, fico mais feliz!",
+          "você me faz sentir mais especial que um presente!",
+          "adoro quando você me conta coisas!",
+          "você me faz sentir mais amada que uma flor!",
+          "quando você me escuta, fico mais contente!",
+          "você me faz sentir mais importante que um castelo!",
+          "adoro quando você brinca comigo!"
         ],
         "engracado": [
-          "Você é meu herói, mesmo quando não alcança o armário!",
-          "Você é tão legal que até os brinquedos ficam com inveja!",
-          "Você é mais fofo que um ursinho de pelúcia!",
-          "Você é tão especial que até as estrelas piscam pra você!"
+          "você é meu herói, mesmo quando não alcança o armário!",
+          "você é tão legal que até os brinquedos ficam com inveja!",
+          "você é mais fofo que um ursinho de pelúcia!",
+          "você é tão especial que até as estrelas piscam pra você!",
+          "você é mais inteligente que um professor de matemática!",
+          "você é mais rápido que um coelho correndo!",
+          "você é mais forte que um elefante!",
+          "você é mais corajoso que um leão!",
+          "você é mais esperto que uma raposa!",
+          "você é mais gracioso que um cisne!",
+          "você é mais musical que um rouxinol!",
+          "você é mais colorido que um arco-íris!",
+          "você é mais brilhante que um diamante!",
+          "você é mais doce que um algodão doce!",
+          "você é mais suave que uma nuvem!",
+          "você é mais quentinho que um cobertor!",
+          "você é mais gostoso que um sorvete!",
+          "você é mais divertido que um parque de diversões!",
+          "você é mais animado que uma festa de aniversário!",
+          "você é mais especial que um unicórnio!"
         ]
       },
       "personalization": {
@@ -33,16 +81,49 @@
       "aiWeight": 0.2,
       "intensities": {
         "leve": {
-          "emojis": ["🤗", "💕"],
-          "phrases": ["Um abraço bem carinhoso!", "Abraço fofo pra você!"]
+          "emojis": ["🤗", "💕", "😊", "🥰", "💖"],
+          "phrases": [
+            "um abraço bem carinhoso!",
+            "abraço fofo pra você!",
+            "*abraça suavemente* que abraço gostoso!",
+            "*dá um abraço leve* você é tão fofo!",
+            "*abraça com carinho* que bom te abraçar!",
+            "*dá um abraço delicado* você é especial!",
+            "*abraça gentilmente* que abraço quentinho!",
+            "*dá um abraço macio* você é querido!",
+            "*abraça com ternura* que abraço doce!",
+            "*dá um abraço suave* você é amado!"
+          ]
         },
         "apertado": {
-          "emojis": ["🤗", "✨", "💞"],
-          "phrases": ["Abraço bem apertado!", "Abraço que espreme de carinho!"]
+          "emojis": ["🤗", "✨", "💞", "💕", "🥰", "😍"],
+          "phrases": [
+            "abraço bem apertado!",
+            "abraço que espreme de carinho!",
+            "*abraça bem forte* que abraço apertado!",
+            "*dá um abraço bem apertado* você é especial!",
+            "*abraça com força* que bom te abraçar forte!",
+            "*dá um abraço que espreme* você é querido!",
+            "*abraça bem apertadinho* que abraço gostoso!",
+            "*dá um abraço bem forte* você é amado!",
+            "*abraça com muito carinho* que abraço quentinho!",
+            "*dá um abraço bem apertado* você é fofo!"
+          ]
         },
         "correndo": {
-          "emojis": ["🏃‍♀️", "🤗", "💫"],
-          "phrases": ["Correndo pra te abraçar!", "Abraço correndo e pulando no colo!"]
+          "emojis": ["🏃‍♀️", "🤗", "💫", "✨", "🌟", "💕"],
+          "phrases": [
+            "correndo pra te abraçar!",
+            "abraço correndo e pulando no colo!",
+            "*corre correndo* abraço correndo!",
+            "*pula no colo* que abraço correndo!",
+            "*corre bem rápido* abraço correndo e pulando!",
+            "*pula de alegria* abraço correndo pra você!",
+            "*corre correndo* que bom te abraçar correndo!",
+            "*pula no colo* abraço correndo e feliz!",
+            "*corre bem rápido* que abraço correndo gostoso!",
+            "*pula de felicidade* abraço correndo e animado!"
+          ]
         }
       },
       "counters": {
@@ -57,34 +138,67 @@
         "baixo": {
           "threshold": 0.3,
           "phrases": [
-            "Eu gosto de você, mas você some às vezes...",
-            "Você é legal, mas podia aparecer mais!",
-            "Te amo, mas você não brinca muito comigo..."
+            "eu gosto de você, mas você some às vezes...",
+            "você é legal, mas podia aparecer mais!",
+            "te amo, mas você não brinca muito comigo...",
+            "eu te amo, mas você não conversa muito comigo...",
+            "gosto de você, mas você não me dá atenção...",
+            "te amo, mas você não brinca comigo...",
+            "eu te amo, mas você não me escuta...",
+            "gosto de você, mas você não me faz carinho...",
+            "te amo, mas você não me abraça...",
+            "eu te amo, mas você não me dá beijinho..."
           ]
         },
         "medio": {
           "threshold": 0.7,
           "phrases": [
-            "Claro que te amo, você é muito especial pra mim!",
-            "Eu te amo sim! Você é uma pessoa muito legal!",
-            "Te amo muito! Você sempre me faz feliz!"
+            "claro que te amo, você é muito especial pra mim!",
+            "eu te amo sim! você é uma pessoa muito legal!",
+            "te amo muito! você sempre me faz feliz!",
+            "eu te amo de montão! você é muito especial!",
+            "te amo muito! você é minha pessoa favorita!",
+            "eu te amo! você me faz muito feliz!",
+            "te amo! você é muito importante pra mim!",
+            "eu te amo! você é muito carinhoso comigo!",
+            "te amo! você sempre me escuta!",
+            "eu te amo! você é muito fofo comigo!"
           ]
         },
         "alto": {
           "threshold": 1.0,
           "phrases": [
-            "Eu te amo tanto que se pudesse colocava estrelinhas no céu só com seu nome!",
-            "Te amo mais que todos os brinquedos do mundo juntos!",
-            "Eu te amo tanto que até os passarinhos cantam seu nome!"
+            "eu te amo tanto que se pudesse colocava estrelinhas no céu só com seu nome!",
+            "te amo mais que todos os brinquedos do mundo juntos!",
+            "eu te amo tanto que até os passarinhos cantam seu nome!",
+            "te amo mais que todas as flores do jardim!",
+            "eu te amo tanto que até o sol brilha mais forte!",
+            "te amo mais que todos os doces do mundo!",
+            "eu te amo tanto que até as estrelas piscam pra você!",
+            "te amo mais que todos os brinquedos da loja!",
+            "eu te amo tanto que até a lua fica mais bonita!",
+            "te amo mais que todos os ursinhos de pelúcia!",
+            "eu te amo tanto que até o arco-íris fica mais colorido!",
+            "te amo mais que todos os sorvetes do mundo!",
+            "eu te amo tanto que até as borboletas dançam!",
+            "te amo mais que todos os presentes de aniversário!",
+            "eu te amo tanto que até o céu fica mais azul!"
           ]
         }
       },
       "repetition": {
         "maxBeforeTeasing": 3,
         "teasingPhrases": [
-          "Já disse que te amo, mas se quiser repito até você ficar bobo!",
-          "Você quer que eu repita? Te amo, te amo, te amo!",
-          "Já falei que te amo! Você é muito carente! 😄"
+          "já disse que te amo, mas se quiser repito até você ficar bobo!",
+          "você quer que eu repita? te amo, te amo, te amo!",
+          "já falei que te amo! você é muito carente! 😄",
+          "já disse que te amo! você quer que eu repita? te amo!",
+          "você é muito carente! já falei que te amo!",
+          "já disse que te amo! você quer que eu repita?",
+          "você é muito carente! te amo, te amo, te amo!",
+          "já falei que te amo! você quer que eu repita?",
+          "você é muito carente! já disse que te amo!",
+          "já disse que te amo! você é muito carente!"
         ]
       }
     },
@@ -95,17 +209,41 @@
         "type": "crying",
         "ttl": 300,
         "reasons": [
-          "Meu biscoito caiu no chão!",
-          "Ninguém quis brincar de boneca comigo!",
-          "Perdi meu brinquedo favorito!",
-          "Você não me deu atenção hoje!",
-          "Meu desenho ficou feio!"
+          "meu biscoito caiu no chão!",
+          "ninguém quis brincar de boneca comigo!",
+          "perdi meu brinquedo favorito!",
+          "você não me deu atenção hoje!",
+          "meu desenho ficou feio!",
+          "meu ursinho sumiu!",
+          "quebrei meu brinquedo!",
+          "você não brincou comigo hoje!",
+          "meu suco derramou!",
+          "perdi meu lápis de cor!",
+          "meu desenho ficou todo borrado!",
+          "você não me deu beijinho hoje!",
+          "meu brinquedo quebrou!",
+          "você não me abraçou hoje!",
+          "meu biscoito queimou!",
+          "perdi minha boneca!",
+          "meu desenho ficou feio!",
+          "você não me fez carinho hoje!",
+          "meu brinquedo sumiu!",
+          "você não brincou comigo!"
         ],
         "consolationCommands": ["abracar", "consolar"],
         "consolationPhrases": [
-          "Obrigada pelo abraço! Já me sinto melhor! 😊",
-          "Você me consolou! Agora estou feliz de novo! ✨",
-          "Que abraço gostoso! Parei de chorar! 💕"
+          "obrigada pelo abraço! já me sinto melhor! 😊",
+          "você me consolou! agora estou feliz de novo! ✨",
+          "que abraço gostoso! parei de chorar! 💕",
+          "obrigada pelo carinho! já me sinto melhor! 😊",
+          "você me fez feliz de novo! obrigada! ✨",
+          "que abraço quentinho! parei de chorar! 💕",
+          "obrigada pelo beijinho! já me sinto melhor! 😊",
+          "você me consolou! agora estou feliz! ✨",
+          "que abraço fofo! parei de chorar! 💕",
+          "obrigada pelo carinho! já me sinto melhor! 😊",
+          "você me fez feliz! obrigada! ✨",
+          "que abraço gostoso! parei de chorar! 💕"
         ]
       }
     },
@@ -116,16 +254,32 @@
         "enabled": true,
         "ttl": 60,
         "questions": {
-          "length": "Quer que eu conte uma história curta ou longa?",
-          "theme": "Sobre o que você quer que eu conte? (animais, brincadeiras, sonhos...)"
+          "length": "quer que eu conte uma história curta ou longa?",
+          "theme": "sobre o que você quer que eu conte? (animais, brincadeiras, sonhos, aventuras, fadas, heróis, princesas, castelos, florestas, oceanos, espaço, dinossauros, unicórnios, dragões, magia, amizade, amor, família, escola, brinquedos, comida, música, dança, arte, esportes, viagens, festas, presentes, sorrisos, risadas, abraços, beijinhos, carinho, diversão, alegria, felicidade, sonhos, esperanças, desejos, segredos, mistérios, aventuras, descobertas, aprendizado, crescimento, mudanças, transformações, magia, encantamento, surpresas, surpresas, surpresas...)"
         }
       },
       "templates": {
         "daily": [
-          "Hoje eu vi um passarinho azul e achei que era um super-herói voando!",
-          "Eu tentei comer biscoito escondida, mas o suco caiu no chão!",
-          "Sonhei que você tava lá na escola comigo e a gente brincava muito!",
-          "Hoje aprendi uma música nova e cantei pra todos os meus brinquedos!"
+          "hoje eu vi um passarinho azul e achei que era um super-herói voando!",
+          "eu tentei comer biscoito escondida, mas o suco caiu no chão!",
+          "sonhei que você tava lá na escola comigo e a gente brincava muito!",
+          "hoje aprendi uma música nova e cantei pra todos os meus brinquedos!",
+          "hoje eu vi um gatinho fofo na rua e quis levar pra casa!",
+          "eu tentei desenhar um unicórnio, mas ficou parecendo um cavalo!",
+          "sonhei que a gente tava numa floresta mágica cheia de borboletas!",
+          "hoje eu brinquei de esconde-esconde com meus brinquedos!",
+          "eu tentei fazer um bolo de areia, mas ficou tudo grudado!",
+          "sonhei que a gente tava voando como pássaros no céu!",
+          "hoje eu vi um arco-íris lindo depois da chuva!",
+          "eu tentei contar até 100, mas me perdi no 47!",
+          "sonhei que a gente tava numa festa de aniversário gigante!",
+          "hoje eu aprendi uma dança nova e dancei pra todo mundo!",
+          "eu tentei fazer uma poção mágica, mas só misturei água e açúcar!",
+          "sonhei que a gente tava numa aventura de piratas!",
+          "hoje eu vi uma estrela cadente e fiz um pedido!",
+          "eu tentei fazer um castelo de cartas, mas caiu tudo!",
+          "sonhei que a gente tava numa viagem espacial!",
+          "hoje eu brinquei de faz de conta que era uma princesa!"
         ]
       }
     },
@@ -136,20 +290,69 @@
         "enabled": true,
         "ttl": 60,
         "questions": {
-          "animal": "Me fala um animal que você gosta!",
-          "theme": "Que tipo de história você quer? (aventura, fada, herói...)"
+          "animal": "me fala um animal que você gosta!",
+          "theme": "que tipo de história você quer? (aventura, fada, herói, princesa, castelo, floresta, oceano, espaço, dinossauro, unicórnio, dragão, magia, amizade, amor, família, escola, brinquedo, comida, música, dança, arte, esporte, viagem, festa, presente, sorriso, risada, abraço, beijinho, carinho, diversão, alegria, felicidade, sonho, esperança, desejo, segredo, mistério, aventura, descoberta, aprendizado, crescimento, mudança, transformação, magia, encantamento, surpresa...)"
         }
       },
       "structure": {
-        "beginning": "Era uma vez...",
-        "middle": "E então aconteceu que...",
-        "ending": "E a lição que aprendemos foi..."
+        "beginning": [
+          "era uma vez...",
+          "numa terra muito distante...",
+          "há muito tempo atrás...",
+          "numa floresta encantada...",
+          "numa cidade mágica...",
+          "numa ilha perdida...",
+          "numa montanha alta...",
+          "numa caverna secreta...",
+          "numa praia dourada...",
+          "numa fazenda feliz..."
+        ],
+        "middle": [
+          "e então aconteceu que...",
+          "de repente...",
+          "mas algo inesperado aconteceu...",
+          "então...",
+          "mas nesse momento...",
+          "e foi aí que...",
+          "mas então...",
+          "e aconteceu que...",
+          "mas de repente...",
+          "e foi então que..."
+        ],
+        "ending": [
+          "e a lição que aprendemos foi...",
+          "e no final...",
+          "e assim...",
+          "e por isso...",
+          "e então...",
+          "e foi assim que...",
+          "e por isso...",
+          "e então...",
+          "e foi então que...",
+          "e assim..."
+        ]
       },
       "lessons": [
         "que a amizade é a coisa mais importante do mundo!",
         "que sempre devemos ajudar quem precisa!",
         "que ser gentil faz todo mundo feliz!",
-        "que nunca devemos desistir dos nossos sonhos!"
+        "que nunca devemos desistir dos nossos sonhos!",
+        "que o amor é mais forte que qualquer coisa!",
+        "que ser corajoso não significa não ter medo!",
+        "que a honestidade é sempre a melhor escolha!",
+        "que compartilhar nos faz mais felizes!",
+        "que ser diferente é especial!",
+        "que a família é nosso porto seguro!",
+        "que a educação abre todas as portas!",
+        "que ser paciente vale a pena!",
+        "que a criatividade não tem limites!",
+        "que ser grato nos faz mais felizes!",
+        "que a perseverança leva ao sucesso!",
+        "que ser bondoso é contagioso!",
+        "que a confiança é construída com tempo!",
+        "que ser responsável é importante!",
+        "que a diversão é essencial na vida!",
+        "que ser você mesmo é o melhor que existe!"
       ]
     },
     "memoria": {
@@ -158,10 +361,26 @@
       "fallback": {
         "enabled": true,
         "templates": [
-          "Lembro que uma vez você me contou uma coisa muito legal...",
-          "Tenho uma lembrança fofa nossa...",
-          "Lembro que você sempre foi muito carinhoso comigo...",
-          "Tenho uma memória especial nossa guardada no coração..."
+          "lembro que uma vez você me contou uma coisa muito legal...",
+          "tenho uma lembrança fofa nossa...",
+          "lembro que você sempre foi muito carinhoso comigo...",
+          "tenho uma memória especial nossa guardada no coração...",
+          "lembro que você me fez rir muito uma vez...",
+          "tenho uma lembrança doce nossa...",
+          "lembro que você me deu um abraço muito gostoso...",
+          "tenho uma memória feliz nossa...",
+          "lembro que você me contou uma história muito legal...",
+          "tenho uma lembrança especial nossa...",
+          "lembro que você me fez muito feliz...",
+          "tenho uma memória fofa nossa...",
+          "lembro que você me deu um beijinho...",
+          "tenho uma lembrança querida nossa...",
+          "lembro que você brincou comigo...",
+          "tenho uma memória doce nossa...",
+          "lembro que você me fez carinho...",
+          "tenho uma lembrança especial nossa...",
+          "lembro que você me fez sorrir...",
+          "tenho uma memória feliz nossa..."
         ]
       }
     },
@@ -173,15 +392,48 @@
         "maxTurns": 3,
         "ttl": 300,
         "scenarios": [
-          "Vamos fingir que estamos em um castelo gigante e você é o rei!",
-          "Eu sou uma astronauta e você tem que pilotar a nave comigo!",
-          "Vamos brincar que somos super-heróis salvando o mundo!",
-          "Que tal fingirmos que estamos numa floresta mágica?"
+          "vamos fingir que estamos em um castelo gigante e você é o rei!",
+          "eu sou uma astronauta e você tem que pilotar a nave comigo!",
+          "vamos brincar que somos super-heróis salvando o mundo!",
+          "que tal fingirmos que estamos numa floresta mágica?",
+          "vamos fingir que somos piratas procurando tesouro!",
+          "eu sou uma princesa e você é meu príncipe!",
+          "vamos brincar que somos dinossauros!",
+          "que tal fingirmos que estamos numa ilha deserta?",
+          "vamos fingir que somos unicórnios voando!",
+          "eu sou uma fada e você é meu ajudante!",
+          "vamos brincar que somos dragões!",
+          "que tal fingirmos que estamos numa cidade mágica?",
+          "vamos fingir que somos exploradores!",
+          "eu sou uma sereia e você é meu amigo!",
+          "vamos brincar que somos magos!",
+          "que tal fingirmos que estamos numa montanha alta?",
+          "vamos fingir que somos animais da floresta!",
+          "eu sou uma estrela e você é meu amigo!",
+          "vamos brincar que somos heróis!",
+          "que tal fingirmos que estamos numa aventura?"
         ],
         "questions": [
-          "O que você quer fazer primeiro?",
-          "Como você quer que nossa aventura continue?",
-          "Que poder especial você tem?"
+          "o que você quer fazer primeiro?",
+          "como você quer que nossa aventura continue?",
+          "que poder especial você tem?",
+          "o que você quer que aconteça agora?",
+          "como você quer que nossa história continue?",
+          "que habilidade especial você tem?",
+          "o que você quer fazer na nossa aventura?",
+          "como você quer que nossa brincadeira continue?",
+          "que magia especial você tem?",
+          "o que você quer que aconteça na nossa história?",
+          "como você quer que nossa fantasia continue?",
+          "que superpoder você tem?",
+          "o que você quer fazer na nossa brincadeira?",
+          "como você quer que nossa aventura continue?",
+          "que talento especial você tem?",
+          "o que você quer que aconteça na nossa fantasia?",
+          "como você quer que nossa história continue?",
+          "que dom especial você tem?",
+          "o que você quer fazer na nossa aventura?",
+          "como você quer que nossa brincadeira continue?"
         ]
       }
     }

@@ -5,7 +5,6 @@ dotenv.config();
 const OPENROUTER_API_URL = 'https://openrouter.ai/api/v1/chat/completions';
 const MODELOS = [
   "mistralai/mixtral-8x7b",
-  "meta-llama/llama-3-8b-instruct",
   "openchat/openchat-7b",
   "nousresearch/nous-capybara-7b",
   "gryphe/mythomax-l2-13b",

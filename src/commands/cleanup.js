@@ -31,9 +31,7 @@ export default {
         case 'stats':
         case 'status':
         default:
-          const stats = dataCleanupSystem.getStats();
-          const statusMessage = this.formatStats(stats);
-          await message.reply(formatReply(statusMessage));
+          await this.showStatus(message);
           break;
       }
     } catch (error) {
@@ -42,22 +40,39 @@ export default {
     }
   },
 
-  formatStats(stats) {
-    const embed = new EmbedBuilder()
-      .setColor('#00ff88')
-      .setTitle('🧹 Status do Sistema de Limpeza')
-      .setDescription('Informações sobre a limpeza automática de dados.')
-      .addFields(
-        { name: 'Status', value: stats.isActive ? '✅ Ativo' : '❌ Inativo', inline: true },
-        { name: 'Última Limpeza', value: stats.lastCleanup ? `<t:${Math.floor(new Date(stats.lastCleanup).getTime() / 1000)}:R>` : 'Nunca', inline: true },
-        { name: 'Intervalo', value: `${stats.cleanupInterval / 1000 / 60 / 60} horas`, inline: true },
-        { name: 'Max Histórico', value: stats.maxHistoryEntries.toString(), inline: true },
-        { name: 'Max Experiências', value: stats.maxExperienceBuffer.toString(), inline: true },
-        { name: 'Max Padrões', value: stats.maxPatternEntries.toString(), inline: true },
-        { name: 'Max Apegos', value: stats.maxAttachmentEntries.toString(), inline: true }
-      )
-      .setTimestamp();
+  // Mostra status com embed
+  async showStatus(message) {
+    console.log(`[CLEANUP-STATUS] 📊 Mostrando status do sistema de limpeza`);
+    
+    try {
+      const stats = dataCleanupSystem.getStats();
+      
+      const embed = new EmbedBuilder()
+        .setColor(stats.isStarted ? '#00ff88' : '#ff4444')
+        .setTitle('🧹 Status do Sistema de Limpeza de Dados')
+        .setDescription('Informações sobre a manutenção automática dos arquivos de dados')
+        .addFields(
+          { name: '🟢 Status', value: stats.isStarted ? '✅ Ativo' : '❌ Inativo', inline: true },
+          { name: '🔄 Ciclos de Limpeza', value: stats.cleanupCount.toString(), inline: true },
+          { name: '✨ Arquivos Otimizados', value: stats.optimizedFilesCount.toString(), inline: true },
+          { name: '🗑️ Arquivos Deletados', value: stats.deletedFilesCount.toString(), inline: true },
+          { name: '🕐 Última Limpeza', value: stats.lastCleanupTime || 'Nunca', inline: true },
+          { name: '⏰ Próxima Limpeza', value: stats.nextCleanup !== 'N/A' ? stats.nextCleanup : 'N/A', inline: true }
+        )
+        .setTimestamp();
 
-    return { embeds: [embed] };
+      // Adiciona comandos disponíveis
+      embed.addFields({
+        name: '🎮 Comandos Disponíveis',
+        value: '• `n!cleanup start` - Inicia limpeza automática\n• `n!cleanup force` - Executa limpeza manual\n• `n!cleanup stats` - Mostra estatísticas',
+        inline: false
+      });
+
+      await message.reply({ embeds: [embed] });
+      
+    } catch (error) {
+      console.error(`[CLEANUP-STATUS] 💥 Erro:`, error.message);
+      await message.reply(formatReply('Ops! Erro ao mostrar status do sistema de limpeza... 😅'));
+    }
   }
 };

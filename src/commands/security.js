@@ -1,6 +1,7 @@
 // src/commands/security.js - Comando de gerenciamento de segurança
 import { formatReply } from '../utils/formatReply.js';
 import securityModule from '../modules/securityModule.js';
+import { EmbedBuilder } from 'discord.js';
 
 export default {
   commandName: 'security',
@@ -50,32 +51,42 @@ export default {
 
   // Mostra status de segurança
   async showSecurityStatus(message) {
-    const stats = securityModule.getSecurityStats();
+    console.log(`[SECURITY-STATUS] 📊 Mostrando status de segurança`);
     
-    let status = `🔒 **STATUS DE SEGURANÇA**\n\n`;
-    
-    // Estatísticas gerais
-    status += `📊 **Estatísticas Gerais:**\n`;
-    status += `• Total de Eventos: ${stats.totalEvents}\n`;
-    status += `• Eventos Recentes (1h): ${stats.recentEvents}\n`;
-    status += `• Rate Limits Ativos: ${stats.activeRateLimits}\n`;
-    status += `• Tentativas Falhadas: ${stats.failedAttempts}\n\n`;
-    
-    // Eventos por severidade
-    status += `🚨 **Eventos por Severidade (1h):**\n`;
-    status += `• 🔴 Alta: ${stats.highSeverityEvents}\n`;
-    status += `• 🟡 Média: ${stats.mediumSeverityEvents}\n`;
-    status += `• 🟢 Baixa: ${stats.lowSeverityEvents}\n\n`;
-    
-    // Configurações
-    status += `⚙️ **Configurações:**\n`;
-    status += `• Logs de Segurança: ${stats.config.enableSecurityLogs ? '✅ Ativo' : '❌ Inativo'}\n`;
-    status += `• Monitoramento: ${stats.config.enableActivityMonitoring ? '✅ Ativo' : '❌ Inativo'}\n`;
-    status += `• Max Tentativas: ${stats.config.maxFailedAttempts}\n`;
-    status += `• Rate Limit: ${stats.config.maxRequestsPerWindow}/min\n`;
-    
-    await message.reply(formatReply(status));
-    console.log(`[SECURITY-COMMAND] ✅ Status de segurança exibido`);
+    try {
+      const stats = securityModule.getSecurityStats();
+      
+      const embed = new EmbedBuilder()
+        .setColor('#e74c3c')
+        .setTitle('🔒 Status de Segurança')
+        .setDescription('Informações sobre o sistema de segurança e monitoramento')
+        .addFields(
+          { name: '📊 Total de Eventos', value: stats.totalEvents.toString(), inline: true },
+          { name: '⏰ Eventos Recentes (1h)', value: stats.recentEvents.toString(), inline: true },
+          { name: '🚫 Rate Limits Ativos', value: stats.activeRateLimits.toString(), inline: true },
+          { name: '❌ Tentativas Falhadas', value: stats.failedAttempts.toString(), inline: true },
+          { name: '🔴 Alta Severidade', value: stats.highSeverityEvents.toString(), inline: true },
+          { name: '🟡 Média Severidade', value: stats.mediumSeverityEvents.toString(), inline: true },
+          { name: '🟢 Baixa Severidade', value: stats.lowSeverityEvents.toString(), inline: true },
+          { name: '📝 Logs Ativos', value: stats.config.enableSecurityLogs ? '✅ Sim' : '❌ Não', inline: true },
+          { name: '👁️ Monitoramento', value: stats.config.enableActivityMonitoring ? '✅ Ativo' : '❌ Inativo', inline: true }
+        )
+        .setTimestamp();
+
+      // Adiciona configurações avançadas
+      embed.addFields({
+        name: '⚙️ Configurações Avançadas',
+        value: `• Max Tentativas: ${stats.config.maxFailedAttempts}\n• Rate Limit: ${stats.config.maxRequestsPerWindow}/min\n• Timeout: ${stats.config.timeoutDuration}ms`,
+        inline: false
+      });
+
+      await message.reply({ embeds: [embed] });
+      console.log(`[SECURITY-STATUS] ✅ Status de segurança exibido`);
+      
+    } catch (error) {
+      console.error(`[SECURITY-STATUS] 💥 Erro:`, error.message);
+      await message.reply(formatReply('Ops! Erro ao mostrar status de segurança... 😅'));
+    }
   },
 
   // Mostra logs de segurança

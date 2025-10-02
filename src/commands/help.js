@@ -1,6 +1,7 @@
 // src/commands/help.js - Comando unificado n!help
 import { formatReply } from '../utils/formatReply.js';
 import commandRouter from '../utils/commandRouter.js';
+import { EmbedBuilder } from 'discord.js';
 
 export default {
   commandName: 'help',
@@ -9,52 +10,72 @@ export default {
   aliases: ['ajuda', 'comandos', 'commands'],
   
   async execute(message, client) {
-    const commands = commandRouter.getAvailableCommands();
-    const stats = commandRouter.getStats();
+    console.log(`[HELP-COMMAND] 📚 Executando comando help para ${message.author.username}`);
     
-    // Agrupa comandos por categoria
-    const categories = {};
-    commands.forEach(cmd => {
-      if (!categories[cmd.category]) {
-        categories[cmd.category] = [];
-      }
-      categories[cmd.category].push(cmd);
-    });
-    
-    let helpText = '🎯 **Comandos da Alicezinha**\n\n';
-    helpText += `📊 **Total:** ${commands.length} comandos | **Execuções:** ${stats.totalExecutions}\n\n`;
-    
-    // Lista comandos por categoria
-    Object.entries(categories).forEach(([category, cmds]) => {
-      const categoryEmoji = {
-        'sistema': '⚙️',
-        'personalidade': '🎭',
-        'utilidade': '🔧',
-        'monitoramento': '📊',
-        'geral': '📝'
-      }[category] || '📝';
+    try {
+      const commands = commandRouter.getAvailableCommands();
+      const stats = commandRouter.getStats();
       
-      helpText += `${categoryEmoji} **${category.toUpperCase()}**\n`;
-      
-      cmds.forEach(cmd => {
-        const aliases = cmd.aliases.length > 0 ? ` (${cmd.aliases.join(', ')})` : '';
-        helpText += `  • \`n!${cmd.name}\`${aliases} - ${cmd.description}\n`;
+      // Agrupa comandos por categoria
+      const categories = {};
+      commands.forEach(cmd => {
+        if (!categories[cmd.category]) {
+          categories[cmd.category] = [];
+        }
+        categories[cmd.category].push(cmd);
       });
       
-      helpText += '\n';
-    });
-    
-    helpText += '💡 **Como usar:**\n';
-    helpText += '• `n![comando]` - Executa comando\n';
-    helpText += '• `@Alice [mensagem]` - Conversa com IA\n';
-    helpText += '• `n!help` - Mostra esta ajuda\n\n';
-    helpText += '✨ **Alice está sempre pronta para ajudar!**';
-    
-    // Discord tem limite de 2000 caracteres
-    if (helpText.length > 1900) {
-      helpText = helpText.substring(0, 1900) + '\n... *(lista truncada)*';
+      const embed = new EmbedBuilder()
+        .setColor('#00ff88')
+        .setTitle('🎯 Comandos da Alicezinha')
+        .setDescription('Lista completa de todos os comandos disponíveis')
+        .addFields(
+          { name: '📊 Total de Comandos', value: commands.length.toString(), inline: true },
+          { name: '⚡ Execuções Totais', value: (stats.totalExecutions || 0).toString(), inline: true },
+          { name: '✅ Taxa de Sucesso', value: `${stats.successRate || 0}%`, inline: true }
+        )
+        .setTimestamp();
+
+      // Adiciona comandos por categoria
+      Object.entries(categories).forEach(([category, cmds]) => {
+        const categoryEmoji = {
+          'sistema': '⚙️',
+          'historias': '📚',
+          'afeto': '💕',
+          'admin': '🔒',
+          'utilitarios': '🔧',
+          'geral': '📝'
+        }[category] || '📝';
+        
+        let categoryText = '';
+        cmds.forEach(cmd => {
+          const aliases = cmd.aliases.length > 0 ? ` (${cmd.aliases.slice(0, 2).join(', ')})` : '';
+          categoryText += `• \`n!${cmd.name}\`${aliases}\n`;
+        });
+        
+        embed.addFields({
+          name: `${categoryEmoji} ${category.toUpperCase()}`,
+          value: categoryText || 'Nenhum comando',
+          inline: true
+        });
+      });
+
+      // Adiciona informações de uso
+      embed.addFields({
+        name: '💡 Como Usar',
+        value: '• `n![comando]` - Executa comando\n• `@Alice [mensagem]` - Conversa com IA\n• `n!help` - Mostra esta ajuda',
+        inline: false
+      });
+
+      embed.setFooter({ 
+        text: '✨ Alice está sempre pronta para ajudar!' 
+      });
+
+      await message.reply({ embeds: [embed] });
+      
+    } catch (error) {
+      console.error(`[HELP-COMMAND] 💥 Erro:`, error.message);
+      await message.reply(formatReply('Ops! Tive um probleminha ao mostrar a ajuda... 😅'));
     }
-    
-    await message.reply(formatReply(helpText));
   }
 };

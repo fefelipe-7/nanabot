@@ -19,10 +19,12 @@ class KeepAliveSystem {
       // Intervalo para auto-ping (10 minutos)
       selfPingIntervalMs: 10 * 60 * 1000, // 10 minutos
       
-      // URLs para manter ativo
+      // URLs para manter ativo (mais confiáveis)
       externalUrls: [
         'https://httpstat.us/200', // Serviço de teste HTTP
         'https://api.github.com/zen', // API pública do GitHub
+        'https://jsonplaceholder.typicode.com/posts/1', // API de teste
+        'https://httpbin.org/get', // Serviço de teste HTTP
       ],
       
       // URL do próprio serviço (será definida dinamicamente)
@@ -69,6 +71,8 @@ class KeepAliveSystem {
     // Inicia auto-ping (se URL disponível)
     if (this.config.selfUrl) {
       this.startSelfPing();
+    } else {
+      console.log('[KEEP-ALIVE] ⚠️ Auto-ping desabilitado - focando apenas em pings externos');
     }
     
     // Log inicial
@@ -147,7 +151,10 @@ class KeepAliveSystem {
 
   // Inicia auto-ping para o próprio serviço
   startSelfPing() {
-    if (!this.config.selfUrl) return;
+    if (!this.config.selfUrl) {
+      console.log('[KEEP-ALIVE] ⚠️ Auto-ping desabilitado - URL não detectada');
+      return;
+    }
     
     this.selfPingInterval = setInterval(async () => {
       await this.performSelfPing();
@@ -155,6 +162,8 @@ class KeepAliveSystem {
     
     // Executa primeiro auto-ping após 2 minutos
     setTimeout(() => this.performSelfPing(), 2 * 60 * 1000);
+    
+    console.log(`[KEEP-ALIVE] 🔄 Auto-ping configurado para: ${this.config.selfUrl}`);
   }
 
   // Executa ping externo
@@ -168,7 +177,8 @@ class KeepAliveSystem {
         method: 'GET',
         timeout: this.config.requestTimeout,
         headers: {
-          'User-Agent': 'Alice-Bot-KeepAlive/1.0'
+          'User-Agent': 'Alice-Bot-KeepAlive/1.0',
+          'Accept': 'application/json, text/plain, */*'
         }
       });
       
@@ -183,39 +193,80 @@ class KeepAliveSystem {
       this.stats.failedPings++;
       this.stats.lastError = error.message;
       console.log(`[KEEP-ALIVE] ❌ Ping externo falhou: ${error.message}`);
+      
+      // Se falhou, tenta uma URL alternativa
+      await this.tryAlternativePing();
     }
     
     this.stats.totalPings++;
     this.stats.lastPing = new Date().toISOString();
   }
 
+  // Tenta ping alternativo quando o principal falha
+  async tryAlternativePing() {
+    const alternativeUrls = [
+      'https://www.google.com/favicon.ico',
+      'https://www.cloudflare.com/favicon.ico',
+      'https://httpstat.us/200'
+    ];
+    
+    for (const url of alternativeUrls) {
+      try {
+        console.log(`[KEEP-ALIVE] 🔄 Tentando ping alternativo: ${url}`);
+        
+        const response = await fetch(url, {
+          method: 'GET',
+          timeout: 5000,
+          headers: {
+            'User-Agent': 'Alice-Bot-KeepAlive/1.0'
+          }
+        });
+        
+        if (response.ok) {
+          this.stats.successfulPings++;
+          console.log(`[KEEP-ALIVE] ✅ Ping alternativo bem-sucedido (${response.status})`);
+          return;
+        }
+      } catch (error) {
+        console.log(`[KEEP-ALIVE] ❌ Ping alternativo falhou: ${error.message}`);
+      }
+    }
+  }
+
   // Executa auto-ping para o próprio serviço
   async performSelfPing() {
     if (!this.config.selfUrl) return;
     
-    const healthUrl = `${this.config.selfUrl}/health`;
+    // Usa endpoint /ping ao invés de /health para evitar problemas de autenticação
+    const pingUrl = `${this.config.selfUrl}/ping`;
     
     try {
-      console.log(`[KEEP-ALIVE] 🔄 Auto-ping para: ${healthUrl}`);
+      console.log(`[KEEP-ALIVE] 🔄 Auto-ping para: ${pingUrl}`);
       
-      const response = await fetch(healthUrl, {
+      const response = await fetch(pingUrl, {
         method: 'GET',
         timeout: this.config.requestTimeout,
         headers: {
-          'User-Agent': 'Alice-Bot-SelfPing/1.0'
+          'User-Agent': 'Alice-Bot-SelfPing/1.0',
+          'Accept': 'application/json'
         }
       });
       
       if (response.ok) {
-        const data = await response.json();
-        console.log(`[KEEP-ALIVE] ✅ Auto-ping bem-sucedido - Uptime: ${Math.floor(data.uptime)}s`);
+        console.log(`[KEEP-ALIVE] ✅ Auto-ping bem-sucedido (${response.status})`);
+        this.stats.successfulPings++;
       } else {
         throw new Error(`HTTP ${response.status}`);
       }
       
     } catch (error) {
       console.log(`[KEEP-ALIVE] ❌ Auto-ping falhou: ${error.message}`);
+      this.stats.failedPings++;
+      this.stats.lastError = error.message;
     }
+    
+    this.stats.totalPings++;
+    this.stats.lastPing = new Date().toISOString();
   }
 
   // Executa health check interno

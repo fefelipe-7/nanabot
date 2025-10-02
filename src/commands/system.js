@@ -79,12 +79,12 @@ export default {
           { name: '🟢 Status', value: 'Online e funcionando', inline: true },
           { name: '⏰ Uptime', value: `${hours}h ${minutes}m`, inline: true },
           { name: '💾 Memória', value: `${Math.round(process.memoryUsage().heapUsed / 1024 / 1024)}MB`, inline: true },
-          { name: '🤖 Modelos Ativos', value: apiStats.models.filter(m => m.isActive).length.toString(), inline: true },
-          { name: '📈 Total Requisições', value: apiStats.totalRequests.toString(), inline: true },
-          { name: '✅ Taxa de Sucesso', value: `${apiStats.successRate}%`, inline: true },
-          { name: '📝 Comandos Executados', value: commandStats.totalExecutions.toString(), inline: true },
-          { name: '💾 Memórias Ativas', value: memoryStats.totalMemories.toString(), inline: true },
-          { name: '👥 Usuários Únicos', value: memoryStats.uniqueUsers.toString(), inline: true }
+          { name: '🤖 Modelos Ativos', value: (apiStats.models?.filter(m => m.isActive)?.length || 0).toString(), inline: true },
+          { name: '📈 Total Requisições', value: (apiStats.totalRequests || 0).toString(), inline: true },
+          { name: '✅ Taxa de Sucesso', value: `${apiStats.successRate || 0}%`, inline: true },
+          { name: '📝 Comandos Executados', value: (commandStats.totalExecutions || 0).toString(), inline: true },
+          { name: '💾 Memórias Ativas', value: (memoryStats.totalMemories || 0).toString(), inline: true },
+          { name: '👥 Usuários Únicos', value: (memoryStats.uniqueUsers || 0).toString(), inline: true }
         )
         .setTimestamp();
 
@@ -134,18 +134,18 @@ export default {
 
   // Lista modelos
   async listModels(message, stats) {
-    const activeModels = stats.models.filter(m => m.isActive);
-    const inactiveModels = stats.models.filter(m => !m.isActive);
+    const activeModels = stats.models?.filter(m => m.isActive) || [];
+    const inactiveModels = stats.models?.filter(m => !m.isActive) || [];
     
-    const embed = new EmbedBuilder()
-      .setColor('#0099ff')
-      .setTitle('🤖 Modelos de IA Disponíveis')
-      .setDescription('Lista de todos os modelos configurados')
-      .addFields(
-        { name: '✅ Modelos Ativos', value: activeModels.length.toString(), inline: true },
-        { name: '❌ Modelos Inativos', value: inactiveModels.length.toString(), inline: true },
-        { name: '📊 Total', value: stats.models.length.toString(), inline: true }
-      );
+      const embed = new EmbedBuilder()
+        .setColor('#0099ff')
+        .setTitle('🤖 Modelos de IA Disponíveis')
+        .setDescription('Lista de todos os modelos configurados')
+        .addFields(
+          { name: '✅ Modelos Ativos', value: (activeModels?.length || 0).toString(), inline: true },
+          { name: '❌ Modelos Inativos', value: (inactiveModels?.length || 0).toString(), inline: true },
+          { name: '📊 Total', value: (stats.models?.length || 0).toString(), inline: true }
+        );
 
     if (activeModels.length > 0) {
       embed.addFields({
@@ -168,7 +168,7 @@ export default {
 
   // Testa um modelo específico
   async testModel(message, stats) {
-    const activeModels = stats.models.filter(m => m.isActive);
+    const activeModels = stats.models?.filter(m => m.isActive) || [];
     
     if (activeModels.length === 0) {
       await message.reply(formatReply('❌ Nenhum modelo ativo para testar!'));
@@ -236,11 +236,11 @@ export default {
         .setDescription('Informações sobre a rotação de modelos')
         .addFields(
           { name: '🤖 Modelo Atual', value: currentModel?.name || 'Nenhum', inline: true },
-          { name: '📊 Total Requisições', value: stats.totalRequests.toString(), inline: true },
-          { name: '✅ Taxa de Sucesso', value: `${stats.successRate}%`, inline: true },
-          { name: '🔄 Rotações Hoje', value: stats.rotationsToday.toString(), inline: true },
+          { name: '📊 Total Requisições', value: (stats.totalRequests || 0).toString(), inline: true },
+          { name: '✅ Taxa de Sucesso', value: `${stats.successRate || 0}%`, inline: true },
+          { name: '🔄 Rotações Hoje', value: (stats.rotationsToday || 0).toString(), inline: true },
           { name: '⏰ Última Rotação', value: stats.lastRotation ? `<t:${Math.floor(new Date(stats.lastRotation).getTime() / 1000)}:R>` : 'Nunca', inline: true },
-          { name: '📈 Requisições Hoje', value: stats.requestsToday.toString(), inline: true }
+          { name: '📈 Requisições Hoje', value: (stats.requestsToday || 0).toString(), inline: true }
         )
         .setTimestamp();
 
@@ -289,12 +289,12 @@ export default {
         .setTitle('💾 Estatísticas de Memória')
         .setDescription('Informações sobre o sistema de memória')
         .addFields(
-          { name: '📝 Total de Memórias', value: memoryStats.totalMemories.toString(), inline: true },
-          { name: '👥 Usuários Únicos', value: memoryStats.uniqueUsers.toString(), inline: true },
-          { name: '🏠 Servidores', value: memoryStats.totalGuilds.toString(), inline: true },
-          { name: '💬 Canais', value: memoryStats.totalChannels.toString(), inline: true },
+          { name: '📝 Total de Memórias', value: (memoryStats.totalMemories || 0).toString(), inline: true },
+          { name: '👥 Usuários Únicos', value: (memoryStats.uniqueUsers || 0).toString(), inline: true },
+          { name: '🏠 Servidores', value: (memoryStats.totalGuilds || 0).toString(), inline: true },
+          { name: '💬 Canais', value: (memoryStats.totalChannels || 0).toString(), inline: true },
           { name: '🔄 Última Limpeza', value: memoryStats.lastCleanup || 'Nunca', inline: true },
-          { name: '📊 Tamanho do Cache', value: `${memoryStats.cacheSize}MB`, inline: true }
+          { name: '📊 Tamanho do Cache', value: `${memoryStats.cacheSize || 0}MB`, inline: true }
         )
         .setTimestamp();
 
@@ -318,9 +318,9 @@ export default {
         .setTitle('📝 Estatísticas de Comandos')
         .setDescription('Informações sobre o uso de comandos')
         .addFields(
-          { name: '📊 Total Execuções', value: commandStats.totalExecutions.toString(), inline: true },
-          { name: '❌ Comandos Falharam', value: commandStats.failedExecutions.toString(), inline: true },
-          { name: '✅ Taxa de Sucesso', value: `${commandStats.successRate}%`, inline: true },
+          { name: '📊 Total Execuções', value: (commandStats.totalExecutions || 0).toString(), inline: true },
+          { name: '❌ Comandos Falharam', value: (commandStats.failedExecutions || 0).toString(), inline: true },
+          { name: '✅ Taxa de Sucesso', value: `${commandStats.successRate || 0}%`, inline: true },
           { name: '⏰ Comando Mais Usado', value: commandStats.mostUsedCommand || 'N/A', inline: true },
           { name: '👤 Usuário Mais Ativo', value: commandStats.mostActiveUser || 'N/A', inline: true },
           { name: '🏠 Servidor Mais Ativo', value: commandStats.mostActiveGuild || 'N/A', inline: true }

@@ -12,10 +12,16 @@ class DataCleanupSystem {
     this.maxAttachmentEntries = 10;
     this.cleanupInterval = 24 * 60 * 60 * 1000; // 24 horas
     this.lastCleanup = null;
+    this.cleanupCount = 0;
+    this.optimizedFilesCount = 0;
+    this.deletedFilesCount = 0;
+    this.isStarted = false;
   }
 
   async start() {
     logger.info('[DATA-CLEANUP] 🧹 Iniciando sistema de limpeza automática...');
+    
+    this.isStarted = true;
     
     // Executa limpeza inicial
     await this.performCleanup();
@@ -51,6 +57,7 @@ class DataCleanupSystem {
       results.forEach((result, index) => {
         if (result.status === 'fulfilled') {
           successCount++;
+          this.optimizedFilesCount += result.value || 1; // Conta arquivos otimizados
           logger.debug(`[DATA-CLEANUP] ✅ Tarefa ${index + 1} concluída`);
         } else {
           failCount++;
@@ -59,6 +66,7 @@ class DataCleanupSystem {
       });
 
       this.lastCleanup = new Date().toISOString();
+      this.cleanupCount++;
       
       logger.info(`[DATA-CLEANUP] 🎯 Limpeza concluída: ${successCount} sucessos, ${failCount} falhas`);
       
@@ -221,14 +229,23 @@ class DataCleanupSystem {
   }
 
   getStats() {
+    const nextCleanup = this.lastCleanup 
+      ? new Date(new Date(this.lastCleanup).getTime() + this.cleanupInterval).toLocaleString('pt-BR')
+      : 'N/A';
+    
     return {
-      lastCleanup: this.lastCleanup,
+      isStarted: this.isStarted,
+      cleanupCount: this.cleanupCount,
+      optimizedFilesCount: this.optimizedFilesCount,
+      deletedFilesCount: this.deletedFilesCount,
+      lastCleanupTime: this.lastCleanup ? new Date(this.lastCleanup).toLocaleString('pt-BR') : 'Nunca',
+      nextCleanup: nextCleanup,
       cleanupInterval: this.cleanupInterval,
       maxHistoryEntries: this.maxHistoryEntries,
       maxExperienceBuffer: this.maxExperienceBuffer,
       maxPatternEntries: this.maxPatternEntries,
       maxAttachmentEntries: this.maxAttachmentEntries,
-      isActive: true
+      isActive: this.isStarted
     };
   }
 }

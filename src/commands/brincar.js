@@ -57,11 +57,15 @@ export default {
       
     } catch (error) {
       console.error(`[BRINCAR-COMMAND] 💥 Erro:`, error.message);
-      const fallbackResponse = emotionBase.applyEmotionVariation(
-        'Vamos brincar? Eu adoro inventar mundos! 🧸', 
-        'medium'
-      );
-      await message.reply(formatReply(fallbackResponse));
+      
+      // Só responde se ainda não respondeu
+      if (!message.replied) {
+        const fallbackResponse = emotionBase.applyEmotionVariation(
+          'Vamos brincar? Eu adoro inventar mundos! 🧸', 
+          'medium'
+        );
+        await message.reply(formatReply(fallbackResponse));
+      }
     }
   },
 

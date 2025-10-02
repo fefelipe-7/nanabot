@@ -40,11 +40,15 @@ export default {
       
     } catch (error) {
       console.error(`[FALAR-COMMAND] 💥 Erro:`, error.message);
-      const fallbackSpeech = emotionBase.applyEmotionVariation(
-        'Você sabia que eu te amo até a lua e voltar? 🌙', 
-        'medium'
-      );
-      await message.reply(formatReply(fallbackSpeech));
+      
+      // Só responde se ainda não respondeu
+      if (!message.replied) {
+        const fallbackSpeech = emotionBase.applyEmotionVariation(
+          'Você sabia que eu te amo até a lua e voltar? 🌙', 
+          'medium'
+        );
+        await message.reply(formatReply(fallbackSpeech));
+      }
     }
   },
 

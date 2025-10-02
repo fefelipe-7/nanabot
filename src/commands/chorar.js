@@ -67,7 +67,11 @@ export default {
       
     } catch (error) {
       console.error(`[CHORAR-COMMAND] 💥 Erro:`, error.message);
-      await message.reply(formatReply('Buaaa... 😭 *começa a chorar*'));
+      
+      // Só responde se ainda não respondeu
+      if (!message.replied) {
+        await message.reply(formatReply('Buaaa... 😭 *começa a chorar*'));
+      }
     }
   },
 

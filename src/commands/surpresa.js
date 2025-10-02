@@ -33,11 +33,15 @@ export default {
       
     } catch (error) {
       console.error(`[SURPRESA-COMMAND] 💥 Erro:`, error.message);
-      const fallbackSurprise = emotionBase.applyEmotionVariation(
-        'Uau! Eu trouxe uma surpresa: você ganhou um abraço de estrelinha! ✨', 
-        'high'
-      );
-      await message.reply(formatReply(fallbackSurprise));
+      
+      // Só responde se ainda não respondeu
+      if (!message.replied) {
+        const fallbackSurprise = emotionBase.applyEmotionVariation(
+          'Uau! Eu trouxe uma surpresa: você ganhou um abraço de estrelinha! ✨', 
+          'high'
+        );
+        await message.reply(formatReply(fallbackSurprise));
+      }
     }
   },
 

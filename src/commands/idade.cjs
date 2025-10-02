@@ -32,11 +32,15 @@ export default {
       
     } catch (error) {
       console.error(`[IDADE-COMMAND] 💥 Erro:`, error.message);
-      const fallbackResponse = emotionBase.applyEmotionVariation(
-        'Sou uma menininha que está crescendo a cada dia! 🌱', 
-        'medium'
-      );
-      await message.reply(formatReply(fallbackResponse));
+      
+      // Só responde se ainda não respondeu
+      if (!message.replied) {
+        const fallbackResponse = emotionBase.applyEmotionVariation(
+          'Sou uma menininha que está crescendo a cada dia! 🌱', 
+          'medium'
+        );
+        await message.reply(formatReply(fallbackResponse));
+      }
     }
   },
 

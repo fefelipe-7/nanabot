@@ -5,6 +5,7 @@ import fs from 'fs';
 import path from 'path';
 import logger from './utils/logger.js';
 import keepAliveSystem from './utils/keepAlive.js';
+import dataCleanupSystem from './utils/dataCleanup.js';
 
 // Criação do cliente do Discord com intents necessários
 const client = new Client({
@@ -75,16 +76,19 @@ for (const file of eventFiles) {
 // === Iniciar o bot ===
 client.login(process.env.DISCORD_TOKEN);
 
-// === Inicializar Keep-Alive System ===
-// Aguarda o bot estar pronto antes de iniciar o keep-alive
+// === Inicializar Keep-Alive System e Data Cleanup ===
+// Aguarda o bot estar pronto antes de iniciar os sistemas
 client.once('ready', () => {
-  // Inicia keep-alive após 30 segundos para garantir que tudo esteja funcionando
+  // Inicia sistemas após 30 segundos para garantir que tudo esteja funcionando
   setTimeout(() => {
     if (process.env.NODE_ENV === 'production' || process.env.RENDER) {
       console.log('[BOT] 🔄 Iniciando sistema de keep-alive...');
       keepAliveSystem.start();
+      
+      console.log('[BOT] 🧹 Iniciando sistema de limpeza de dados...');
+      dataCleanupSystem.start();
     } else {
-      console.log('[BOT] 🏠 Ambiente de desenvolvimento - keep-alive desabilitado');
+      console.log('[BOT] 🏠 Ambiente de desenvolvimento - sistemas desabilitados');
     }
   }, 30000); // 30 segundos
 });

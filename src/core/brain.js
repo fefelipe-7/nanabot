@@ -1281,9 +1281,9 @@ async function processMessage(content, userMetadata) {
   } catch (error) {
     console.error('Erro no processamento da mensagem:', error);
     // Fallback para o sistema antigo
-    const prompt = buildPrompt(content, userMetadata);
-    const resposta = await callOpenRouterAPI(prompt);
-    return formatReply(resposta);
+  const prompt = buildPrompt(content, userMetadata);
+  const resposta = await callOpenRouterAPI(prompt);
+  return formatReply(resposta);
   }
 }
 

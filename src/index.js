@@ -4,6 +4,7 @@ import { Client, Collection, GatewayIntentBits } from 'discord.js';
 import fs from 'fs';
 import path from 'path';
 import logger from './utils/logger.js';
+import keepAliveSystem from './utils/keepAlive.js';
 
 // Criação do cliente do Discord com intents necessários
 const client = new Client({
@@ -73,3 +74,32 @@ for (const file of eventFiles) {
 
 // === Iniciar o bot ===
 client.login(process.env.DISCORD_TOKEN);
+
+// === Inicializar Keep-Alive System ===
+// Aguarda o bot estar pronto antes de iniciar o keep-alive
+client.once('ready', () => {
+  // Inicia keep-alive após 30 segundos para garantir que tudo esteja funcionando
+  setTimeout(() => {
+    if (process.env.NODE_ENV === 'production' || process.env.RENDER) {
+      console.log('[BOT] 🔄 Iniciando sistema de keep-alive...');
+      keepAliveSystem.start();
+    } else {
+      console.log('[BOT] 🏠 Ambiente de desenvolvimento - keep-alive desabilitado');
+    }
+  }, 30000); // 30 segundos
+});
+
+// Graceful shutdown
+process.on('SIGTERM', () => {
+  console.log('[BOT] 🛑 SIGTERM recebido, encerrando bot...');
+  keepAliveSystem.stop();
+  client.destroy();
+  process.exit(0);
+});
+
+process.on('SIGINT', () => {
+  console.log('[BOT] 🛑 SIGINT recebido, encerrando bot...');
+  keepAliveSystem.stop();
+  client.destroy();
+  process.exit(0);
+});

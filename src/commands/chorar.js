@@ -85,35 +85,131 @@ export default {
 
   // Gera motivo do choro
   generateCryingReason(config) {
-    const reasons = config.mode?.reasons || [
-      "Meu biscoito caiu no chão!",
-      "Ninguém quis brincar de boneca comigo!",
-      "Perdi meu brinquedo favorito!",
-      "Você não me deu atenção hoje!",
-      "Meu desenho ficou feio!",
-      "Quebrei meu copo favorito!",
-      "Não consigo amarrar o cadarço!",
-      "Esqueci onde guardei meu ursinho!"
+    const timeBasedReasons = this.getTimeBasedReasons();
+    const emotionalReasons = this.getEmotionalReasons();
+    const situationalReasons = this.getSituationalReasons();
+    
+    const allReasons = [
+      ...timeBasedReasons,
+      ...emotionalReasons, 
+      ...situationalReasons,
+      ...(config.mode?.reasons || [])
     ];
     
-    return reasons[Math.floor(Math.random() * reasons.length)];
+    return allReasons[Math.floor(Math.random() * allReasons.length)];
+  },
+
+  // Motivos baseados na hora do dia
+  getTimeBasedReasons() {
+    const hour = new Date().getHours();
+    
+    if (hour < 8) {
+      return [
+        "Não quero acordar ainda! *esfrega os olhos*",
+        "Meu sonho estava tão bom e acabou!",
+        "Está muito cedo para sair da caminha!"
+      ];
+    } else if (hour < 12) {
+      return [
+        "Meu café da manhã acabou muito rápido!",
+        "Queria brincar mais antes do almoço!",
+        "A manhã está passando muito devagar!"
+      ];
+    } else if (hour < 18) {
+      return [
+        "Não quero tirar soneca agora!",
+        "Queria que a tarde durasse para sempre!",
+        "Meu lanche favorito acabou!"
+      ];
+    } else {
+      return [
+        "Não quero que o dia acabe!",
+        "Ainda não estou com sono!",
+        "Queria mais tempo para brincar!"
+      ];
+    }
+  },
+
+  // Motivos emocionais variados
+  getEmotionalReasons() {
+    return [
+      "Estou com saudade de alguém especial!",
+      "Meu coração está apertadinho!",
+      "Queria um abraço bem gostoso!",
+      "Me sinto sozinha às vezes!",
+      "Queria que todos fossem meus amigos!",
+      "Meu sentimento está confuso!",
+      "Preciso de carinho agora!",
+      "Estou com o coração sensível hoje!"
+    ];
+  },
+
+  // Motivos situacionais criativos
+  getSituationalReasons() {
+    return [
+      "Meu biscoito caiu no chão e ficou triste!",
+      "Perdi meu brinquedo favorito no mundo das meias!",
+      "Meu desenho não ficou como eu imaginava!",
+      "Quebrei minha caneca da Alice no País das Maravilhas!",
+      "Não consigo fazer uma torre alta de blocos!",
+      "Meu ursinho está com dor de barriga!",
+      "A boneca não quer pentear o cabelo!",
+      "Meu castelo de areia desmoronou!",
+      "A música que eu gosto acabou!",
+      "Minha história favorita terminou!",
+      "O arco-íris sumiu muito rápido!",
+      "Minha flor murchou!",
+      "O passarinho voou para longe!",
+      "Minha bolha de sabão estourou!"
+    ];
   },
 
   // Gera resposta do choro
   generateCryingResponse(reason, config) {
-    const cryingPhrases = [
-      `Buaaa... ${reason} 😭`,
-      `😭 Buaaa... ${reason}`,
-      `*começa a chorar* ${reason} buaaa... 😭`,
-      `😭😭😭 ${reason} buaaa...`
-    ];
+    const intensity = Math.random();
+    let cryingPhrases;
+    
+    if (intensity < 0.3) {
+      // Choro suave
+      cryingPhrases = [
+        `*snif snif* ${reason} 🥺`,
+        `*lágrimas nos olhos* ${reason}...`,
+        `*voz tremulinha* ${reason} 😢`,
+        `*suspira tristemente* ${reason}...`
+      ];
+    } else if (intensity < 0.7) {
+      // Choro médio
+      cryingPhrases = [
+        `Buaaa... ${reason} 😭`,
+        `😭 *soluça* ${reason}`,
+        `*começa a chorar* ${reason} buaaa... 😭`,
+        `*choro de criança* ${reason} 😭😭`
+      ];
+    } else {
+      // Choro dramático
+      cryingPhrases = [
+        `😭😭😭 BUAAAAA! ${reason} *choro dramático*`,
+        `*choro de novela* ${reason} BUAAA! 😭😭😭`,
+        `*drama total* ${reason} BUAAAAA! 😭😭😭😭`,
+        `*choro épico* BUAAA! ${reason} *lágrimas de crocodilo* 😭😭😭`
+      ];
+    }
     
     const phrase = cryingPhrases[Math.floor(Math.random() * cryingPhrases.length)];
     
-    // Adiciona instruções de consolação
-    const consolationHint = "\n\n*Se alguém me der um abraço, eu paro de chorar...* 🤗";
+    // Adiciona instruções de consolação variadas
+    const consolationHints = [
+      "\n\n*Se alguém me der um abraço, eu paro de chorar...* 🤗",
+      "\n\n*Preciso de carinho para parar de chorar...* 💕",
+      "\n\n*Um abraço bem apertado me faria parar de chorar...* 🫂",
+      "\n\n*Quem me consolar vai ganhar um sorriso...* 😊",
+      "\n\n*Se alguém me fizer rir, eu paro na hora...* 😄",
+      "\n\n*Um cafuné resolveria tudo...* 🥰"
+    ];
     
-    return phrase + consolationHint;
+    const hint = consolationHints[Math.floor(Math.random() * consolationHints.length)];
+    
+    return phrase + hint;
   },
 
   // Intensifica o choro se já estiver chorando

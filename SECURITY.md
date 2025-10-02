@@ -339,5 +339,5 @@ export const VERSION = {
 
 **⚠️ IMPORTANTE:** Este documento deve ser revisado regularmente e atualizado conforme novas vulnerabilidades são descobertas ou novas práticas de segurança são implementadas.
 
-**📅 Última atualização:** 2024-01-01
-**🔄 Próxima revisão:** 2024-04-01
+**📅 Última atualização:** 2025-10-01
+**🔄 Próxima revisão:** 2026-01-01

@@ -12,7 +12,7 @@ export default {
   description: 'Comando unificado para testar todos os sistemas da Alice',
   category: 'sistema',
   aliases: ['teste', 't', 'debug'],
-
+  
   async execute(message, client) {
     console.log(`[TEST-COMMAND] 🧪 Executando comando test unificado para ${message.author.username}`);
 

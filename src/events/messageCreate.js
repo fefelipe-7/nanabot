@@ -12,6 +12,12 @@ export default {
   name: Events.MessageCreate,
   async execute(message, client) {
     try {
+      // 0. VERIFICA se é mensagem de bot - IGNORA (primeira verificação)
+      if (message.author.bot) {
+        console.log(`[MESSAGE-CREATE] 🤖 MENSAGEM DE BOT IGNORADA: ${message.content.substring(0, 30)}...`);
+        return;
+      }
+      
       console.log(`[MESSAGE-CREATE] 📨 Recebida mensagem de: ${message.author.username}`);
       
       // 1. VERIFICA se é comando n! primeiro

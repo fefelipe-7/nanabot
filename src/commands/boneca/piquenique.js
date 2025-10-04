@@ -1,5 +1,5 @@
 // src/commands/boneca/piquenique.js - Comando para atividade piquenique
-import { formatReply } from '../utils/formatReply.js';
+import { formatReply } from '../../utils/formatReply.js';
 import BonecaManager from './BonecaManager.js';
 
 export default {

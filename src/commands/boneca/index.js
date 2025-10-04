@@ -1,9 +1,9 @@
 // src/commands/boneca/index.js - Comando principal n!boneca
-import { formatReply } from '../utils/formatReply.js';
-import modeManager from '../modules/modeManager.js';
-import emotionBase from '../modules/emotionBase.js';
-import variationEngine from '../modules/variationEngine.js';
-import contextManager from '../modules/contextManager.js';
+import { formatReply } from '../../utils/formatReply.js';
+import modeManager from '../../modules/modeManager.js';
+import emotionBase from '../../modules/emotionBase.js';
+import variationEngine from '../../modules/variationEngine.js';
+import contextManager from '../../modules/contextManager.js';
 import { EmbedBuilder } from 'discord.js';
 import BonecaManager from './BonecaManager.js';
 import StageHandler from './StageHandler.js';

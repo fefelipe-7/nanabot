@@ -1,5 +1,5 @@
 // src/commands/boneca/cantiga.js - Comando para atividade cantiga
-import { formatReply } from '../utils/formatReply.js';
+import { formatReply } from '../../utils/formatReply.js';
 import BonecaManager from './BonecaManager.js';
 
 export default {

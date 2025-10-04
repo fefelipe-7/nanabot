@@ -1,7 +1,7 @@
 // src/commands/boneca/ActivityHandler.js - Manipulador das atividades extras
-import { formatReply } from '../utils/formatReply.js';
-import modeManager from '../modules/modeManager.js';
-import emotionBase from '../modules/emotionBase.js';
+import { formatReply } from '../../utils/formatReply.js';
+import modeManager from '../../modules/modeManager.js';
+import emotionBase from '../../modules/emotionBase.js';
 import { EmbedBuilder } from 'discord.js';
 import BonecaManager from './BonecaManager.js';
 

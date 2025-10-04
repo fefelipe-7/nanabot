@@ -1,7 +1,7 @@
 // src/commands/boneca/BonecaManager.js - Gerenciador principal do modo boneca
-import { formatReply } from '../utils/formatReply.js';
-import modeManager from '../modules/modeManager.js';
-import emotionBase from '../modules/emotionBase.js';
+import { formatReply } from '../../utils/formatReply.js';
+import modeManager from '../../modules/modeManager.js';
+import emotionBase from '../../modules/emotionBase.js';
 import { EmbedBuilder } from 'discord.js';
 import StageHandler from './StageHandler.js';
 import ActivityHandler from './ActivityHandler.js';

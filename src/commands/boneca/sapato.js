@@ -1,5 +1,5 @@
 // src/commands/boneca/sapato.js - Comando para escolher sapato
-import { formatReply } from '../utils/formatReply.js';
+import { formatReply } from '../../utils/formatReply.js';
 import BonecaManager from './BonecaManager.js';
 
 export default {

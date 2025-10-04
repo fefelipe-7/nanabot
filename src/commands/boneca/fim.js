@@ -1,5 +1,5 @@
 // src/commands/boneca/fim.js - Comando para finalizar modo boneca
-import { formatReply } from '../utils/formatReply.js';
+import { formatReply } from '../../utils/formatReply.js';
 import BonecaManager from './BonecaManager.js';
 
 export default {

@@ -1,5 +1,5 @@
 // src/commands/boneca/desfile.js - Comando para atividade desfile
-import { formatReply } from '../utils/formatReply.js';
+import { formatReply } from '../../utils/formatReply.js';
 import BonecaManager from './BonecaManager.js';
 
 export default {

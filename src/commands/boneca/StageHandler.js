@@ -1,8 +1,8 @@
 // src/commands/boneca/StageHandler.js - Manipulador das etapas de cuidado
-import { formatReply } from '../utils/formatReply.js';
-import modeManager from '../modules/modeManager.js';
-import emotionBase from '../modules/emotionBase.js';
-import variationEngine from '../modules/variationEngine.js';
+import { formatReply } from '../../utils/formatReply.js';
+import modeManager from '../../modules/modeManager.js';
+import emotionBase from '../../modules/emotionBase.js';
+import variationEngine from '../../modules/variationEngine.js';
 import { EmbedBuilder } from 'discord.js';
 import BonecaManager from './BonecaManager.js';
 import ActivityHandler from './ActivityHandler.js';

@@ -1,5 +1,5 @@
 // src/commands/boneca/passeio.js - Comando para atividade passeio
-import { formatReply } from '../utils/formatReply.js';
+import { formatReply } from '../../utils/formatReply.js';
 import BonecaManager from './BonecaManager.js';
 
 export default {

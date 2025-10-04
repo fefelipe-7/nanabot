@@ -1,5 +1,5 @@
 // src/commands/boneca/historia.js - Comando para atividade história
-import { formatReply } from '../utils/formatReply.js';
+import { formatReply } from '../../utils/formatReply.js';
 import BonecaManager from './BonecaManager.js';
 
 export default {

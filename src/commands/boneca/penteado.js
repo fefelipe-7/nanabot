@@ -1,5 +1,5 @@
 // src/commands/boneca/penteado.js - Comando para escolher penteado
-import { formatReply } from '../utils/formatReply.js';
+import { formatReply } from '../../utils/formatReply.js';
 import BonecaManager from './BonecaManager.js';
 
 export default {

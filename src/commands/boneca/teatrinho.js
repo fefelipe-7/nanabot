@@ -1,5 +1,5 @@
 // src/commands/boneca/teatrinho.js - Comando para atividade teatrinho
-import { formatReply } from '../utils/formatReply.js';
+import { formatReply } from '../../utils/formatReply.js';
 import BonecaManager from './BonecaManager.js';
 
 export default {

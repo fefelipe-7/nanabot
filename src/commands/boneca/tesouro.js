@@ -1,5 +1,5 @@
 // src/commands/boneca/tesouro.js - Comando para atividade tesouro
-import { formatReply } from '../utils/formatReply.js';
+import { formatReply } from '../../utils/formatReply.js';
 import BonecaManager from './BonecaManager.js';
 
 export default {

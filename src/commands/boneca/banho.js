@@ -1,5 +1,5 @@
 // src/commands/boneca/banho.js - Comando para escolher sabonete
-import { formatReply } from '../utils/formatReply.js';
+import { formatReply } from '../../utils/formatReply.js';
 import BonecaManager from './BonecaManager.js';
 
 export default {

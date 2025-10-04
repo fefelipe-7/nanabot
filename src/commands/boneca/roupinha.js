@@ -1,5 +1,5 @@
 // src/commands/boneca/roupinha.js - Comando para escolher roupa
-import { formatReply } from '../utils/formatReply.js';
+import { formatReply } from '../../utils/formatReply.js';
 import BonecaManager from './BonecaManager.js';
 
 export default {

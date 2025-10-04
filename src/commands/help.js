@@ -42,6 +42,7 @@ export default {
           'sistema': '⚙️',
           'historias': '📚',
           'afeto': '💕',
+          'boneca': '🎀',
           'admin': '🔒',
           'utilitarios': '🔧',
           'geral': '📝'
